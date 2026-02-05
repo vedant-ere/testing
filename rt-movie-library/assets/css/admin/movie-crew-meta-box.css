@@ -1,0 +1,159 @@
+/**
+ * Movie Crew Meta Box Styles
+ *
+ * Path: assets/css/admin/movie-crew-meta-box.css
+ */
+
+/* Main wrapper */
+.rt-crew-meta-wrapper {
+	padding: 10px 0;
+}
+
+/* Each crew section (Director, Producer, etc.) */
+.rt-crew-section {
+	margin-bottom: 25px;
+	width: 50%;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.rt-crew-section:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.rt-crew-section h3 {
+	margin: 0 0 12px;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+/* Selected crew members list */
+.rt-crew-selected-list {
+	margin-bottom: 12px;
+	min-height: 20px;
+}
+
+.rt-crew-empty {
+	margin: 0 0 10px;
+	padding: 8px 12px;
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 4px;
+	color: #646970;
+	font-size: 13px;
+	font-style: italic;
+}
+
+/* Individual crew item */
+.rt-crew-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 12px;
+	margin-bottom: 6px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	transition: border-color 0.15s ease;
+}
+
+.rt-crew-item:hover {
+	border-color: #8c8f94;
+}
+
+.rt-crew-name {
+	font-size: 13px;
+	color: #2c3338;
+	font-weight: 500;
+}
+
+/* Actor with character input */
+.rt-crew-actor-item {
+	flex-wrap: wrap;
+}
+
+.rt-crew-actor-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.rt-character-input {
+	width: 50%;
+	max-width: 350px;
+	padding: 4px 8px;
+	font-size: 13px;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+}
+
+.rt-character-input:focus {
+	border-color: #2271b1;
+	outline: 2px solid transparent;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Remove button */
+.rt-crew-remove {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px;
+	color: #b32d2e;
+	text-decoration: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	transition: color 0.15s ease;
+}
+
+.rt-crew-remove:hover,
+.rt-crew-remove:focus {
+	color: #8a2424;
+}
+
+.rt-crew-remove .dashicons {
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+}
+
+/* Add new crew row */
+.rt-crew-add-row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.rt-crew-dropdown {
+	flex: 1;
+	max-width: 350px;
+	height: 32px;
+	padding: 2px 8px;
+	font-size: 13px;
+}
+
+.rt-crew-add-btn {
+	height: 32px;
+	padding: 0 12px;
+	font-size: 13px;
+	line-height: 2;
+	white-space: nowrap;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+
+	.rt-crew-add-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.rt-crew-dropdown,
+	.rt-crew-add-btn {
+		max-width: 100%;
+	}
+}

@@ -77,7 +77,28 @@ class Movie_Poster_Meta_Box {
 		}
 
 		if ( isset( $_POST['rt_movie_poster'] ) ) {
-			update_post_meta( $post_id, 'rt-movie-meta-carousel-poster', absint( $_POST['rt_movie_poster'] ) );
+			$value = sanitize_text_field( wp_unslash( $_POST['rt_movie_poster'] ) );
+
+			// Decode JSON to extract single attachment ID.
+			$decoded       = json_decode( $value, true );
+			$attachment_id = 0;
+
+			if ( is_array( $decoded ) && ! empty( $decoded ) ) {
+				$attachment_id = absint( $decoded[0] );
+			} elseif ( is_numeric( $value ) ) {
+				// Fallback: direct numeric value.
+				$attachment_id = absint( $value );
+			}
+
+			if ( $attachment_id > 0 ) {
+				update_post_meta(
+					$post_id,
+					'rt-movie-meta-carousel-poster',
+					$attachment_id
+				);
+			} else {
+				delete_post_meta( $post_id, 'rt-movie-meta-carousel-poster' );
+			}
 		}
 	}
 

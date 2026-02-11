@@ -31,7 +31,7 @@ trait Singleton {
 	protected function __clone() {}
 
 	/**
-	 * Prevent unserializing of the instance.
+	 * Prevent unserializing of the instance.s
 	 */
 	public function __wakeup() {}
 

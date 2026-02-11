@@ -74,6 +74,32 @@ class Movie_Shortcode {
 			if ( empty( $atts[ $attr ] ) ) {
 				continue;
 			}
+			if ( 'person' === $attr ) {
+				
+				$person_query = new WP_Query(
+					array(
+						'post_type'      => 'rt-person',
+						'name'           => sanitize_title( $atts[ $attr ] ),
+						'posts_per_page' => 1,
+						'fields'         => 'ids',
+						'no_found_rows'  => true,
+					) 
+				);
+
+				if ( $person_query->posts ) {
+					$person_id = $person_query->posts[0];
+					
+					$person_post = get_post( $person_id );
+					$shadow_slug = sanitize_title( $person_post->post_name . '-' . $person_id );
+			
+					$tax_query[] = array(
+						'taxonomy' => $taxonomy,
+						'field'    => 'slug',
+						'terms'    => array( $shadow_slug ),
+					);
+				}
+				continue;
+			}
 
 			$field = ctype_digit( $atts[ $attr ] ) ? 'term_id' : 'slug';
 
@@ -89,11 +115,12 @@ class Movie_Shortcode {
 		}
 
 		$args = array(
-			'post_type'        => 'rt-movie',
-			'posts_per_page'   => -1,
-			'no_found_rows'    => true,
+			'post_type'              => 'rt-movie',
+			'posts_per_page'         => 50,
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => false,
 			// phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.SuppressFilters_suppress_filters -- Needed to ensure accurate taxonomy filtering without third-party interference.
-			'suppress_filters' => true,
+			'suppress_filters'       => true,
 		);
 
 		if ( 1 < count( $tax_query ) ) {

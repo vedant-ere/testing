@@ -99,7 +99,22 @@ class Media_Video_Meta_Box {
 	 */
 	public function assets(): void {
 		wp_enqueue_media();
-		wp_enqueue_script( 'rt-media-box' );
-		wp_enqueue_style( 'rt-media-box' );
+
+		// Enqueue shared media box script.
+		wp_enqueue_script(
+			'rt-media-box',
+			RT_MOVIE_LIBRARY_URL . 'assets/js/admin/media-meta-box.js',
+			array( 'jquery' ),
+			RT_MOVIE_LIBRARY_VERSION,
+			true
+		);
+
+		// Enqueue shared media box styles.
+		wp_enqueue_style(
+			'rt-media-box',
+			RT_MOVIE_LIBRARY_URL . 'assets/css/admin/media-meta-box.css',
+			array(),
+			RT_MOVIE_LIBRARY_VERSION
+		);
 	}
 }

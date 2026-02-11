@@ -49,10 +49,24 @@
 					if ( ! ids.includes( data.id ) ) {
 						ids.push( data.id );
 
+						let preview = '';
+
+						if ( type === 'image' && data.url ) {
+							preview = `<img src="${ data.url }"
+								alt="${ data.alt || data.filename }"
+								style="max-width:80px;max-height:80px;object-fit:cover;margin-right:10px;border-radius:4px;">`;
+						} else if ( type === 'video' && data.url ) {
+							preview = `<video src="${ data.url }"
+								style="max-width:120px;max-height:80px;margin-right:10px;border-radius:4px;"
+								muted
+								preload="metadata"></video>`;
+						}
+
 						list.append(
 							`<div class="rt-media-item" data-id="${ data.id }">
-								<span>${ data.filename }</span>
-								<button type="button" class="rt-media-remove">×</button>
+								${ preview }
+								<span class="rt-media-filename">${ data.filename }</span>
+								<button type="button" class="rt-media-remove" aria-label="Remove ${ data.filename }">×</button>
 							</div>`
 						);
 					}

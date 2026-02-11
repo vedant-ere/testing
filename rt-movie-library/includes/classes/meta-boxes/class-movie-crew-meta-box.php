@@ -24,7 +24,6 @@ defined( 'ABSPATH' ) || exit;
 class Movie_Crew_Meta_Box {
 
 
-
 	use Singleton;
 
 	/**
@@ -127,29 +126,71 @@ class Movie_Crew_Meta_Box {
 			}
 		}
 
-
 		/**
-		 * Helper: fetch persons by career.
+		 * Helper: fetch persons by career with fallback.
 		 */
 		$get_people = function ( string $career_slug ): array {
 			// phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.get_posts_get_posts -- Needed for meta box functionality with manageable data set.
-			return get_posts(
+			$persons = get_posts(
 				array(
-					'post_type'      => 'rt-person',
-					'posts_per_page' => -1,
+					'post_type'              => 'rt-person',
+					'posts_per_page'         => 100,
+					'no_found_rows'          => true,
+					'update_post_meta_cache' => false,
 					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- Required for filtering persons by career taxonomy.
-					'tax_query'      => array(
+					'tax_query'              => array(
 						array(
 							'taxonomy' => 'rt-person-career',
 							'field'    => 'slug',
 							'terms'    => $career_slug,
 						),
 					),
-					'orderby'        => 'title',
-					'order'          => 'ASC',
+					'orderby'                => 'title',
+					'order'                  => 'ASC',
 				)
 			);
+
+			// If no results, try fallback slugs.
+			if ( empty( $persons ) ) {
+				$fallback_map = array(
+					'director'   => array( 'directors' ),
+					'producer'   => array( 'producers' ),
+					'writer'     => array( 'writers', 'screenwriter', 'screenwriters' ),
+					'actor-star' => array( 'actor', 'actors', 'star', 'stars' ),
+				);
+
+				if ( isset( $fallback_map[ $career_slug ] ) ) {
+					foreach ( $fallback_map[ $career_slug ] as $fallback_slug ) {
+						// phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.get_posts_get_posts -- Needed for meta box functionality with manageable data set.
+						$persons = get_posts(
+							array(
+								'post_type'              => 'rt-person',
+								'posts_per_page'         => 100,
+								'no_found_rows'          => true,
+								'update_post_meta_cache' => false,
+								// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- Required for filtering persons by career taxonomy.
+								'tax_query'              => array(
+									array(
+										'taxonomy' => 'rt-person-career',
+										'field'    => 'slug',
+										'terms'    => $fallback_slug,
+									),
+								),
+								'orderby'                => 'title',
+								'order'                  => 'ASC',
+							)
+						);
+
+						if ( ! empty( $persons ) ) {
+							break; // Found results, stop trying.
+						}
+					}
+				}
+			}
+
+			return $persons;
 		};
+
 
 		$directors = $get_people( 'director' );
 		$producers = $get_people( 'producer' );
@@ -456,7 +497,7 @@ class Movie_Crew_Meta_Box {
 		/*
 		 * SAVE ACTOR → CHARACTER NAMES
 		 */
-		
+
 		$characters = array();
 
 		// Additional nonce check for PHPCS compliance (already verified at method start).

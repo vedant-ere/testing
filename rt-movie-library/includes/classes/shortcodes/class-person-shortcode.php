@@ -50,9 +50,10 @@ class Person_Shortcode {
 		$atts['career'] = sanitize_text_field( $atts['career'] );
 
 		$args = array(
-			'post_type'      => 'rt-person',
-			'posts_per_page' => -1,
-			'no_found_rows'  => true,
+			'post_type'              => 'rt-person',
+			'posts_per_page'         => 50,
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => false,
 		);
 
 		if ( ! empty( $atts['career'] ) ) {

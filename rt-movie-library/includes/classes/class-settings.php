@@ -58,11 +58,23 @@ class Settings {
 
 	/**
 	 * Renders settings page.
+	 * Verify user has admin capabilities.
 	 */
 	public function render_page(): void {
+		
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die(
+				esc_html__(
+					'You do not have sufficient permissions to access this page.',
+					'rt-movie-library'
+				),
+				esc_html__( 'Permission Denied', 'rt-movie-library' ),
+				array( 'response' => 403 )
+			);
+		}
 		?>
 		<div class="wrap">
-			<h1>RT Movie Library</h1>
+			<h1><?php esc_html_e( 'RT Movie Library Settings', 'rt-movie-library' ); ?></h1>
 
 			<form method="post" action="options.php">
 				<?php settings_fields( 'rt_movie_library_settings' ); ?>
@@ -70,23 +82,25 @@ class Settings {
 				<table class="form-table">
 					<tr>
 						<th scope="row">
-							Delete all plugin data on uninstall
+							<?php esc_html_e( 'Uninstall Behavior', 'rt-movie-library' ); ?>
 						</th>
 						<td>
 							<label>
 								<input type="checkbox"
 									name="rt_movie_library_delete_data"
 									value="1"
-									<?php checked( 1, get_option( 'rt_movie_library_delete_data' ) ); ?>
-								/>
-								<strong>Enable destructive cleanup</strong>
+									<?php checked( 1, get_option( 'rt_movie_library_delete_data' ) ); ?> />
+								<strong><?php esc_html_e( 'Delete all plugin data on uninstall', 'rt-movie-library' ); ?></strong>
 							</label>
 
 							<p class="description" style="color:#b32d2e;">
-								⚠️ WARNING:  
-								If enabled, deleting this plugin will permanently
-								delete all Movies, Persons, and related metadata.
-								This action cannot be undone.
+								<span class="dashicons dashicons-warning" style="vertical-align:middle;"></span>
+								<?php
+								esc_html_e(
+									'WARNING: If enabled, deleting this plugin will permanently remove all Movies, Persons, taxonomies, and metadata. This action cannot be undone.',
+									'rt-movie-library'
+								);
+								?>
 							</p>
 						</td>
 					</tr>

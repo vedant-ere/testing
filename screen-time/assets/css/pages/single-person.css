@@ -1,0 +1,279 @@
+/* Page shell spacing. */
+.page-single-person {
+	padding-bottom: 120px;
+}
+
+/* Hero block size from spec. */
+.page-single-person .person-hero {
+	min-height: 642px;
+	padding-top: 35px;
+}
+
+/* Hero two-column layout. */
+.page-single-person .person-hero__inner {
+	display: grid;
+	grid-template-columns: 488px 1fr;
+	column-gap: 96px;
+	align-items: start;
+}
+
+/* Hero image exact dimensions. */
+.page-single-person .person-hero__image {
+	width: 488px;
+	height: 572px;
+	object-fit: cover;
+}
+
+/* Hero content vertical offset. */
+.page-single-person .person-hero__content {
+	padding-top: 56px;
+}
+
+/* Name row aligns display and full name. */
+.page-single-person .person-hero__title-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 12px;
+}
+
+/* Display name typography spec. */
+.page-single-person .person-hero__content h1 {
+	margin: 0;
+	font-family: var(--font-logo);
+	font-size: 64px;
+	font-weight: 600;
+	line-height: 72px;
+}
+
+/* Full name typography spec. */
+.page-single-person .person-hero__full-name {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 32px;
+	color: var(--color-text-muted);
+}
+
+/* Meta table starts below name row. */
+.page-single-person .person-hero__meta-list {
+	margin-top: 24px;
+	display: grid;
+	row-gap: 16px;
+}
+
+/* Meta rows two-column labels and values. */
+.page-single-person .person-hero__meta-item {
+	display: grid;
+	grid-template-columns: 130px 1fr;
+	column-gap: 16px;
+}
+
+/* About section top spacing. */
+.page-single-person .person-about {
+	margin-top: 120px;
+}
+
+/* About and quick links grid. */
+.page-single-person .person-about__grid {
+	display: grid;
+	grid-template-columns: 798px 280px;
+	column-gap: 130px;
+	align-items: start;
+}
+
+/* About text rhythm. */
+.page-single-person .person-about__content p {
+	margin: 0 0 24px;
+	line-height: 2;
+}
+
+/* Quick links panel size and padding. */
+.page-single-person .person-about__quick-links {
+	width: 280px;
+	min-height: 368px;
+	padding: 24px 32px;
+	background: rgba(255, 255, 255, 0.06);
+}
+
+/* Quick links title style. */
+.page-single-person .person-about__quick-links h2 {
+	margin: 0;
+	font-family: var(--font-logo);
+	font-size: 52px;
+	line-height: 1;
+}
+
+/* Quick links list spacing. */
+.page-single-person .person-about__quick-links ul {
+	margin: 24px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Quick links item gap. */
+.page-single-person .person-about__quick-links li {
+	margin-top: 32px;
+}
+
+/* Quick links arrow marker. */
+.page-single-person .person-about__quick-links a::before {
+	content: "→";
+	margin-right: 12px;
+}
+
+/* Shared section spacing after about. */
+.page-single-person .person-section {
+	margin-top: 120px;
+}
+
+/* Popular movies always 3 columns desktop. */
+.page-single-person .person-popular-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 384px);
+	gap: 32px;
+	margin-top: 24px;
+}
+
+/* Snapshot grid matches single movie layout. */
+.page-single-person .person-snapshot-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 592px);
+	grid-auto-rows: 419px;
+	gap: 32px;
+	margin-top: 24px;
+}
+
+/* Snapshot image fixed sizing. */
+.page-single-person .person-snapshot-grid img {
+	width: 592px;
+	height: 419px;
+	object-fit: cover;
+}
+
+/* Video grid matches single movie layout. */
+.page-single-person .person-video-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 384px);
+	gap: 32px;
+	margin-top: 24px;
+}
+
+/* Video card shell and overlay icon. */
+.page-single-person .person-video-card {
+	width: 384px;
+	height: 246px;
+	padding: 0;
+	border: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Video thumbnail fit. */
+.page-single-person .person-video-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Play icon centered and sized. */
+.page-single-person .person-video-card__play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 56px;
+	height: 56px;
+	margin: -28px 0 0 -28px;
+	border-radius: 50%;
+	background: var(--color-accent);
+	display: grid;
+	place-items: center;
+}
+
+/* Tablet adaptation with fluid columns. */
+@media (max-width: 1279px) {
+	.page-single-person .person-hero__inner {
+		grid-template-columns: 1fr;
+		row-gap: 32px;
+	}
+	.page-single-person .person-hero__image {
+		width: 100%;
+		max-width: 488px;
+		height: auto;
+	}
+	.page-single-person .person-hero__content {
+		padding-top: 0;
+	}
+	.page-single-person .person-about__grid {
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+	}
+	.page-single-person .person-about__quick-links {
+		width: 100%;
+		max-width: 360px;
+	}
+	.page-single-person .person-popular-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+	.page-single-person .person-snapshot-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-auto-rows: 300px;
+		gap: 24px;
+	}
+	.page-single-person .person-video-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+	.page-single-person .person-video-card {
+		width: 100%;
+	}
+}
+
+/* Mobile single-line readable layout. */
+@media (max-width: 767px) {
+	.page-single-person {
+		padding-bottom: 72px;
+	}
+	.page-single-person .person-hero {
+		min-height: auto;
+		padding-top: 24px;
+	}
+	.page-single-person .person-hero__title-row {
+		gap: 8px;
+	}
+	.page-single-person .person-hero__content h1 {
+		font-size: 56px;
+		line-height: 1;
+	}
+	.page-single-person .person-hero__full-name {
+		line-height: 1.5;
+	}
+	.page-single-person .person-hero__meta-item {
+		grid-template-columns: 96px 1fr;
+		column-gap: 12px;
+		font-size: 14px;
+	}
+	.page-single-person .person-about {
+		margin-top: 72px;
+	}
+	.page-single-person .person-section {
+		margin-top: 72px;
+	}
+	.page-single-person .person-popular-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.page-single-person .person-snapshot-grid {
+		grid-template-columns: 1fr;
+		grid-auto-rows: 220px;
+		gap: 16px;
+	}
+	.page-single-person .person-video-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.page-single-person .person-video-card {
+		height: 190px;
+	}
+}

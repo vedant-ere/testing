@@ -14,7 +14,7 @@ get_header();
 	<section class="movie-section">
 		<div class="container">
 			<h2 class="section-title">Upcoming Movies</h2>
-			<div class="movie-grid">
+			<div class="movie-grid movie-grid--scroll-mobile">
 				<?php
 				$upcoming_movies = array(
 					array(
@@ -66,7 +66,7 @@ get_header();
 	<section class="movie-section">
 		<div class="container">
 			<h2 class="section-title">Trending Now</h2>
-			<div class="movie-grid">
+			<div class="movie-grid movie-grid--scroll-mobile">
 				<?php
 				$trending_movies = array(
 					array(

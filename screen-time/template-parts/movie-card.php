@@ -12,7 +12,7 @@ $movie_image    = isset( $args['image'] ) ? $args['image'] : 'assets/images/movi
 ?>
 <article class="movie-card">
 	<div class="movie-card__poster">
-		<img src="<?php echo esc_url( get_template_directory_uri() . '/' . $movie_image ); ?>" alt="<?php echo esc_attr( $movie_title ); ?> poster" width="393" height="524">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/' . $movie_image ); ?>" alt="<?php echo esc_attr( $movie_title ); ?> poster" width="384" height="411">
 	</div>
 	<div class="movie-card__content">
 		<div class="movie-card__row">

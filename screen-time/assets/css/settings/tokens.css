@@ -1,0 +1,60 @@
+:root {
+  --color-text-primary: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.72);
+  --color-header-bg: #1f1f1f;
+  --color-nav-bg: #111111;
+  --color-footer-bg: #24252b;
+  --color-page-bg: #1f1f1f;
+  --color-surface-card: #2a2b30;
+  --color-accent: #d13223;
+  --color-divider: #666666;
+  --color-social-circle: #1a1b20;
+
+  --font-logo: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Heebo', sans-serif;
+
+  --text-12: 0.75rem;
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+  --text-20: 1.25rem;
+  --text-32: 2rem;
+  --text-36: 2.25rem;
+  --text-47: 2.9375rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --lh-100: 1;
+  --lh-24: 1.5;
+  --lh-32: 2;
+
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-56: 3.5rem;
+  --space-64: 4rem;
+
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+  --radius-sm: 4px;
+
+  --container-max: 1440px;
+  --container-gutter: 116px;
+
+  --header-top-height: 120px;
+  --header-nav-height: 48px;
+  --slider-height: 620px;
+
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}

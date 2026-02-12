@@ -1,0 +1,45 @@
+@media (max-width: 1279px) {
+  .site-footer__top {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .site-footer__top {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    padding-bottom: 32px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .site-logo--footer {
+    font-size: var(--text-32);
+    line-height: 40px;
+  }
+
+  .site-footer__heading {
+    margin-top: 24px;
+  }
+
+  .social-list {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .social-list a {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .site-footer__links-col {
+    display: none;
+  }
+
+  .site-footer__bottom {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}

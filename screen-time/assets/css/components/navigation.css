@@ -1,0 +1,20 @@
+.site-header__nav-bar {
+  min-height: var(--header-nav-height);
+  background: var(--color-nav-bg);
+  display: flex;
+  align-items: center;
+}
+
+.site-header__menu {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  padding-block: var(--space-8);
+}
+
+.site-header__menu a {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-16);
+  line-height: var(--lh-32);
+  text-transform: uppercase;
+}

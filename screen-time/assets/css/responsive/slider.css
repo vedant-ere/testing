@@ -1,0 +1,28 @@
+@media (max-width: 1023px) {
+  :root {
+    --slider-height: 320px;
+  }
+
+  .hero-slider__content {
+    padding-top: 52px;
+    max-width: 250px;
+  }
+
+  .hero-slider__title {
+    font-size: 2rem;
+  }
+
+  .hero-slider__description {
+    font-size: var(--text-12);
+  }
+
+  .hero-slider__meta,
+  .hero-slider__tags {
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+
+  .hero-slider__controls {
+    margin-top: 24px; /* appvalue */
+  }
+}

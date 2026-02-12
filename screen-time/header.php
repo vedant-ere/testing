@@ -19,7 +19,9 @@
 	<div class="site-header__top-bar">
 		<div class="container site-header__top-inner">
 			<button class="header-icon-button" type="button" aria-label="Search">
-				<span aria-hidden="true">⌕</span>
+				<span aria-hidden="true">
+                    <img src="images/icons/search.png" alt="" width="16" height="16">
+                </span>
 				<span class="header-action-text">Search</span>
 			</button>
 

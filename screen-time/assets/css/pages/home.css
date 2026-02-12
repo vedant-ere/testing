@@ -14,6 +14,10 @@
   gap: var(--space-16);
 }
 
+.section-title{
+    font-family: var(--font-logo);
+}
+
 @media (width <= 63.9375rem) {
   .page-home .movie-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

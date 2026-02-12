@@ -1,0 +1,19 @@
+/* Person archive page */
+.page-archive-person {
+  padding-bottom: 4.5rem; /* appvalue */
+}
+
+.page-archive-person .movie-section {
+  padding-top: 4.5rem; /* appvalue */
+}
+
+.page-archive-person .person-list {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.page-archive-person .load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-32);
+}

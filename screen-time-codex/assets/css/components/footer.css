@@ -1,0 +1,130 @@
+.site-footer {
+	background: var(--color-footer-bg);
+}
+
+.site-footer__top {
+	display: grid;
+	grid-template-columns: minmax(300px, 1.4fr) 1fr 1fr;
+	gap: 64px;
+	padding-top: 110px;
+	padding-bottom: 80px;
+}
+
+.site-logo--footer {
+	font-size: clamp(2rem, 4vw, var(--text-47));
+	line-height: 1;
+}
+
+.site-footer__heading,
+.site-footer__links-col h2 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: var(--text-16);
+	line-height: 32px;
+	font-weight: var(--weight-bold);
+}
+
+.site-footer__heading {
+	margin-top: 56px;
+}
+
+.social-list {
+	margin-top: var(--space-16);
+	display: flex;
+	gap: var(--space-16);
+}
+
+.social-list a {
+	width: 50px;
+	height: 50px;
+	border-radius: var(--radius-circle);
+	background: var(--color-social-circle);
+	display: grid;
+	place-items: center;
+}
+
+.social-list svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+.site-footer__links-col ul {
+	margin-top: var(--space-16);
+}
+
+.site-footer__links-col li {
+	font-size: var(--text-16);
+	line-height: 40px;
+}
+
+.site-footer__divider {
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.site-footer__bottom {
+	padding-top: var(--space-24);
+	padding-bottom: 64px;
+}
+
+.site-footer__bottom p {
+	margin: 0;
+	font-size: var(--text-16);
+	line-height: 24px;
+	color: var(--color-text-muted);
+	text-align: center;
+}
+
+.site-footer__bottom-links {
+	margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+	.site-footer__top {
+		grid-template-columns: 1fr;
+		gap: 0;
+		padding-top: 48px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+
+	.site-footer__brand-col {
+		display: grid;
+		justify-items: center;
+	}
+
+	.site-footer__links-col {
+		display: none;
+	}
+
+	.site-footer__heading {
+		margin-top: 24px;
+		font-size: 24px;
+	}
+
+	.social-list {
+		margin-top: 20px;
+		justify-content: center;
+		gap: 18px;
+	}
+
+	.social-list a {
+		width: 42px;
+		height: 42px;
+	}
+
+	.social-list svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.site-footer__divider {
+		margin-top: 36px;
+	}
+
+	.site-footer__bottom {
+		padding-top: 24px;
+		padding-bottom: 42px;
+		text-align: center;
+	}
+}

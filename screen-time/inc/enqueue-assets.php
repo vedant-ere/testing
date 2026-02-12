@@ -20,6 +20,41 @@ function screentime_enqueue_assets() {
 		SCREENTIME_VERSION
 	);
 
+	wp_enqueue_style(
+		'screentime-component-header',
+		SCREENTIME_URI . '/assets/css/components/header.css',
+		array( 'screentime-global' ),
+		SCREENTIME_VERSION
+	);
+
+	wp_enqueue_style(
+		'screentime-component-hero-slider',
+		SCREENTIME_URI . '/assets/css/components/hero-slider.css',
+		array( 'screentime-global' ),
+		SCREENTIME_VERSION
+	);
+
+	wp_enqueue_style(
+		'screentime-component-chip',
+		SCREENTIME_URI . '/assets/css/components/chip.css',
+		array( 'screentime-global' ),
+		SCREENTIME_VERSION
+	);
+
+	wp_enqueue_style(
+		'screentime-component-movie-card',
+		SCREENTIME_URI . '/assets/css/components/movie-card.css',
+		array( 'screentime-global' ),
+		SCREENTIME_VERSION
+	);
+
+	wp_enqueue_style(
+		'screentime-component-footer',
+		SCREENTIME_URI . '/assets/css/components/footer.css',
+		array( 'screentime-global' ),
+		SCREENTIME_VERSION
+	);
+
 	if ( is_front_page() ) {
 		wp_enqueue_style(
 			'screentime-page-home',

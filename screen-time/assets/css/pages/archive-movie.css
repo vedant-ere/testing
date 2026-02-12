@@ -7,6 +7,10 @@
   padding-top: 4.5rem; /* appvalue */
 }
 
+.section-title{
+    font-family: var(--font-logo);
+}
+
 .page-archive-movie .archive-toolbar {
   display: flex;
   flex-wrap: wrap;

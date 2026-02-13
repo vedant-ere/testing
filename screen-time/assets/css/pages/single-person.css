@@ -1,3 +1,9 @@
+/**
+ * Screen Time Theme - Single Person Page Stylesheet.
+ *
+ * Controls person profile layout, section grids, and responsive breakpoints.
+ */
+
 /* Page shell spacing. */
 .page-single-person {
 	padding-bottom: 120px;
@@ -83,7 +89,7 @@
 .page-single-person .person-hero__socials svg {
 	width: 20px;
 	height: 20px;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /* About section top spacing. */
@@ -106,7 +112,7 @@
 }
 
 .page-single-person .person-about__content a {
-	color: #E46D62;
+	color: #e46d62;
 	text-decoration: underline;
 	text-underline-offset: 2px;
 	text-decoration-thickness: 1px;
@@ -231,38 +237,47 @@
 
 /* Tablet adaptation with fluid columns. */
 @media (max-width: 1279px) {
+
 	.page-single-person .person-hero__inner {
 		grid-template-columns: 1fr;
 		row-gap: 32px;
 	}
+
 	.page-single-person .person-hero__image {
 		width: 100%;
 		max-width: 488px;
 		height: auto;
 	}
+
 	.page-single-person .person-hero__content {
 		padding-top: 0;
 	}
+
 	.page-single-person .person-about__grid {
 		grid-template-columns: 1fr;
 		row-gap: 40px;
 	}
+
 	.page-single-person .person-about__quick-links {
 		width: 100%;
 		max-width: 360px;
 	}
+
 	.page-single-person .person-popular-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-person .person-snapshot-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-person .person-video-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-person .person-video-card {
 		width: 100%;
 	}
@@ -274,6 +289,7 @@
 
 /* Mobile single-line readable layout. */
 @media (max-width: 767px) {
+
 	.page-single-person .container {
 		padding-inline: 24px;
 	}
@@ -281,46 +297,56 @@
 	.page-single-person {
 		padding-bottom: 56px;
 	}
+
 	.page-single-person .person-hero {
 		min-height: auto;
 		padding-top: 16px;
 	}
+
 	.page-single-person .person-hero__inner {
 		row-gap: 14px;
 	}
+
 	.page-single-person .person-hero__image-wrap {
 		display: flex;
 		justify-content: center;
 	}
+
 	.page-single-person .person-hero__image {
 		width: 244px;
 		height: 286px;
 		max-width: none;
 	}
+
 	.page-single-person .person-hero__title-row {
 		gap: 4px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
+
 	.page-single-person .person-hero__content h1 {
 		font-size: 32px;
 		line-height: 40px;
 	}
+
 	.page-single-person .person-hero__full-name {
 		font-size: 12px;
 		line-height: 18px;
 		text-align: center;
 	}
+
 	.page-single-person .person-hero__content {
 		padding-top: 0;
 	}
+
 	.page-single-person .person-hero__meta-item {
 		grid-template-columns: 92px 1fr;
 		column-gap: 12px;
 		font-size: 14px;
 		line-height: 20px;
 	}
+
 	.page-single-person .person-hero__meta-list {
 		margin-top: 14px;
 		max-width: none;
@@ -328,26 +354,33 @@
 		margin-inline: 0;
 		row-gap: 12px;
 	}
+
 	.page-single-person .person-hero__meta-item > :first-child {
 		color: var(--color-text-muted);
 	}
+
 	.page-single-person .person-hero__meta-item > :last-child {
 		text-align: right;
 	}
+
 	.page-single-person .person-about {
 		margin-top: 32px;
 	}
+
 	.page-single-person .person-about__quick-links {
 		display: none;
 	}
+
 	.page-single-person .person-about__content p {
 		margin-bottom: 14px;
 		font-size: 14px;
 		line-height: 24px;
 	}
+
 	.page-single-person .person-section {
 		margin-top: 32px;
 	}
+
 	.page-single-person .person-popular-grid {
 		grid-template-columns: none;
 		grid-auto-flow: column;
@@ -359,45 +392,56 @@
 		scroll-snap-type: x proximity;
 		padding-bottom: 32px;
 		scrollbar-width: thin;
-		scrollbar-color: #D13223 rgba(255, 255, 255, 0.18);
+		scrollbar-color: #d13223 rgba(255, 255, 255, 0.18);
 	}
+
 	.page-single-person .person-popular-grid > * {
 		scroll-snap-align: start;
 	}
+
 	.page-single-person .person-popular-grid::-webkit-scrollbar {
 		height: 4px;
 	}
+
 	.page-single-person .person-popular-grid::-webkit-scrollbar-track {
 		background: rgba(255, 255, 255, 0.18);
 	}
+
 	.page-single-person .person-popular-grid::-webkit-scrollbar-thumb {
-		background: #D13223;
+		background: #d13223;
 	}
+
 	.page-single-person .person-popular-grid .movie-card {
 		width: 155px;
 		height: 240px;
 	}
+
 	.page-single-person .person-popular-grid .movie-card__poster {
 		width: 155px;
 		height: 166px;
 		aspect-ratio: auto;
 	}
+
 	.page-single-person .person-popular-grid .movie-card__content {
 		padding: 8px;
 	}
+
 	.page-single-person .person-popular-grid .movie-card__row {
 		margin-bottom: 4px;
 		column-gap: 6px;
 	}
+
 	.page-single-person .person-popular-grid .movie-card__title {
 		font-size: 11px;
 		line-height: 1.2;
 	}
+
 	.page-single-person .person-popular-grid .movie-card__runtime,
 	.page-single-person .person-popular-grid .movie-card__subtitle {
 		font-size: 7px;
 		line-height: 1.2;
 	}
+
 	.page-single-person .person-snapshot-grid {
 		grid-template-columns: 1fr;
 		grid-auto-rows: 231.440872px;
@@ -409,10 +453,12 @@
 		height: 231.440872px;
 		aspect-ratio: auto;
 	}
+
 	.page-single-person .person-video-grid {
 		grid-template-columns: 1fr;
 		gap: 10px;
 	}
+
 	.page-single-person .person-video-card {
 		aspect-ratio: 384 / 126;
 		height: auto;

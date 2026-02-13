@@ -1,3 +1,8 @@
+/**
+ * Screen Time Theme - Header Component Stylesheet.
+ *
+ * Styles desktop and mobile header, navigation, and off-canvas menu elements.
+ */
 .site-header {
 	position: relative;
 	z-index: 30;
@@ -95,6 +100,14 @@
 	object-fit: contain;
 }
 
+.header-menu-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: clamp(2.125rem, 7vw, 2.5rem);
+	height: clamp(2.125rem, 7vw, 2.5rem);
+}
+
 .header-icon-button:hover,
 .header-icon-button:focus-visible,
 .header-action-link:hover,
@@ -104,14 +117,6 @@
 .header-menu-toggle:hover,
 .header-menu-toggle:focus-visible {
 	color: var(--color-accent);
-}
-
-.header-menu-toggle {
-	display: none;
-	align-items: center;
-	justify-content: center;
-	width: clamp(2.125rem, 7vw, 2.5rem);
-	height: clamp(2.125rem, 7vw, 2.5rem);
 }
 
 .site-header__nav-bar {
@@ -265,6 +270,7 @@
 }
 
 @media (max-width: 900px) {
+
 	:root {
 		--container-gutter: clamp(1rem, 5vw, 2rem);
 	}
@@ -275,8 +281,16 @@
 }
 
 @media (max-width: 767px) {
+
+	.site-header__top-bar {
+		min-height: 105px;
+		background: #2a2a2a;
+	}
+
 	.site-header__top-inner {
 		min-height: clamp(4.5rem, 18vw, 6.2rem);
+		background: #2a2a2a;
+
 	}
 
 	.header-icon-button .header-action-text,
@@ -314,6 +328,7 @@
 }
 
 @media (min-width: 768px) {
+
 	.mobile-menu {
 		display: none !important;
 	}

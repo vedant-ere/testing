@@ -1,81 +1,88 @@
-/* Movie archive page */
+/**
+ * Screen Time Theme - Movie Archive Page Stylesheet.
+ *
+ * Defines archive grid layout, title accents, filters, and pagination styling.
+ */
 .page-archive-movie {
-  padding-bottom: 4.5rem; /* appvalue */
+	padding-bottom: 4.5rem;
 }
 
 .page-archive-movie .movie-section {
-  padding-top: 4.5rem; /* appvalue */
+	padding-top: 4.5rem;
 }
 
-.section-title{
-    font-family: var(--font-logo);
+.section-title {
+	font-family: var(--font-logo);
 }
 
 .page-archive-movie .archive-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-12);
-  margin-bottom: var(--space-24);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-12);
+	margin-bottom: var(--space-24);
 }
 
 .page-archive-movie .movie-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-16);
-  margin-top: 48px;
+	display: grid;
+	grid-template-columns: repeat(3, 384px);
+	justify-content: space-between;
+	gap: var(--space-16);
+	margin-top: 48px;
 }
 
 .page-archive-movie .section-title--page {
-  font-family: var(--font-logo);
+	font-family: var(--font-logo);
 }
 
 .page-archive-movie .section-title--page::before {
-  width: 4px;
-  height: 72px;
+	width: 4px;
+	height: 72px;
 }
 
 .page-archive-movie .archive-pagination {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-8);
-  margin-top: var(--space-32);
+	display: flex;
+	justify-content: center;
+	gap: var(--space-8);
+	margin-top: var(--space-32);
 }
 
 .page-archive-movie .archive-pagination__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 0.0625rem solid rgb(255 255 255 / 45%);
-  border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border: 0.0625rem solid rgb(255 255 255 / 45%);
+	border-radius: 50%;
 }
 
 .page-archive-movie .archive-pagination__link--active {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+	color: var(--color-accent);
+	border-color: var(--color-accent);
 }
 
 .page-archive-movie .archive-pagination__link:hover,
 .page-archive-movie .archive-pagination__link:focus-visible {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  background: rgba(209, 50, 35, 0.1);
+	color: var(--color-accent);
+	border-color: var(--color-accent);
+	background: rgba(209, 50, 35, 0.1);
 }
 
 @media (width <= 63.9375rem) {
-  .page-archive-movie .movie-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+
+	.page-archive-movie .movie-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
 @media (width <= 39.9375rem) {
-  .page-archive-movie .container {
-    padding-inline: 24px;
-  }
 
-  .page-archive-movie .movie-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
-  }
+	.page-archive-movie .container {
+		padding-inline: 24px;
+	}
+
+	.page-archive-movie .movie-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 15px;
+	}
 }

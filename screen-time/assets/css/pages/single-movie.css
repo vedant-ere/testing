@@ -1,3 +1,9 @@
+/**
+ * Screen Time Theme - Single Movie Page Stylesheet.
+ *
+ * Controls movie detail layout, section grids, and responsive breakpoints.
+ */
+
 /* Page shell spacing. */
 .page-single-movie {
 	padding-bottom: 0;
@@ -408,6 +414,7 @@
 
 /* Tablet responsiveness for page grids. */
 @media (max-width: 1279px) {
+
 	.page-single-movie .movie-single-section__heading {
 		flex-wrap: wrap;
 		gap: 12px;
@@ -427,31 +434,38 @@
 		grid-template-columns: 1fr;
 		row-gap: 32px;
 	}
+
 	.page-single-movie .movie-single-hero__poster {
 		width: 100%;
 		height: auto;
 		max-width: 552px;
 	}
+
 	.page-single-movie .movie-single-hero__content {
 		max-width: 100%;
 		padding-top: 0;
 	}
+
 	.page-single-movie .movie-single-hero__content h1 {
 		font-size: 72px;
 		line-height: 1.05;
 	}
+
 	.page-single-movie .movie-single-body__grid {
 		grid-template-columns: 1fr;
 		row-gap: 40px;
 	}
+
 	.page-single-movie .movie-single-body__quick-links {
 		width: 100%;
 		max-width: 360px;
 	}
+
 	.page-single-movie .movie-cast-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-movie .movie-cast-card,
 	.page-single-movie .movie-cast-card img,
 	.page-single-movie .movie-snapshot-grid img,
@@ -459,18 +473,22 @@
 	.page-single-movie .movie-review-card {
 		width: 100%;
 	}
+
 	.page-single-movie .movie-snapshot-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-movie .movie-trailer-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 24px;
 	}
+
 	.page-single-movie .movie-review-grid {
 		grid-template-columns: 1fr;
 		gap: 24px;
 	}
+
 	.page-single-movie .movie-review-form__row {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		column-gap: 24px;
@@ -479,6 +497,7 @@
 
 /* Mobile layout with single-line visibility. */
 @media (max-width: 767px) {
+
 	.page-single-movie .container {
 		padding-inline: 24px;
 	}
@@ -493,8 +512,11 @@
 	}
 
 	.page-single-movie .movie-single-hero__poster {
-		max-width: 100%;
-		width: 100%;
+		width: 100vw;
+		max-width: none;
+		height: 286px;
+		object-fit: cover;
+		margin-inline: calc(50% - 50vw);
 	}
 
 	.page-single-movie .movie-single-hero__content {
@@ -505,29 +527,35 @@
 		font-size: var(--text-32);
 		line-height: 1;
 	}
+
 	.page-single-movie .movie-single-hero__rating-row {
 		gap: 10px;
 		margin-top: 14px;
 		font-size: var(--text-14);
 	}
+
 	.page-single-movie .movie-single-hero__description {
 		margin-top: 14px;
 		font-size: var(--text-14);
 		line-height: 1.7;
 	}
+
 	.page-single-movie .movie-single-hero__genres {
 		margin-top: 16px;
 		gap: 6px;
 	}
+
 	.page-single-movie .movie-single-hero__genres li {
 		height: 30px;
 		padding: 6px 12px;
 		font-size: 12px;
 	}
+
 	.page-single-movie .movie-single-hero__directors {
 		margin-top: 20px;
 		font-size: var(--text-14);
 	}
+
 	.page-single-movie .movie-single-body {
 		margin-top: 42px;
 	}
@@ -545,6 +573,7 @@
 	.page-single-movie .movie-single-section {
 		margin-top: 52px;
 	}
+
 	.page-single-movie .movie-single-section__heading {
 		align-items: baseline;
 	}
@@ -557,6 +586,7 @@
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 16px;
 	}
+
 	.page-single-movie .movie-cast-card,
 	.page-single-movie .movie-cast-card img,
 	.page-single-movie .movie-trailer-card,
@@ -564,72 +594,90 @@
 		width: 100%;
 		max-width: 100%;
 	}
+
 	.page-single-movie .movie-cast-card {
 		height: auto;
 	}
+
 	.page-single-movie .movie-cast-card img {
 		height: 160px;
 	}
+
 	.page-single-movie .movie-cast-card h3 {
 		height: 54px;
 		font-size: 14px;
 	}
+
 	.page-single-movie .movie-snapshot-grid {
 		grid-template-columns: 1fr;
 		gap: 16px;
 	}
+
 	.page-single-movie .movie-snapshot-grid img {
 		width: 100%;
 		height: 231.4408721923828px;
 		object-fit: cover;
 	}
+
 	.page-single-movie .movie-trailer-grid {
 		grid-template-columns: 1fr;
 		gap: 16px;
 	}
+
 	.page-single-movie .movie-trailer-card {
 		aspect-ratio: 384 / 190;
 		height: auto;
 	}
+
 	.page-single-movie .movie-review-grid {
 		grid-template-columns: 1fr;
 		gap: 16px;
 	}
+
 	.page-single-movie .movie-review-card {
 		height: auto;
 		min-height: 260px;
 		padding: 16px;
 	}
+
 	.page-single-movie .movie-review-card__author {
 		font-size: var(--text-14);
 	}
+
 	.page-single-movie .movie-review-card__text {
 		margin-top: 14px;
 		font-size: var(--text-14);
 	}
+
 	.page-single-movie .movie-review-form {
 		max-width: 100%;
 	}
+
 	.page-single-movie .movie-review-form h2 {
 		font-size: var(--text-32);
 		line-height: 1;
 	}
+
 	.page-single-movie .movie-review-form p,
 	.page-single-movie .movie-review-form label {
 		font-size: var(--text-14);
 	}
+
 	.page-single-movie .movie-review-form textarea {
 		height: 110px;
 	}
+
 	.page-single-movie .movie-review-form__row {
 		grid-template-columns: 1fr;
 		column-gap: 0;
 		row-gap: 16px;
 		margin-top: 24px;
 	}
+
 	.page-single-movie .movie-review-form button {
 		width: 100%;
 	}
+
 	.page-single-movie .movie-single-form {
 		margin-top: 52px;
 		margin-bottom: 56px;

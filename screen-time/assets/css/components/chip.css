@@ -1,3 +1,8 @@
+/**
+ * Screen Time Theme - Chip Component Stylesheet.
+ *
+ * Styles reusable chips used for labels, filters, and genre tags.
+ */
 .chip {
 	display: inline-flex;
 	align-items: center;
@@ -41,12 +46,14 @@
 }
 
 @media (max-width: 1023px) {
+
 	.chip--sm {
 		font-size: 14px;
 	}
 }
 
 @media (max-width: 767px) {
+
 	.chip {
 		height: 34px;
 		min-width: 70px;

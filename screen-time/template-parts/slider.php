@@ -32,6 +32,12 @@ $slides = array(
 		'title'       => 'The Witcher',
 		'description' => 'Geralt of Rivia, a mutated monster hunter for hire, journeys toward his destiny in a turbulent world.',
 	),
+	array(
+		'image'       => 'assets/images/slider/black-adam.png',
+		'alt'         => 'Black Adam hero image',
+		'title'       => 'Black Adam',
+		'description' => 'a powerful, empowered by gods who protects using brutal justice rather than traditional heroism',
+	),
 );
 ?>
 <section class="hero-slider" role="region" aria-label="Featured movies slider" data-slider>
@@ -51,11 +57,7 @@ $slides = array(
 							<span>PG-13</span>•
 							<span>3h 1m</span>
 						</div>
-						<div class="hero-slider__tags">
-							<button class="chip chip--outline chip--sm" type="button">Action</button>
-							<button class="chip chip--outline chip--sm" type="button">Adventure</button>
-							<button class="chip chip--outline chip--sm" type="button">Drama</button>
-						</div>
+				
 					</div>
 				</div>
 			</article>

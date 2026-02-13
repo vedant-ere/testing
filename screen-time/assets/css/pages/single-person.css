@@ -1,6 +1,7 @@
 /* Page shell spacing. */
 .page-single-person {
 	padding-bottom: 120px;
+	overflow-x: hidden;
 }
 
 /* Hero block size from spec. */
@@ -69,6 +70,22 @@
 	column-gap: 16px;
 }
 
+.page-single-person .person-hero__socials {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.page-single-person .person-hero__socials a {
+	display: inline-flex;
+}
+
+.page-single-person .person-hero__socials svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
 /* About section top spacing. */
 .page-single-person .person-about {
 	margin-top: 120px;
@@ -88,6 +105,13 @@
 	line-height: 2;
 }
 
+.page-single-person .person-about__content a {
+	color: #E46D62;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
+}
+
 /* Quick links panel size and padding. */
 .page-single-person .person-about__quick-links {
 	width: 280px;
@@ -100,8 +124,10 @@
 .page-single-person .person-about__quick-links h2 {
 	margin: 0;
 	font-family: var(--font-logo);
-	font-size: 52px;
-	line-height: 1;
+	font-size: 32px;
+	font-weight: var(--weight-bold);
+	line-height: 72px;
+	letter-spacing: 0;
 }
 
 /* Quick links list spacing. */
@@ -113,7 +139,7 @@
 
 /* Quick links item gap. */
 .page-single-person .person-about__quick-links li {
-	margin-top: 32px;
+	margin-top: 24px;
 }
 
 /* Quick links arrow marker. */
@@ -130,7 +156,7 @@
 /* Popular movies always 3 columns desktop. */
 .page-single-person .person-popular-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 384px);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 32px;
 	margin-top: 24px;
 }
@@ -138,31 +164,32 @@
 /* Snapshot grid matches single movie layout. */
 .page-single-person .person-snapshot-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 592px);
-	grid-auto-rows: 419px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 32px;
 	margin-top: 24px;
 }
 
 /* Snapshot image fixed sizing. */
 .page-single-person .person-snapshot-grid img {
-	width: 592px;
-	height: 419px;
+	width: 100%;
+	aspect-ratio: 592 / 419;
+	height: auto;
 	object-fit: cover;
 }
 
 /* Video grid matches single movie layout. */
 .page-single-person .person-video-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 384px);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 32px;
 	margin-top: 24px;
 }
 
 /* Video card shell and overlay icon. */
 .page-single-person .person-video-card {
-	width: 384px;
-	height: 246px;
+	width: 100%;
+	aspect-ratio: 384 / 246;
+	height: auto;
 	padding: 0;
 	border: 0;
 	position: relative;
@@ -186,8 +213,20 @@
 	margin: -28px 0 0 -28px;
 	border-radius: 50%;
 	background: var(--color-accent);
+	color: #fff;
 	display: grid;
 	place-items: center;
+}
+
+.page-single-person .person-about__quick-links a:hover,
+.page-single-person .person-about__quick-links a:focus-visible {
+	color: #f16557;
+}
+
+.page-single-person .person-video-card:hover .person-video-card__play,
+.page-single-person .person-video-card:focus-visible .person-video-card__play {
+	transform: scale(1.08);
+	background: #f16557;
 }
 
 /* Tablet adaptation with fluid columns. */
@@ -218,7 +257,6 @@
 	}
 	.page-single-person .person-snapshot-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-auto-rows: 300px;
 		gap: 24px;
 	}
 	.page-single-person .person-video-grid {
@@ -228,52 +266,155 @@
 	.page-single-person .person-video-card {
 		width: 100%;
 	}
+
+	.page-single-person .person-snapshot-grid img {
+		height: auto;
+	}
 }
 
 /* Mobile single-line readable layout. */
 @media (max-width: 767px) {
+	.page-single-person .container {
+		padding-inline: 24px;
+	}
+
 	.page-single-person {
-		padding-bottom: 72px;
+		padding-bottom: 56px;
 	}
 	.page-single-person .person-hero {
 		min-height: auto;
-		padding-top: 24px;
+		padding-top: 16px;
+	}
+	.page-single-person .person-hero__inner {
+		row-gap: 14px;
+	}
+	.page-single-person .person-hero__image-wrap {
+		display: flex;
+		justify-content: center;
+	}
+	.page-single-person .person-hero__image {
+		width: 244px;
+		height: 286px;
+		max-width: none;
 	}
 	.page-single-person .person-hero__title-row {
-		gap: 8px;
+		gap: 4px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	.page-single-person .person-hero__content h1 {
-		font-size: 56px;
-		line-height: 1;
+		font-size: 32px;
+		line-height: 40px;
 	}
 	.page-single-person .person-hero__full-name {
-		line-height: 1.5;
+		font-size: 12px;
+		line-height: 18px;
+		text-align: center;
+	}
+	.page-single-person .person-hero__content {
+		padding-top: 0;
 	}
 	.page-single-person .person-hero__meta-item {
-		grid-template-columns: 96px 1fr;
+		grid-template-columns: 92px 1fr;
 		column-gap: 12px;
 		font-size: 14px;
+		line-height: 20px;
+	}
+	.page-single-person .person-hero__meta-list {
+		margin-top: 14px;
+		max-width: none;
+		width: 100%;
+		margin-inline: 0;
+		row-gap: 12px;
+	}
+	.page-single-person .person-hero__meta-item > :first-child {
+		color: var(--color-text-muted);
+	}
+	.page-single-person .person-hero__meta-item > :last-child {
+		text-align: right;
 	}
 	.page-single-person .person-about {
-		margin-top: 72px;
+		margin-top: 32px;
+	}
+	.page-single-person .person-about__quick-links {
+		display: none;
+	}
+	.page-single-person .person-about__content p {
+		margin-bottom: 14px;
+		font-size: 14px;
+		line-height: 24px;
 	}
 	.page-single-person .person-section {
-		margin-top: 72px;
+		margin-top: 32px;
 	}
 	.page-single-person .person-popular-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: none;
+		grid-auto-flow: column;
+		grid-auto-columns: 155px;
 		gap: 16px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x proximity;
+		padding-bottom: 32px;
+		scrollbar-width: thin;
+		scrollbar-color: #D13223 rgba(255, 255, 255, 0.18);
+	}
+	.page-single-person .person-popular-grid > * {
+		scroll-snap-align: start;
+	}
+	.page-single-person .person-popular-grid::-webkit-scrollbar {
+		height: 4px;
+	}
+	.page-single-person .person-popular-grid::-webkit-scrollbar-track {
+		background: rgba(255, 255, 255, 0.18);
+	}
+	.page-single-person .person-popular-grid::-webkit-scrollbar-thumb {
+		background: #D13223;
+	}
+	.page-single-person .person-popular-grid .movie-card {
+		width: 155px;
+		height: 240px;
+	}
+	.page-single-person .person-popular-grid .movie-card__poster {
+		width: 155px;
+		height: 166px;
+		aspect-ratio: auto;
+	}
+	.page-single-person .person-popular-grid .movie-card__content {
+		padding: 8px;
+	}
+	.page-single-person .person-popular-grid .movie-card__row {
+		margin-bottom: 4px;
+		column-gap: 6px;
+	}
+	.page-single-person .person-popular-grid .movie-card__title {
+		font-size: 11px;
+		line-height: 1.2;
+	}
+	.page-single-person .person-popular-grid .movie-card__runtime,
+	.page-single-person .person-popular-grid .movie-card__subtitle {
+		font-size: 7px;
+		line-height: 1.2;
 	}
 	.page-single-person .person-snapshot-grid {
 		grid-template-columns: 1fr;
-		grid-auto-rows: 220px;
+		grid-auto-rows: 231.440872px;
 		gap: 16px;
+	}
+
+	.page-single-person .person-snapshot-grid img {
+		width: 100%;
+		height: 231.440872px;
+		aspect-ratio: auto;
 	}
 	.page-single-person .person-video-grid {
 		grid-template-columns: 1fr;
-		gap: 16px;
+		gap: 10px;
 	}
 	.page-single-person .person-video-card {
-		height: 190px;
+		aspect-ratio: 384 / 126;
+		height: auto;
 	}
 }

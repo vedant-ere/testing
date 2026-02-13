@@ -2,9 +2,17 @@
 /**
  * Static featured slider (Phase 1).
  *
+ * Expects front-page JavaScript (`assets/js/slider.js`) to read `data-*`
+ * attributes and control active slide state, dots, and arrow navigation.
+ *
  * @package ScreenTime
  */
 
+/**
+ * Static slide payload for the home hero.
+ *
+ * @var array<int, array<string, string>> $slides
+ */
 $slides = array(
 	array(
 		'image'       => 'assets/images/slider/avengers-endgame.png',
@@ -54,12 +62,10 @@ $slides = array(
 		<?php endforeach; ?>
 	</div>
 	<div class="hero-slider__controls">
-		<button class="hero-slider__arrow" type="button" data-slider-prev aria-label="Previous slide">←</button>
 		<div class="hero-slider__dots" role="tablist" aria-label="Slider navigation dots">
 			<?php foreach ( $slides as $index => $slide ) : ?>
 				<button class="hero-slider__dot" type="button" role="tab" aria-label="Go to slide <?php echo esc_attr( (string) ( $index + 1 ) ); ?>" aria-current="<?php echo 0 === $index ? 'true' : 'false'; ?>" data-slider-dot="<?php echo esc_attr( (string) $index ); ?>"></button>
 			<?php endforeach; ?>
 		</div>
-		<button class="hero-slider__arrow" type="button" data-slider-next aria-label="Next slide">→</button>
 	</div>
 </section>

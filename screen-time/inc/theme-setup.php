@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme setup.
+ * Theme setup hooks.
  *
  * @package ScreenTime
  */
@@ -8,7 +8,10 @@
 add_action( 'after_setup_theme', 'screentime_theme_setup' );
 
 /**
- * Register supports and menus.
+ * Register theme supports and nav menus.
+ *
+ * Centralizes all `after_setup_theme` capabilities so templates can assume
+ * basic features (title tags, thumbnails, HTML5 markup, and menu locations).
  *
  * @return void
  */

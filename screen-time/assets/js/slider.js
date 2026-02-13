@@ -1,3 +1,9 @@
+/**
+ * Home hero slider controller.
+ *
+ * Powers slide transitions, dot navigation, arrow controls, and autoplay
+ * lifecycle behavior (hover/focus pause plus visibility-state handling).
+ */
 (() => {
 	const slider = document.querySelector('[data-slider]');
 
@@ -9,8 +15,11 @@
 	const dots = Array.from(slider.querySelectorAll('[data-slider-dot]'));
 	const prevButton = slider.querySelector('[data-slider-prev]');
 	const nextButton = slider.querySelector('[data-slider-next]');
+	const autoplayDelay = 4500;
 	let index = 0;
+	let autoplayTimer = null;
 
+	// Circularly wraps indexes so prev/next can loop infinitely.
 	const render = (newIndex) => {
 		index = (newIndex + slides.length) % slides.length;
 
@@ -28,6 +37,24 @@
 	const next = () => render(index + 1);
 	const prev = () => render(index - 1);
 
+	// Start autoplay only when useful and only once.
+	const startAutoplay = () => {
+		if (autoplayTimer || slides.length < 2) {
+			return;
+		}
+
+		autoplayTimer = setInterval(next, autoplayDelay);
+	};
+
+	const stopAutoplay = () => {
+		if (!autoplayTimer) {
+			return;
+		}
+
+		clearInterval(autoplayTimer);
+		autoplayTimer = null;
+	};
+
 	if (prevButton) {
 		prevButton.addEventListener('click', prev);
 	}
@@ -38,6 +65,20 @@
 
 	dots.forEach((dot, dotIndex) => {
 		dot.addEventListener('click', () => render(dotIndex));
+	});
+
+	slider.addEventListener('mouseenter', stopAutoplay);
+	slider.addEventListener('mouseleave', startAutoplay);
+	slider.addEventListener('focusin', stopAutoplay);
+	slider.addEventListener('focusout', startAutoplay);
+
+	document.addEventListener('visibilitychange', () => {
+		if (document.hidden) {
+			stopAutoplay();
+			return;
+		}
+
+		startAutoplay();
 	});
 
 	document.addEventListener('keydown', (event) => {
@@ -51,4 +92,5 @@
 	});
 
 	render(0);
+	startAutoplay();
 })();

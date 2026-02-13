@@ -2,9 +2,21 @@
 /**
  * Static person card.
  *
+ * Accepts `$args` from `get_template_part()` with optional keys:
+ * `name`, `role`, `dob`, `bio`, and `image`.
+ *
  * @package ScreenTime
  */
 
+/**
+ * Normalize person card fields with fallback placeholders.
+ *
+ * @var string $person_name
+ * @var string $person_role
+ * @var string $person_dob
+ * @var string $person_bio
+ * @var string $person_image
+ */
 $person_name  = isset( $args['name'] ) ? $args['name'] : 'Actor Name';
 $person_role  = isset( $args['role'] ) ? $args['role'] : '';
 $person_dob   = isset( $args['dob'] ) ? $args['dob'] : 'Born - 01 Jan 1970';

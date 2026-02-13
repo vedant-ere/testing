@@ -63,3 +63,41 @@
 		aspect-ratio: 384 / 411;
 	}
 }
+
+@media (max-width: 767px) {
+	.movie-card {
+		width: 100%;
+		min-height: 240px;
+	}
+
+	.movie-card__poster {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 156 / 166.96875;
+	}
+
+	.movie-card__content {
+		padding: 8px;
+	}
+
+	.movie-card__row {
+		column-gap: 6px;
+		margin-bottom: 12px;
+	}
+
+	.movie-card__title {
+		font-family: var(--font-body);
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.movie-card__runtime,
+	.movie-card__subtitle {
+		font-family: var(--font-body);
+		font-size: 8px;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0;
+	}
+}

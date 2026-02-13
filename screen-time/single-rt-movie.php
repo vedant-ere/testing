@@ -12,7 +12,7 @@ get_header();
 	<section class="movie-single-hero" id="top">
 		<div class="container movie-single-hero__inner">
 			<div class="movie-single-hero__poster-wrap">
-				<img class="movie-single-hero__poster" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/avengers-endgame-poster.jpg' ); ?>" alt="Avengers Endgame poster" width="552" height="876">
+				<img class="movie-single-hero__poster" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/avengers-endgame.png' ); ?>" alt="Avengers Endgame poster" width="552" height="876">
 			</div>
 			<div class="movie-single-hero__content">
 				<h1>Avengers: Endgame</h1>
@@ -50,17 +50,25 @@ get_header();
 		<div class="container">
 			<div class="movie-single-section__heading"><h2 class="section-title">Cast &amp; Crew</h2><a href="#" class="movie-single-section__view-all">View All →</a></div>
 			<div class="movie-cast-grid">
-				<?php $cast = array(
-					array('Robert Downey Jr.', 'robert-downey-jr.jpg'),
-					array('Chris Evans', 'chris-evans.jpg'),
-					array('Mark Ruffalo', 'mark-ruffalo.jpg'),
-					array('Chris Hemsworth', 'chris-hemsworth.jpg'),
-					array('Jeremy Renner', 'jeremy-renner.jpg'),
-					array('Scarlett Johansson', 'scarlett-johansson.jpg'),
-					array('Elizabeth Olsen', 'elizabeth-olsen.jpg'),
-					array('Tom Hiddleston', 'tom-hiddleston.jpg'),
-				); foreach ($cast as $person) : ?>
-				<article class="movie-cast-card"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/people/' . $person[1] ); ?>" alt="<?php echo esc_attr($person[0]); ?>" width="280" height="248"><h3><?php echo esc_html($person[0]); ?></h3></article>
+				<?php
+				/**
+				 * Static cast list mapped to local profile images.
+				 *
+				 * @var array<int, array<int, string>> $cast
+				 */
+				$cast = array(
+					array( 'Robert Downey Jr.', 'robert-downey-jr.png' ),
+					array( 'Chris Evans', 'chris-evans.png' ),
+					array( 'Mark Ruffalo', 'mark-ruffalo.png' ),
+					array( 'Chris Hemsworth', 'chris-hemsworth.png' ),
+					array( 'Jeremy Renner', 'jeremy-renner.png' ),
+					array( 'Scarlett Johansson', 'scarlett-johansson.png' ),
+					array( 'Elizabeth Olsen', 'elizabeth-olsen.png' ),
+					array( 'Tom Hiddleston', 'tom-hiddleston.png' ),
+				);
+				foreach ( $cast as $person ) :
+					?>
+				<article class="movie-cast-card"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/people/' . $person[1] ); ?>" alt="<?php echo esc_attr( $person[0] ); ?>" width="280" height="248"><h3><?php echo esc_html( $person[0] ); ?></h3></article>
 				<?php endforeach; ?>
 			</div>
 		</div>
@@ -70,8 +78,9 @@ get_header();
 		<div class="container">
 			<h2 class="section-title">Snapshots</h2>
 			<div class="movie-snapshot-grid">
-				<?php for ($i=1; $i<=6; $i++) : ?>
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/snapshot-' . $i . '.jpg' ); ?>" alt="Snapshot <?php echo esc_attr((string)$i); ?>" width="592" height="419">
+				<?php // Render six static snapshot frames from numbered assets. ?>
+				<?php for ( $i = 1; $i <= 6; $i++ ) : ?>
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/avengers-' . $i . '.png' ); ?>" alt="Snapshot <?php echo esc_attr( (string) $i ); ?>" width="592" height="419">
 				<?php endfor; ?>
 			</div>
 		</div>
@@ -81,8 +90,9 @@ get_header();
 		<div class="container">
 			<h2 class="section-title">Trailer &amp; Clips</h2>
 			<div class="movie-trailer-grid">
-				<?php for ($i=1; $i<=3; $i++) : ?>
-				<button type="button" class="movie-trailer-card" aria-label="Play trailer <?php echo esc_attr((string)$i); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/trailer-' . $i . '.jpg' ); ?>" alt="Trailer <?php echo esc_attr((string)$i); ?>" width="384" height="246"><span class="movie-trailer-card__play" aria-hidden="true">▶</span></button>
+				<?php // Render three trailer cards from numbered thumbnail assets. ?>
+				<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
+				<button type="button" class="movie-trailer-card" aria-label="Play trailer <?php echo esc_attr( (string) $i ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/movies/trailer-' . $i . '.png' ); ?>" alt="Trailer <?php echo esc_attr( (string) $i ); ?>" width="384" height="246"><span class="movie-trailer-card__play" aria-hidden="true">▶</span></button>
 				<?php endfor; ?>
 			</div>
 		</div>
@@ -92,8 +102,16 @@ get_header();
 		<div class="container">
 			<h2 class="section-title">Reviews</h2>
 			<div class="movie-review-grid">
-				<?php $names = array('Maria Russo','Nathan Tyler','Natalie Dyer','Anna Harris'); foreach ($names as $name) : ?>
-				<article class="movie-review-card"><p class="movie-review-card__author"><span class="movie-review-card__icon" aria-hidden="true">◔</span><?php echo esc_html($name); ?></p><p class="movie-review-card__text">Where to begin, where to begin! You know a movie is outstanding when the end credits alone are more epic than the majority of films released in the last 20 years.</p><p class="movie-review-card__date">12 Dec 2022</p></article>
+				<?php
+				/**
+				 * Static reviewer names used for placeholder review cards.
+				 *
+				 * @var array<int, string> $reviewer_names
+				 */
+				$reviewer_names = array( 'Maria Russo', 'Nathan Tyler', 'Natalie Dyer', 'Anna Harris' );
+				foreach ( $reviewer_names as $name ) :
+					?>
+				<article class="movie-review-card"><p class="movie-review-card__author"><span class="movie-review-card__icon" aria-hidden="true">◔</span><?php echo esc_html( $name ); ?></p><p class="movie-review-card__text">Where to begin, where to begin! You know a movie is outstanding when the end credits alone are more epic than the majority of films released in the last 20 years.</p><p class="movie-review-card__date">12 Dec 2022</p></article>
 				<?php endforeach; ?>
 			</div>
 		</div>

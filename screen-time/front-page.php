@@ -16,6 +16,11 @@ get_header();
 			<h2 class="section-title">Upcoming Movies</h2>
 			<div class="movie-grid movie-grid--scroll-mobile">
 				<?php
+				/**
+				 * Static card dataset for the upcoming movies section.
+				 *
+				 * @var array<int, array<string, string>> $upcoming_movies
+				 */
 				$upcoming_movies = array(
 					array(
 						'title'    => 'Spiderman: Far From Home',
@@ -55,6 +60,7 @@ get_header();
 					),
 				);
 
+				// Render each item through the shared movie-card partial.
 				foreach ( $upcoming_movies as $movie ) {
 					get_template_part( 'template-parts/movie-card', null, $movie );
 				}
@@ -68,6 +74,11 @@ get_header();
 			<h2 class="section-title">Trending Now</h2>
 			<div class="movie-grid movie-grid--scroll-mobile">
 				<?php
+				/**
+				 * Static card dataset for the trending movies section.
+				 *
+				 * @var array<int, array<string, string>> $trending_movies
+				 */
 				$trending_movies = array(
 					array(
 						'title'    => 'Once Upon a Time',
@@ -107,6 +118,7 @@ get_header();
 					),
 				);
 
+				// Render each item through the shared movie-card partial.
 				foreach ( $trending_movies as $movie ) {
 					get_template_part( 'template-parts/movie-card', null, $movie );
 				}

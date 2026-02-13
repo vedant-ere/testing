@@ -4,6 +4,7 @@
  *
  * @package ScreenTime
  */
+
 ?>
 <ul class="site-header__menu">
 	<li><a href="#">Movies</a></li>

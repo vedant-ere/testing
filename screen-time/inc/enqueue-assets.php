@@ -10,9 +10,13 @@ add_action( 'wp_enqueue_scripts', 'screentime_enqueue_assets' );
 /**
  * Enqueue styles and scripts.
  *
+ * Loads global component assets first, then conditionally loads page-level
+ * styles based on the current query context to avoid unnecessary CSS payload.
+ *
  * @return void
  */
 function screentime_enqueue_assets() {
+	// Shared base stylesheet for layout, resets, and utility classes.
 	wp_enqueue_style(
 		'screentime-global',
 		SCREENTIME_URI . '/assets/css/global.css',
@@ -55,6 +59,7 @@ function screentime_enqueue_assets() {
 		SCREENTIME_VERSION
 	);
 
+	// Context-aware page styles. Keep these conditionals mutually additive.
 	if ( is_front_page() ) {
 		wp_enqueue_style(
 			'screentime-page-home',
@@ -109,6 +114,7 @@ function screentime_enqueue_assets() {
 		);
 	}
 
+	// Global behavior script used across header and shared interactions.
 	wp_enqueue_script(
 		'screentime-main',
 		SCREENTIME_URI . '/assets/js/main.js',
@@ -117,6 +123,7 @@ function screentime_enqueue_assets() {
 		true
 	);
 
+	// Front-page-only slider behavior.
 	if ( is_front_page() ) {
 		wp_enqueue_script(
 			'screentime-slider',

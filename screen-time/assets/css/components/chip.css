@@ -20,6 +20,13 @@
 	color: #fff;
 }
 
+.chip:hover,
+.chip:focus-visible {
+	border-color: var(--color-accent);
+	background: var(--color-accent);
+	color: #fff;
+}
+
 .chip--active {
 	background: var(--color-accent);
 	border-color: var(--color-accent);

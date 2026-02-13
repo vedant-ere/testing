@@ -22,6 +22,7 @@
 	--text-32: 2rem;
 	--text-36: 2.25rem;
 	--text-47: 2.9375rem;
+	--text-64: 4rem;
 
 	--weight-regular: 400;
 	--weight-medium: 500;
@@ -58,6 +59,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	max-width: 100%;
 }
 
 ul {
@@ -69,6 +71,7 @@ ul {
 a {
 	color: inherit;
 	text-decoration: none;
+	transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 img {
@@ -82,6 +85,23 @@ button {
 	background: none;
 	border: 0;
 	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+a:hover,
+button:hover {
+	opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 body {
@@ -90,6 +110,7 @@ body {
 	font-family: var(--font-body);
 	font-size: var(--text-16);
 	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 .container {
@@ -98,7 +119,86 @@ body {
 	padding-inline: var(--container-gutter);
 }
 
+main,
+section,
+.container {
+	min-width: 0;
+}
+
 :focus-visible {
 	outline: 2px solid var(--color-accent);
 	outline-offset: 2px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.section-title {
+	margin: 0;
+	display: inline-flex;
+	align-items: stretch;
+	gap: 16px;
+	font-family: var(--font-logo);
+	font-size: 32px;
+	font-weight: var(--weight-bold);
+	line-height: 72px;
+	letter-spacing: 0;
+}
+
+.section-title::before {
+	content: "";
+	width: 4px;
+	height: 32px;
+	background: #D13223;
+	border-radius: 0;
+	flex-shrink: 0;
+	align-self: center;
+}
+
+.section-title--page {
+	font-size: 64px;
+	line-height: 72px;
+}
+
+@media (max-width: 767px) {
+	:root {
+		--text-64: 2rem;
+		--text-32: 1.5rem;
+		--text-16: 0.875rem;
+	}
+
+	.section-title {
+		gap: 16px;
+		font-size: 32px;
+		line-height: 72px;
+	}
+
+	.section-title--page {
+		font-size: 32px;
+		line-height: 40px;
+	}
+}
+
+@media (min-width: 1600px) {
+	:root {
+		--container-max: 1680px;
+		--container-gutter: 104px;
+	}
+}
+
+@media (min-width: 2560px) {
+	:root {
+		--container-max: 1920px;
+		--container-gutter: 120px;
+		--slider-height: 700px;
+	}
 }

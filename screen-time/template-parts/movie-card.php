@@ -2,9 +2,20 @@
 /**
  * Static movie card.
  *
+ * Accepts `$args` from `get_template_part()` with optional keys:
+ * `title`, `runtime`, `subtitle`, and `image`.
+ *
  * @package ScreenTime
  */
 
+/**
+ * Normalize card fields with safe fallback values.
+ *
+ * @var string $movie_title
+ * @var string $movie_runtime
+ * @var string $movie_subtitle
+ * @var string $movie_image
+ */
 $movie_title    = isset( $args['title'] ) ? $args['title'] : 'Movie title';
 $movie_runtime  = isset( $args['runtime'] ) ? $args['runtime'] : '1 hr 14 min';
 $movie_subtitle = isset( $args['subtitle'] ) ? $args['subtitle'] : 'Release: 12 Dec 2022';

@@ -1,6 +1,7 @@
 /* Person archive page */
 .page-archive-person {
   padding-bottom: 4.5rem;
+  overflow-x: clip;
 }
 
 .page-archive-person .movie-section {
@@ -13,24 +14,6 @@
 
 .page-archive-person .section-title--person-archive {
   margin: 0;
-  position: relative;
-  padding-left: 1.5rem;
-  font-family: var(--font-logo);
-  font-size: 64px;
-  font-weight: var(--weight-bold);
-  line-height: 72px;
-  letter-spacing: 0;
-}
-
-.page-archive-person .section-title--person-archive::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 40px;
-  background: #e46d62;
 }
 
 .page-archive-person .person-list {
@@ -39,14 +22,17 @@
   justify-content: center;
   gap: 32px;
   margin-top: 80px;
+  min-width: 0;
 }
 
 .page-archive-person .person-card {
-  width: 592px;
+  width: 100%;
+  max-width: 592px;
   height: 224px;
   background: var(--color-surface-card);
   display: grid;
   grid-template-columns: 153px minmax(0, 1fr);
+  min-width: 0;
 }
 
 .page-archive-person .person-card__image {
@@ -70,7 +56,10 @@
 }
 
 .page-archive-person .person-card__role {
-  font-size: 24px;
+  display: block;
+  font-family: var(--font-logo);
+  font-size: 32px;
+  font-weight: var(--weight-bold);
   line-height: 40px;
 }
 
@@ -99,11 +88,16 @@
 .page-archive-person .person-card__link {
   margin-top: auto;
   align-self: flex-start;
-  color: #e46d62;
+  color: #D13223;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: var(--weight-regular);
   line-height: 24px;
+}
+
+.page-archive-person .person-card__link:hover,
+.page-archive-person .person-card__link:focus-visible {
+  color: #f16557;
 }
 
 .page-archive-person .load-more-wrap {
@@ -127,21 +121,11 @@
     height: 204px;
   }
 
-  .page-archive-person .person-card__name {
-    font-size: 30px;
-    line-height: 1.1;
-  }
-
-  .page-archive-person .person-card__role {
-    font-size: 20px;
-    line-height: 1.1;
-  }
 }
 
 @media (width <= 63.9375rem) {
-  .page-archive-person .section-title--person-archive {
-    font-size: 52px;
-    line-height: 60px;
+  .page-archive-person .container {
+    padding-inline: 24px;
   }
 
   .page-archive-person .person-list {
@@ -162,17 +146,6 @@
     padding-top: 2.5rem;
   }
 
-  .page-archive-person .section-title--person-archive {
-    padding-left: 0.875rem;
-    font-size: 52px;
-    line-height: 1;
-  }
-
-  .page-archive-person .section-title--person-archive::before {
-    width: 3px;
-    height: 38px;
-  }
-
   .page-archive-person .person-list {
     margin-top: 40px;
     gap: 12px;
@@ -180,36 +153,45 @@
 
   .page-archive-person .person-card {
     min-height: 172px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     grid-template-columns: 72px minmax(0, 1fr);
+    row-gap: 10px;
+    column-gap: 12px;
+    padding: 10px;
   }
 
   .page-archive-person .person-card__image {
     width: 72px;
-    height: 102px;
+    height: 105px;
+    grid-area: image;
   }
 
   .page-archive-person .person-card__content {
-    padding: 10px;
+    display: contents;
   }
 
   .page-archive-person .person-card__name {
+    grid-area: name;
     font-size: 24px;
-    line-height: 1.1;
+    line-height: 28px;
   }
 
   .page-archive-person .person-card__role {
-    font-size: 18px;
-
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .page-archive-person .person-card__dob {
+    grid-area: dob;
     margin-top: 4px;
     font-size: 10px;
     line-height: 14px;
   }
 
   .page-archive-person .person-card__excerpt {
+    grid-area: excerpt;
     margin-top: 10px;
     font-size: 14px;
     line-height: 24px;
@@ -217,9 +199,18 @@
   }
 
   .page-archive-person .person-card__link {
+    grid-area: link;
     margin-top: 8px;
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .page-archive-person .person-card {
+    grid-template-areas:
+      "image name"
+      "image dob"
+      "excerpt excerpt"
+      "link link";
   }
 
   .page-archive-person .load-more-wrap {

@@ -1,0 +1,162 @@
+/**
+ * Screen Time Theme - Home Page Stylesheet.
+ *
+ * Defines homepage section spacing, card grids, and responsive adaptations.
+ */
+.page-home {
+	padding-bottom: 0;
+}
+
+.page-home .movie-section {
+	padding-top: 5.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.page-home .movie-section:last-of-type {
+	padding-bottom: 120px;
+}
+
+.page-home .movie-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--space-32);
+	margin-top: 36px;
+}
+
+.section-title {
+	font-family: var(--font-logo);
+}
+
+@media (width <= 63.9375rem) {
+	.page-home .movie-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (width <= 39.9375rem) {
+	.page-home .container {
+		padding-inline: 24px;
+	}
+
+	.page-home .movie-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 15px;
+	}
+
+	.page-home .movie-grid--scroll-mobile {
+		grid-template-columns: none;
+		grid-auto-flow: column;
+		grid-auto-columns: calc((100% - 15px) / 2);
+		gap: 15px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		overscroll-behavior-x: contain;
+		padding-bottom: 32px;
+		scroll-snap-type: x proximity;
+		scrollbar-width: thin;
+		scrollbar-color: #d13223 rgba(255, 255, 255, 0.18);
+	}
+
+	.page-home .movie-grid--scroll-mobile > * {
+		scroll-snap-align: start;
+	}
+
+	.page-home .movie-grid--scroll-mobile::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.page-home .movie-grid--scroll-mobile::-webkit-scrollbar-track {
+		background: rgba(255, 255, 255, 0.18);
+	}
+
+	.page-home .movie-grid--scroll-mobile::-webkit-scrollbar-thumb {
+		background: #d13223;
+	}
+}
+
+@media (max-width: 767px) {
+	.hero-slider__slide {
+		min-height: 286px;
+	}
+
+	.hero-slider__content {
+		padding-top: 90px;
+		padding-bottom: 20px;
+	}
+
+	.hero-slider__title {
+		font-family: var(--font-logo);
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 1;
+		letter-spacing: 0;
+	}
+
+	.hero-slider__meta {
+		font-family: var(--font-body);
+		font-size: 14px;
+		font-weight: var(--weight-regular);
+		letter-spacing: 0;
+	}
+
+	.page-home .movie-section {
+		position: relative;
+		padding-top: 44px;
+		padding-bottom: 0;
+	}
+
+	.page-home .movie-section + .movie-section {
+		padding-top: 64px;
+	}
+
+	.page-home .movie-section .movie-grid {
+		margin-top: 36px;
+	}
+
+	.page-home .section-title {
+		font-family: var(--font-logo);
+		font-size: 24px;
+		font-weight: var(--weight-bold);
+		line-height: 1;
+		letter-spacing: 0;
+	}
+
+	.page-home .movie-section:not(:last-of-type) {
+		padding-bottom: 32px;
+	}
+
+	.page-home .movie-section::after {
+		content: "";
+		position: absolute;
+		left: 24px;
+		right: 24px;
+		bottom: 0;
+		height: 1px;
+		background: rgba(255, 255, 255, 0.24);
+	}
+
+	.page-home .movie-section::before {
+		content: "";
+		position: absolute;
+		left: 24px;
+		bottom: 0;
+		width: 52px;
+		height: 2px;
+		background: #d13223;
+		z-index: 1;
+	}
+
+	/* Avoid browser-specific scrollbar diffs in visual snapshots. */
+	.page-home .movie-grid--scroll-mobile {
+		padding-bottom: 0;
+		scrollbar-width: none;
+	}
+
+	.page-home .movie-grid--scroll-mobile::-webkit-scrollbar {
+		display: none;
+	}
+
+	.page-home .movie-section:last-of-type {
+		padding-bottom: 40px;
+	}
+}

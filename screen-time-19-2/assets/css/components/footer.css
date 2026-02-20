@@ -1,0 +1,207 @@
+/**
+ * Screen Time Theme - Footer Component Stylesheet.
+ *
+ * Styles desktop and responsive footer layout, links, and social icons.
+ */
+.site-footer {
+	background: var(--color-footer-bg);
+	margin-top: auto;
+}
+
+/* =========================
+   TOP FOOTER LAYOUT
+========================= */
+.site-footer__top {
+	display: grid;
+	grid-template-columns: 315px minmax(170px, auto) minmax(170px, auto);
+	column-gap: 300px; /* unified gap for all columns */
+	padding-top: 90px;
+	padding-bottom: 68px;
+	align-items: start;
+}
+
+.site-logo--footer {
+	font-size: clamp(2rem, 4vw, var(--text-47));
+	line-height: 1;
+}
+
+/* Brand column */
+.site-footer__brand-col {
+	width: 315px;
+	margin-top: 8px;      /* ↓ slight downward shift */
+	margin-right: 0;      /* ❌ removed to avoid extra gap */
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.site-footer__heading,
+.site-footer__links-col h2 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: var(--text-16);
+	line-height: 32px;
+	font-weight: var(--weight-bold);
+}
+
+.site-footer__heading {
+	margin-top: 73px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.social-list {
+	margin-top: calc(var(--space-16) + 4px); /* ↓ slight nudge down */
+	display: flex;
+	gap: var(--space-16);
+	width: 315px;
+	min-height: 98px;
+	flex-wrap: wrap;
+}
+
+.social-list a {
+	width: 50px;
+	height: 50px;
+	border-radius: var(--radius-circle);
+	background: var(--color-social-circle);
+	display: grid;
+	place-items: center;
+}
+
+.social-list a:hover,
+.social-list a:focus-visible {
+	background: var(--color-accent);
+}
+
+.social-list img,
+.social-list svg {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+}
+
+.social-list svg {
+	fill: currentcolor;
+}
+
+/* =========================
+   LINK COLUMNS (Company / Explore)
+========================= */
+.site-footer__links-col {
+	margin-top: 6px;     /* ↓ slight downward shift */
+	padding-left: 12px;  /* → slight right nudge */
+}
+
+.site-footer__links-col ul {
+	margin-top: 24px;
+}
+
+.site-footer__links-col li {
+	font-size: var(--text-16);
+	line-height: 40px;
+}
+
+.site-footer__links-col a:hover,
+.site-footer__links-col a:focus-visible,
+.site-footer__bottom a:hover,
+.site-footer__bottom a:focus-visible {
+	color: var(--color-accent);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.site-footer__divider {
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+	max-width: 100%; /* aligns with content width */
+	margin-inline: auto;
+}
+
+/* =========================
+   BOTTOM FOOTER
+========================= */
+.site-footer__bottom {
+	padding-top: 34px;
+	padding-bottom: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.site-footer__bottom p {
+	margin: 0;
+	font-size: var(--text-16);
+	line-height: 24px;
+	color: var(--color-text-muted);
+}
+
+.site-footer__bottom-links .site-footer__menu--inline {
+	display: inline-flex;
+	align-items: center;
+}
+
+.site-footer__bottom-links .site-footer__menu--inline li + li::before {
+	content: "|";
+	color: var(--color-text-muted);
+	margin-inline: 12px;
+}
+
+.site-footer__links-col:last-of-type {
+	margin-left: -120px; /* 👈 reduces Company → Explore gap */
+}
+.site-footer__links-col:first-of-type {
+	padding-left: 12888px; /* increase Brand → Company gap */
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+
+	.site-footer__top {
+		grid-template-columns: 1fr;
+		gap: 0;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+
+	.site-footer__brand-col {
+		display: grid;
+		justify-items: center;
+		width: 327px;
+		margin-inline: auto;
+		margin-top: 0;
+	}
+
+	.site-footer__links-col {
+		display: none;
+	}
+
+	.site-footer__heading {
+		margin-top: 25px;
+		font-size: 24px;
+		line-height: 1.2;
+	}
+
+	.social-list {
+		margin-top: 18px;
+		justify-content: space-between;
+		width: 327px;
+		max-width: 327px;
+		margin-inline: auto;
+		min-height: 79px;
+	}
+
+	.site-footer__divider {
+		margin-top: 36px;
+		max-width: 100%;
+	}
+
+	.site-footer__bottom {
+		flex-direction: column;
+		padding-top: 34px;
+		padding-bottom: 42px;
+		text-align: center;
+	}
+}

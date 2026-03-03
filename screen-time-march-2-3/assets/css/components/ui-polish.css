@@ -1,0 +1,209 @@
+:root {
+	--st-ui-polish-enabled: 1;
+}
+
+/* Consistent subtle transitions on interactive controls. */
+a,
+button,
+input,
+textarea,
+select {
+	transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease, opacity 200ms ease;
+}
+
+/* Keep hover effects subtle to match existing visual language. */
+.movie-card:hover,
+.movie-card:focus-within,
+.person-card:hover,
+.person-card:focus-within,
+.movie-cast-card:hover,
+.movie-cast-card:focus-within,
+.movie-review-card:hover,
+.movie-review-card:focus-within {
+	transform: translateY(-2px);
+}
+
+.movie-trailer-card:hover .movie-trailer-card__play,
+.movie-trailer-card:focus-visible .movie-trailer-card__play,
+.person-video-card:hover .person-video-card__play,
+.person-video-card:focus-visible .person-video-card__play {
+	transform: scale(1.08);
+}
+
+.st-video-modal-open {
+	overflow: hidden;
+}
+
+.st-video-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 10000;
+	background: rgba(0, 0, 0, 0.82);
+	display: grid;
+	place-items: center;
+	padding: 20px;
+}
+
+.st-video-modal[hidden] {
+	display: none;
+}
+
+.st-video-modal__dialog {
+	width: min(1080px, 100%);
+}
+
+.st-video-modal__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.st-video-modal__button {
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background: rgba(16, 16, 16, 0.85);
+	color: #fff;
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.st-video-modal__body {
+	background: #000;
+	aspect-ratio: 16 / 9;
+	width: 100%;
+}
+
+.st-video-modal__video,
+.st-video-modal__frame {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+
+/* Tablet-first accuracy pass for primary layouts (768px-1023px). */
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+
+	.site-header__top-bar {
+		min-height: 104px;
+	}
+
+	.site-header__top-inner {
+		min-height: 104px;
+	}
+
+	.page-home .movie-grid {
+		gap: 24px;
+	}
+
+	.page-archive-movie .movie-grid {
+		gap: 24px;
+	}
+
+	.page-archive-person .movie-section {
+		padding-top: 96px;
+	}
+
+	.page-archive-person .person-list {
+		margin-top: 56px;
+		gap: 24px;
+	}
+
+	.page-single-movie .movie-single-hero {
+		min-height: auto;
+	}
+
+	.page-single-movie .movie-single-hero__inner {
+		grid-template-columns: minmax(320px, 44%) minmax(0, 1fr);
+		column-gap: 32px;
+		padding-left: 0;
+	}
+
+	.page-single-movie .movie-single-hero__poster {
+		width: 100%;
+		height: auto;
+		max-height: 760px;
+	}
+
+	.page-single-movie .movie-single-hero__content {
+		padding-top: 56px;
+	}
+
+	.page-single-movie .movie-single-body__grid {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 32px;
+	}
+
+	.page-single-movie .movie-single-body__quick-links {
+		width: 100%;
+		max-width: 360px;
+	}
+
+	.page-single-movie .movie-cast-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 24px;
+	}
+
+	.page-single-movie .movie-trailer-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+
+	.page-single-movie .movie-review-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+
+	.page-single-person .person-hero {
+		padding-top: 24px;
+	}
+
+	.page-single-person .person-hero__inner {
+		grid-template-columns: minmax(320px, 42%) minmax(0, 1fr);
+		column-gap: 32px;
+	}
+
+	.page-single-person .person-hero__image {
+		width: 100%;
+		height: auto;
+		max-height: 572px;
+	}
+
+	.page-single-person .person-hero__content {
+		padding-top: 24px;
+	}
+
+	.page-single-person .person-about__grid {
+		grid-template-columns: minmax(0, 1fr);
+		row-gap: 32px;
+	}
+
+	.page-single-person .person-about__quick-links {
+		width: 100%;
+		max-width: 360px;
+	}
+
+	.page-single-person .person-popular-grid,
+	.page-single-person .person-video-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	a,
+	button,
+	input,
+	textarea,
+	select,
+	.movie-card,
+	.person-card,
+	.movie-cast-card,
+	.movie-review-card,
+	.movie-trailer-card__play,
+	.person-video-card__play {
+		transition: none;
+		transform: none;
+	}
+}

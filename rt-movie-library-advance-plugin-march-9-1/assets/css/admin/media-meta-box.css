@@ -1,0 +1,105 @@
+/**
+ * Media Meta Box Styles
+ *
+ * Shared styles for Photo and Video Gallery meta boxes.
+ */
+
+.rt-media-box {
+	margin: 10px 0;
+}
+
+.rt-media-add {
+	margin-bottom: 12px;
+}
+
+.rt-media-list {
+	margin-top: 12px;
+	padding: 0;
+}
+
+.rt-media-item {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	margin-bottom: 6px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rt-media-item:hover {
+	border-color: #8c8f94;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rt-media-item img,
+.rt-media-item video {
+	max-width: 80px;
+	max-height: 80px;
+	object-fit: cover;
+	margin-right: 10px;
+	border-radius: 4px;
+	border: 1px solid #e0e0e0;
+}
+
+.rt-media-filename {
+	flex: 1;
+	font-size: 13px;
+	color: #2c3338;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.rt-media-remove {
+	padding: 4px 8px;
+	margin-left: 8px;
+	color: #b32d2e;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 1;
+	transition: color 0.15s ease;
+}
+
+.rt-media-remove:hover,
+.rt-media-remove:focus {
+	color: #8a2424;
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Empty state */
+.rt-media-list:empty::before {
+	content: "No media selected.";
+	display: block;
+	padding: 12px;
+	color: #646970;
+	font-style: italic;
+	font-size: 13px;
+	text-align: center;
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+
+	.rt-media-item {
+		flex-wrap: wrap;
+	}
+
+	.rt-media-item img,
+	.rt-media-item video {
+		max-width: 60px;
+		max-height: 60px;
+	}
+
+	.rt-media-filename {
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,592 @@
+# Copyright (C) 2026 Vedant Ere
+# This file is distributed under the same license as the Movie Library plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Movie Library 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/rt-movie-library\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-05T10:49:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: rt-movie-library\n"
+
+#. Plugin Name of the plugin
+#: rt-movie-library.php
+msgid "Movie Library"
+msgstr ""
+
+#. Description of the plugin
+#: rt-movie-library.php
+msgid "Registers Movie & Person post types with related taxonomies."
+msgstr ""
+
+#. Author of the plugin
+#: rt-movie-library.php
+msgid "Vedant Ere"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-media-image-meta-box.php:32
+msgid "Photo Gallery"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-media-image-meta-box.php:45
+msgid "Add Images"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-media-video-meta-box.php:31
+msgid "Video Gallery"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-media-video-meta-box.php:44
+msgid "Add Videos"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:57
+msgid "Crew Information"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:123
+msgid "Director(s)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:136
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:181
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:225
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:279
+msgid "Remove"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:145
+msgid "No directors added yet."
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:154
+msgid "— Select Director —"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:162
+msgid "Add Director"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:169
+msgid "Producer(s)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:190
+msgid "No producers added yet."
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:198
+msgid "— Select Producer —"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:206
+msgid "Add Producer"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:213
+msgid "Writer(s)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:234
+msgid "No writers added yet."
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:242
+msgid "— Select Writer —"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:250
+msgid "Add Writer"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:257
+msgid "Actor / Star"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:274
+msgid "Character name (optional)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:288
+msgid "No actors added yet."
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:296
+msgid "— Select Actor —"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-crew-meta-box.php:304
+msgid "Add Actor"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:68
+msgid "Basic Movie Details"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:102
+msgid "Rating"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:117
+msgid "Enter rating (e.g. 8.1, 7.4)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:123
+msgid "Runtime (minutes)"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:137
+msgid "e.g. 120 for 2 hours"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:143
+msgid "Release Date"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:163
+msgid "Content Rating"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-meta-box.php:171
+msgid "Select rating"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-poster-meta-box.php:30
+msgid "Carousel Poster"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-movie-poster-meta-box.php:42
+msgid "Select Poster"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-person-basic-meta-box.php:41
+msgid "Basic Details"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-person-basic-meta-box.php:63
+msgid "Full Name"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-person-basic-meta-box.php:68
+msgid "Birth Date"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-person-basic-meta-box.php:73
+msgid "Birth Place"
+msgstr ""
+
+#: includes/classes/meta-boxes/class-person-social-meta-box.php:42
+msgid "Social Information"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:38
+#: includes/classes/post-types/class-movie.php:40
+msgid "Movies"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:39
+#: includes/classes/post-types/class-movie.php:41
+msgid "Movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:42
+#: includes/classes/post-types/class-person.php:41
+msgid "Add New"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:43
+msgid "Add New Movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:44
+msgid "Edit Movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:45
+msgid "New Movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:46
+msgid "View Movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:47
+msgid "View Movies"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:48
+msgid "Search Movies"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:49
+msgid "No movies found."
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:50
+msgid "No movies found in Trash."
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:51
+msgid "All Movies"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:52
+msgid "Movie Archives"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:53
+msgid "Movie Attributes"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:54
+msgid "Insert into movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:55
+msgid "Uploaded to this movie"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:56
+msgid "Movie Poster"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:57
+msgid "Set Movie Poster"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:58
+msgid "Remove Movie Poster"
+msgstr ""
+
+#: includes/classes/post-types/class-movie.php:59
+msgid "Use as Movie Poster"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:37
+#: includes/classes/post-types/class-person.php:39
+msgid "People"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:38
+#: includes/classes/post-types/class-person.php:40
+msgid "Person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:42
+msgid "Add New Person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:43
+msgid "Edit Person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:44
+msgid "New Person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:45
+msgid "View Person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:46
+msgid "View People"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:47
+msgid "Search People"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:48
+msgid "No people found."
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:49
+msgid "No people found in Trash."
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:50
+msgid "All People"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:51
+msgid "People Archives"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:52
+msgid "Person Attributes"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:53
+msgid "Insert into person"
+msgstr ""
+
+#: includes/classes/post-types/class-person.php:54
+msgid "Uploaded to this person"
+msgstr ""
+
+#: includes/classes/shortcodes/class-person-shortcode.php:100
+msgid "No persons found."
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:37
+#: includes/classes/taxonomies/class-career.php:47
+msgid "Careers"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:38
+msgid "Career"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:39
+msgid "Search Careers"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:40
+msgid "All Careers"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:41
+msgid "Parent Career"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:42
+msgid "Parent Career:"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:43
+msgid "Edit Career"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:44
+msgid "Update Career"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:45
+msgid "Add New Career"
+msgstr ""
+
+#: includes/classes/taxonomies/class-career.php:46
+msgid "New Career Name"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:42
+#: includes/classes/taxonomies/class-genre.php:52
+msgid "Genres"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:43
+msgid "Genre"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:44
+msgid "Search Genres"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:45
+msgid "All Genres"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:46
+msgid "Parent Genre"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:47
+msgid "Parent Genre:"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:48
+msgid "Edit Genre"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:49
+msgid "Update Genre"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:50
+msgid "Add New Genre"
+msgstr ""
+
+#: includes/classes/taxonomies/class-genre.php:51
+msgid "New Genre Name"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:40
+#: includes/classes/taxonomies/class-label.php:50
+msgid "Labels"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:41
+msgid "Label"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:42
+msgid "Search Labels"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:43
+msgid "All Labels"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:44
+msgid "Parent Label"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:45
+msgid "Parent Label:"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:46
+msgid "Edit Label"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:47
+msgid "Update Label"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:48
+msgid "Add New Label"
+msgstr ""
+
+#: includes/classes/taxonomies/class-label.php:49
+msgid "New Label Name"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:40
+#: includes/classes/taxonomies/class-language.php:50
+msgid "Languages"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:41
+msgid "Language"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:42
+msgid "Search Languages"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:43
+msgid "All Languages"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:44
+msgid "Parent Language"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:45
+msgid "Parent Language:"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:46
+msgid "Edit Language"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:47
+msgid "Update Language"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:48
+msgid "Add New Language"
+msgstr ""
+
+#: includes/classes/taxonomies/class-language.php:49
+msgid "New Language Name"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:41
+#: includes/classes/taxonomies/class-movie-tag.php:53
+msgid "Movie Tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:42
+msgid "Movie Tag"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:43
+msgid "Search Movie Tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:44
+msgid "Popular Movie Tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:45
+msgid "All Movie Tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:46
+msgid "Edit Movie Tag"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:47
+msgid "Update Movie Tag"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:48
+msgid "Add New Movie Tag"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:49
+msgid "New Movie Tag Name"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:50
+msgid "Separate tags with commas"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:51
+msgid "Add or remove tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-movie-tag.php:52
+msgid "Choose from the most used tags"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:40
+#: includes/classes/taxonomies/class-production-company.php:50
+msgid "Production Companies"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:41
+msgid "Production Company"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:42
+msgid "Search Production Companies"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:43
+msgid "All Production Companies"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:44
+msgid "Parent Production Company"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:45
+msgid "Parent Production Company:"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:46
+msgid "Edit Production Company"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:47
+msgid "Update Production Company"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:48
+msgid "Add New Production Company"
+msgstr ""
+
+#: includes/classes/taxonomies/class-production-company.php:49
+msgid "New Production Company Name"
+msgstr ""
+
+#: includes/helpers/class-admin-filters.php:56
+msgid "All "
+msgstr ""

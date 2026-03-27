@@ -1,0 +1,33 @@
+
+
+/* ===============================
+	Person Shortcode UI
+================================ */
+
+.rt-person-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 16px;
+}
+
+.rt-person-card {
+	text-align: center;
+	padding: 12px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.rt-person-avatar img {
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.rt-person-name {
+	margin: 8px 0 4px;
+	font-size: 16px;
+}
+
+.rt-person-career {
+	font-size: 13px;
+	color: #555;
+}

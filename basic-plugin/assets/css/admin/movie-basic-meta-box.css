@@ -1,0 +1,73 @@
+/**
+ * Movie Basic Meta Box Styles
+ * Consistent styling aligned with crew meta boxes
+ */
+
+/* Wrapper */
+.rt-movie-basic-wrapper {
+	padding: 0;
+	margin: 0;
+}
+
+/* Each field */
+.rt-movie-basic-field {
+	margin-bottom: 16px;
+	display: block;
+}
+
+.rt-movie-basic-field:last-child {
+	margin-bottom: 0;
+}
+
+/* Labels */
+.rt-movie-basic-field label {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+/* Inputs & Selects */
+.rt-movie-basic-input,
+.rt-movie-basic-select {
+	width: 50%;
+	max-width: 100%;
+	height: 36px;
+	padding: 4px 8px;
+	font-size: 13px;
+	line-height: 1.4;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background: #fff;
+	box-sizing: border-box;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rt-movie-basic-input:focus,
+.rt-movie-basic-select:focus {
+	border-color: #2271b1;
+	outline: 2px solid transparent;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Description text */
+.rt-movie-basic-field .description {
+	display: block;
+	margin: 6px 0 0;
+	padding: 0;
+	font-size: 12px;
+	color: #646970;
+	line-height: 1.5;
+	font-style: normal;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+
+	.rt-movie-basic-input,
+	.rt-movie-basic-select {
+		height: 40px;
+		font-size: 16px;
+	}
+}

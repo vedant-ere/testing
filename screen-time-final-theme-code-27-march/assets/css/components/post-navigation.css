@@ -1,0 +1,75 @@
+/**
+ * Screen Time Theme — Post Navigation Stylesheet.
+ *
+ * Styles the previous / next post links rendered inside the site footer.
+ */
+
+.post-navigation {
+	padding: 40px 0;
+	border-bottom: 1px solid var(--color-divider);
+}
+
+.post-navigation__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 24px;
+}
+
+.post-navigation__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 16px;
+	color: var(--color-text-primary);
+	text-decoration: none;
+}
+
+.post-navigation__link:hover,
+.post-navigation__link:focus-visible {
+	color: var(--color-accent);
+}
+
+.post-navigation__arrow {
+	font-size: 24px;
+	color: var(--color-accent);
+	transition: transform 0.2s ease;
+}
+
+.post-navigation__link--prev:hover .post-navigation__arrow,
+.post-navigation__link--prev:focus-visible .post-navigation__arrow {
+	transform: translateX(-4px);
+}
+
+.post-navigation__link--next:hover .post-navigation__arrow,
+.post-navigation__link--next:focus-visible .post-navigation__arrow {
+	transform: translateX(4px);
+}
+
+.post-navigation__link--disabled {
+	visibility: hidden;
+}
+
+/* Truncate long titles to keep the row tidy. */
+.post-navigation__label {
+	max-width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+
+	.post-navigation {
+		padding: 24px 0;
+	}
+
+	.post-navigation__label {
+		max-width: 120px;
+		font-size: 14px;
+	}
+
+	.post-navigation__arrow {
+		font-size: 20px;
+	}
+}

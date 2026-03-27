@@ -1,0 +1,917 @@
+# Copyright (C) 2026 Vedant Ere
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Screen Time 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/screen-time\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-03-26T07:24:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: screen-time\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Screen Time"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Part 1 static theme for Screen Time movie library."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Vedant Ere"
+msgstr ""
+
+#: archive-rt-movie.php:24
+#: inc/rest.php:113
+msgid "No movies found."
+msgstr ""
+
+#: archive-rt-movie.php:35
+#: inc/rest.php:151
+#: taxonomy-rt-movie-genre.php:40
+msgid "Movie pagination"
+msgstr ""
+
+#: archive-rt-person.php:28
+#: template-parts/navigation.php:36
+#: template-parts/navigation.php:85
+msgid "Celebrities"
+msgstr ""
+
+#: archive-rt-person.php:30
+msgid "Celebrities list"
+msgstr ""
+
+#. translators: %s: birth date.
+#: archive-rt-person.php:74
+#: inc/widget-person-recommendations.php:204
+#: template-parts/movie/cast-crew-archive.php:26
+#: template-parts/movie/cast-crew-archive.php:55
+#, php-format
+msgid "Born - %s"
+msgstr ""
+
+#: archive-rt-person.php:98
+#: inc/enqueue-assets.php:202
+#: inc/enqueue-assets.php:231
+#: template-parts/movie/cast-crew-archive.php:81
+msgid "Load More"
+msgstr ""
+
+#: footer.php:8
+#: inc/customizer.php:156
+msgid "All Rights Reserved."
+msgstr ""
+
+#: footer.php:18
+msgid "Facebook"
+msgstr ""
+
+#: footer.php:19
+#: single-rt-person.php:83
+msgid "Twitter"
+msgstr ""
+
+#: footer.php:20
+msgid "YouTube"
+msgstr ""
+
+#: footer.php:21
+#: single-rt-person.php:78
+msgid "Instagram"
+msgstr ""
+
+#: footer.php:22
+msgid "RSS"
+msgstr ""
+
+#: footer.php:30
+msgid "Follow Us"
+msgstr ""
+
+#: footer.php:31
+msgid "Social links"
+msgstr ""
+
+#: footer.php:53
+msgid "Company"
+msgstr ""
+
+#: footer.php:67
+#: header.php:137
+msgid "Explore"
+msgstr ""
+
+#: front-page.php:54
+msgid "Upcoming Movies"
+msgstr ""
+
+#: front-page.php:73
+msgid "No upcoming movies found."
+msgstr ""
+
+#: front-page.php:82
+msgid "Trending Now"
+msgstr ""
+
+#: front-page.php:117
+msgid "No trending movies found."
+msgstr ""
+
+#: header.php:11
+msgid "English"
+msgstr ""
+
+#: header.php:15
+msgid "Hindi"
+msgstr ""
+
+#: header.php:19
+msgid "Spanish"
+msgstr ""
+
+#: header.php:42
+#: header.php:47
+#: header.php:99
+#: header.php:122
+msgid "Search"
+msgstr ""
+
+#: header.php:57
+#: header.php:134
+msgid "Sign In"
+msgstr ""
+
+#: header.php:66
+#: inc/widget-movie-recommendations.php:60
+msgid "Language"
+msgstr ""
+
+#: header.php:68
+#: header.php:158
+msgid "ENG"
+msgstr ""
+
+#: header.php:84
+#: header.php:85
+#: inc/enqueue-assets.php:197
+msgid "Open menu"
+msgstr ""
+
+#: header.php:97
+msgid "Search for:"
+msgstr ""
+
+#: header.php:98
+msgid "Search movies, people, or books"
+msgstr ""
+
+#: header.php:104
+msgid "Primary navigation"
+msgstr ""
+
+#: header.php:128
+#: inc/enqueue-assets.php:198
+msgid "Close menu"
+msgstr ""
+
+#: header.php:154
+msgid "Settings"
+msgstr ""
+
+#: header.php:158
+#: template-parts/movie/metadata.php:72
+msgid "Language:"
+msgstr ""
+
+#: inc/book-cpt.php:17
+#: inc/book-cpt.php:19
+#: index.php:28
+msgid "Books"
+msgstr ""
+
+#: inc/book-cpt.php:18
+#: inc/book-cpt.php:20
+msgid "Book"
+msgstr ""
+
+#: inc/book-cpt.php:21
+msgid "Add New"
+msgstr ""
+
+#: inc/book-cpt.php:22
+msgid "Add New Book"
+msgstr ""
+
+#: inc/book-cpt.php:23
+msgid "Edit Book"
+msgstr ""
+
+#: inc/book-cpt.php:24
+msgid "New Book"
+msgstr ""
+
+#: inc/book-cpt.php:25
+msgid "View Book"
+msgstr ""
+
+#: inc/book-cpt.php:26
+msgid "View Books"
+msgstr ""
+
+#: inc/book-cpt.php:27
+msgid "Search Books"
+msgstr ""
+
+#: inc/book-cpt.php:28
+msgid "No books found."
+msgstr ""
+
+#: inc/book-cpt.php:29
+msgid "No books found in Trash."
+msgstr ""
+
+#: inc/book-cpt.php:30
+msgid "All Books"
+msgstr ""
+
+#: inc/book-cpt.php:31
+msgid "Book Archives"
+msgstr ""
+
+#: inc/book-cpt.php:32
+msgid "Insert into book"
+msgstr ""
+
+#: inc/book-cpt.php:33
+msgid "Uploaded to this book"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "Footer Options"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "Configure footer copyright text."
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer.php:167
+msgid "Year and site name are added automatically."
+msgstr ""
+
+#: inc/customizer.php:172
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer.php:174
+msgid "YouTube URL"
+msgstr ""
+
+#: inc/customizer.php:175
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid "RSS URL"
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Screen Time Options"
+msgstr ""
+
+#: inc/customizer.php:213
+msgid "Theme display settings scoped to specific page types."
+msgstr ""
+
+#: inc/customizer.php:228
+msgid "Site / Global"
+msgstr ""
+
+#: inc/customizer.php:231
+msgid "Site-wide appearance settings."
+msgstr ""
+
+#: inc/customizer.php:249
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer.php:250
+msgid "Controls the background color of all pages."
+msgstr ""
+
+#: inc/customizer.php:267
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer.php:270
+msgid "Previous / next post navigation for single pages."
+msgstr ""
+
+#: inc/customizer.php:287
+msgid "Display Navigation"
+msgstr ""
+
+#: inc/customizer.php:288
+msgid "Show previous / next post links in the site footer."
+msgstr ""
+
+#: inc/customizer.php:305
+msgid "Movie Details"
+msgstr ""
+
+#: inc/customizer.php:308
+msgid "Display options for single movie pages."
+msgstr ""
+
+#: inc/customizer.php:325
+msgid "Time Format"
+msgstr ""
+
+#: inc/customizer.php:326
+msgid "Controls how movie duration is displayed."
+msgstr ""
+
+#: inc/customizer.php:345
+msgid "Separator"
+msgstr ""
+
+#: inc/customizer.php:346
+msgid "Character used between metadata items and directors."
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Single Post Pages"
+msgstr ""
+
+#: inc/customizer.php:367
+msgid "Layout settings for Movie and Person single pages."
+msgstr ""
+
+#: inc/customizer.php:388
+msgid "Sidebar Width (px)"
+msgstr ""
+
+#. translators: 1: minimum, 2: maximum.
+#: inc/customizer.php:391
+#, php-format
+msgid "Allowed range: %1$s–%2$s px"
+msgstr ""
+
+#: inc/customizer.php:421
+msgid "Movie Poster Width (px)"
+msgstr ""
+
+#. translators: 1: minimum allowed pixel value, 2: maximum allowed pixel value.
+#: inc/customizer.php:426
+#: inc/customizer.php:456
+#: inc/customizer.php:486
+#: inc/customizer.php:516
+#, php-format
+msgid "Allowed range: %1$d–%2$d px"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Movie Poster Height (px)"
+msgstr ""
+
+#: inc/customizer.php:481
+msgid "Person Profile Width (px)"
+msgstr ""
+
+#: inc/customizer.php:511
+msgid "Person Profile Height (px)"
+msgstr ""
+
+#. translators: 1: minimum, 2: maximum.
+#: inc/customizer.php:698
+#, php-format
+msgid "Value must be between %1$s and %2$s."
+msgstr ""
+
+#: inc/customizer.php:721
+msgid "Hours & Minutes (2 hr 15 min)"
+msgstr ""
+
+#: inc/customizer.php:722
+msgid "HH:MM (02:15)"
+msgstr ""
+
+#: inc/customizer.php:723
+msgid "Minutes only (135 min)"
+msgstr ""
+
+#: inc/customizer.php:734
+msgid "Bullet (•)"
+msgstr ""
+
+#: inc/customizer.php:735
+msgid "Dash (–)"
+msgstr ""
+
+#: inc/customizer.php:736
+msgid "Pipe (|)"
+msgstr ""
+
+#: inc/customizer.php:737
+msgid "Slash (/)"
+msgstr ""
+
+#: inc/customizer.php:873
+msgid "Reset Layout Defaults"
+msgstr ""
+
+#: inc/enqueue-assets.php:131
+#: inc/enqueue-assets.php:203
+#: inc/enqueue-assets.php:232
+msgid "Loading..."
+msgstr ""
+
+#: inc/enqueue-assets.php:132
+#: single-rt-movie.php:195
+msgid "Load more reviews"
+msgstr ""
+
+#. translators: %s: person name.
+#: inc/enqueue-assets.php:200
+#: template-parts/person-card.php:42
+#, php-format
+msgid "%s portrait"
+msgstr ""
+
+#: inc/enqueue-assets.php:204
+#: inc/enqueue-assets.php:233
+#: template-parts/person-card.php:56
+msgid "Learn more"
+msgstr ""
+
+#: inc/enqueue-assets.php:205
+#: inc/enqueue-assets.php:234
+msgid "Born -"
+msgstr ""
+
+#: inc/enqueue-assets.php:206
+#: inc/enqueue-assets.php:235
+msgid "Unable to load more people right now."
+msgstr ""
+
+#: inc/enqueue-assets.php:207
+#: inc/enqueue-assets.php:236
+msgid "No more people to load."
+msgstr ""
+
+#: inc/rest.php:35
+msgid "Person birth date."
+msgstr ""
+
+#: inc/rest.php:111
+#: taxonomy-rt-movie-genre.php:29
+msgid "No movies found in this genre."
+msgstr ""
+
+#: inc/review-submission.php:30
+msgid "Invalid review request."
+msgstr ""
+
+#: inc/review-submission.php:36
+msgid "Invalid movie review target."
+msgstr ""
+
+#: inc/template-functions.php:47
+msgid "Screen"
+msgstr ""
+
+#: inc/template-functions.php:48
+msgid "Time"
+msgstr ""
+
+#. translators: %d: total minutes.
+#. translators: %d: minutes.
+#: inc/template-functions.php:115
+#: inc/template-functions.php:140
+#, php-format
+msgid "%d min"
+msgstr ""
+
+#. translators: 1: hours, 2: minutes.
+#: inc/template-functions.php:124
+#, php-format
+msgid "%1$d hr %2$d min"
+msgstr ""
+
+#. translators: %d: hours.
+#: inc/template-functions.php:133
+#, php-format
+msgid "%d hr"
+msgstr ""
+
+#. translators: 1: hours, 2: minutes.
+#: inc/template-functions.php:165
+#, php-format
+msgid "%1$dH %2$dM"
+msgstr ""
+
+#. translators: %d: hours.
+#: inc/template-functions.php:174
+#, php-format
+msgid "%dH"
+msgstr ""
+
+#. translators: %d: minutes.
+#: inc/template-functions.php:181
+#, php-format
+msgid "%dM"
+msgstr ""
+
+#. translators: %s: formatted date.
+#: inc/template-functions.php:209
+#, php-format
+msgid "Release %s"
+msgstr ""
+
+#: inc/template-functions.php:563
+msgid "Director"
+msgstr ""
+
+#: inc/template-functions.php:567
+msgid "Producer"
+msgstr ""
+
+#: inc/template-functions.php:571
+msgid "Writer"
+msgstr ""
+
+#: inc/template-functions.php:1008
+msgid "Comment"
+msgstr ""
+
+#: inc/template-functions.php:1010
+msgid "Name"
+msgstr ""
+
+#: inc/template-functions.php:1012
+msgid "Email"
+msgstr ""
+
+#: inc/template-functions.php:1014
+#: single-rt-person.php:88
+msgid "Website"
+msgstr ""
+
+#: inc/template-functions.php:1017
+msgid "Save my name and email in this browser for the next time I comment."
+msgstr ""
+
+#: inc/template-functions.php:1022
+msgid "Leave a Review"
+msgstr ""
+
+#: inc/template-functions.php:1025
+msgid "Your Email Address will not be published. Required fields are marked *"
+msgstr ""
+
+#: inc/template-functions.php:1031
+msgid "Post Review"
+msgstr ""
+
+#: inc/theme-setup.php:47
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/theme-setup.php:48
+msgid "Footer Company Links"
+msgstr ""
+
+#: inc/theme-setup.php:49
+msgid "Footer Explore Links"
+msgstr ""
+
+#: inc/theme-setup.php:50
+msgid "Footer Bottom Links"
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:32
+#: inc/widgets.php:29
+msgid "Movie Recommendations"
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:34
+msgid "Displays related movies above the footer on single movie pages."
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:58
+msgid "Genre"
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:59
+msgid "Label"
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:61
+msgid "Production Company"
+msgstr ""
+
+#: inc/widget-movie-recommendations.php:62
+msgid "Tag"
+msgstr ""
+
+#. translators: 1: taxonomy label (e.g. Genre), 2: term name (e.g. Action).
+#. translators: 1: taxonomy label (e.g. Career), 2: term name (e.g. Actor).
+#: inc/widget-movie-recommendations.php:155
+#: inc/widget-person-recommendations.php:149
+#, php-format
+msgid "Recommended by %1$s: %2$s"
+msgstr ""
+
+#: inc/widget-person-recommendations.php:29
+#: inc/widgets.php:41
+msgid "Person Recommendations"
+msgstr ""
+
+#: inc/widget-person-recommendations.php:31
+msgid "Displays related persons above the footer on single person pages."
+msgstr ""
+
+#: inc/widget-person-recommendations.php:56
+msgid "Career"
+msgstr ""
+
+#: inc/widget-person-recommendations.php:157
+msgid "Recommended celebrities"
+msgstr ""
+
+#: inc/widget-recommendations-base.php:55
+msgid "Title:"
+msgstr ""
+
+#: inc/widget-recommendations-base.php:70
+msgid "Count:"
+msgstr ""
+
+#: inc/widget-recommendations-base.php:87
+msgid "Relation Criteria:"
+msgstr ""
+
+#: inc/widget-recommendations-base.php:113
+msgid "Only one taxonomy is available."
+msgstr ""
+
+#: inc/widgets.php:30
+msgid "Displays related movie cards above the footer on single movie pages."
+msgstr ""
+
+#: inc/widgets.php:42
+msgid "Displays related person cards above the footer on single person pages."
+msgstr ""
+
+#: inc/widgets.php:94
+msgid "Count is required."
+msgstr ""
+
+#: inc/widgets.php:95
+msgid "Count must be a whole number."
+msgstr ""
+
+#. translators: %d: minimum allowed count.
+#: inc/widgets.php:98
+#, php-format
+msgid "Count must be at least %d."
+msgstr ""
+
+#. translators: %d: maximum allowed count.
+#: inc/widgets.php:103
+#, php-format
+msgid "Count must be at most %d."
+msgstr ""
+
+#. translators: %d: maximum allowed title length.
+#: inc/widgets.php:108
+#, php-format
+msgid "Title must be %d characters or fewer."
+msgstr ""
+
+#: index.php:23
+msgid "No posts found."
+msgstr ""
+
+#: index.php:48
+msgid "No books available yet."
+msgstr ""
+
+#: single-rt-movie.php:87
+msgid "Directors:"
+msgstr ""
+
+#: single-rt-movie.php:105
+#: single-rt-movie.php:111
+msgid "Synopsis"
+msgstr ""
+
+#: single-rt-movie.php:108
+#: single-rt-movie.php:109
+#: single-rt-person.php:107
+#: single-rt-person.php:108
+msgid "Quick Links"
+msgstr ""
+
+#: single-rt-movie.php:112
+#: template-parts/movie/cast-crew-archive.php:17
+#: template-parts/movie/crew.php:28
+msgid "Cast & Crew"
+msgstr ""
+
+#: single-rt-movie.php:113
+#: single-rt-person.php:112
+#: single-rt-person.php:154
+#: template-parts/movie/gallery-photo.php:17
+msgid "Snapshots"
+msgstr ""
+
+#: single-rt-movie.php:114
+#: template-parts/movie/gallery-video.php:17
+msgid "Trailer & Clips"
+msgstr ""
+
+#: single-rt-movie.php:115
+#: single-rt-movie.php:150
+msgid "Reviews"
+msgstr ""
+
+#. translators: %d: age in years.
+#: single-rt-person.php:41
+#, php-format
+msgid " (age %d years)"
+msgstr ""
+
+#: single-rt-person.php:64
+msgid "Person details"
+msgstr ""
+
+#: single-rt-person.php:66
+msgid "Occupation:"
+msgstr ""
+
+#: single-rt-person.php:69
+msgid "Born:"
+msgstr ""
+
+#: single-rt-person.php:72
+msgid "Birthplace:"
+msgstr ""
+
+#: single-rt-person.php:75
+msgid "Socials:"
+msgstr ""
+
+#: single-rt-person.php:103
+#: single-rt-person.php:110
+msgid "About"
+msgstr ""
+
+#: single-rt-person.php:111
+#: single-rt-person.php:121
+msgid "Popular Movies"
+msgstr ""
+
+#: single-rt-person.php:113
+#: single-rt-person.php:169
+msgid "Videos"
+msgstr ""
+
+#. translators: %d: snapshot number.
+#: single-rt-person.php:159
+#: template-parts/movie/gallery-photo.php:22
+#, php-format
+msgid "Snapshot %d"
+msgstr ""
+
+#. translators: %d: video number.
+#: single-rt-person.php:181
+#, php-format
+msgid "Play video %d"
+msgstr ""
+
+#. translators: %d: video number.
+#: single-rt-person.php:183
+#, php-format
+msgid "Video %d"
+msgstr ""
+
+#: template-parts/movie-card.php:41
+msgid "Movie title"
+msgstr ""
+
+#: template-parts/movie-card.php:45
+msgid "N/A"
+msgstr ""
+
+#: template-parts/movie-card.php:49
+msgid "Details unavailable"
+msgstr ""
+
+#: template-parts/movie/cast-crew-archive.php:19
+msgid "Cast and crew list"
+msgstr ""
+
+#: template-parts/movie/crew.php:29
+#: template-parts/movie/crew.php:46
+msgid "View All"
+msgstr ""
+
+#. translators: %d: trailer number.
+#: template-parts/movie/gallery-video.php:28
+#, php-format
+msgid "Play trailer %d"
+msgstr ""
+
+#. translators: %d: trailer number.
+#: template-parts/movie/gallery-video.php:30
+#, php-format
+msgid "Trailer %d"
+msgstr ""
+
+#: template-parts/movie/metadata.php:43
+#: template-parts/movie/metadata.php:64
+msgid "Genres"
+msgstr ""
+
+#: template-parts/navigation.php:20
+#: template-parts/navigation.php:69
+msgid "Movies"
+msgstr ""
+
+#: template-parts/navigation.php:24
+#: template-parts/navigation.php:73
+msgid "TV Shows"
+msgstr ""
+
+#: template-parts/navigation.php:28
+#: template-parts/navigation.php:77
+msgid "Events"
+msgstr ""
+
+#: template-parts/navigation.php:32
+#: template-parts/navigation.php:81
+msgid "Theatre"
+msgstr ""
+
+#: template-parts/navigation.php:44
+msgid "About Us"
+msgstr ""
+
+#: template-parts/navigation.php:48
+msgid "Team"
+msgstr ""
+
+#: template-parts/navigation.php:52
+msgid "Careers"
+msgstr ""
+
+#: template-parts/navigation.php:56
+msgid "Culture"
+msgstr ""
+
+#: template-parts/navigation.php:60
+msgid "Community"
+msgstr ""
+
+#: template-parts/navigation.php:94
+msgid "Terms of Service"
+msgstr ""
+
+#: template-parts/navigation.php:98
+msgid "Privacy Policy"
+msgstr ""
+
+#: template-parts/post-navigation.php:24
+msgid "Post navigation"
+msgstr ""
+
+#: template-parts/slider.php:32
+msgid "Featured movies slider"
+msgstr ""
+
+#: template-parts/slider.php:147
+msgid "Slider navigation dots"
+msgstr ""
+
+#. translators: %d: slide number.
+#: template-parts/slider.php:152
+#, php-format
+msgid "Go to slide %d"
+msgstr ""

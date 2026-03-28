@@ -1,0 +1,9 @@
+/**
+ * Screen Time Theme - Fallback Index Page Stylesheet.
+ *
+ * Provides simple spacing for the generic fallback template content.
+ */
+.page-generic {
+	padding-top: 4.5rem;
+	padding-bottom: 4.5rem;
+}

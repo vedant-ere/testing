@@ -1,0 +1,58 @@
+node_modules/
+
+# Composer dependencies
+vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build output
+/dist/
+
+
+# Environment files
+.env
+.env.*
+
+# WordPress specific
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# PHPStorm
+.phpstorm.meta.php
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Coverage reports
+coverage/
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac system files
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows system files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux system files
+*~

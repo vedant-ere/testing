@@ -1,0 +1,249 @@
+.rt-pe-block {
+	display: grid;
+	gap: 1rem;
+}
+
+.rt-pe-block__search {
+	padding: 1rem;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.rt-pe-post-search {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.rt-pe-search-results {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.5rem;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.rt-pe-search-results__button {
+	width: 100%;
+	text-align: left;
+	padding: 0.6rem 0.75rem;
+	border: 1px solid #dcdcde;
+	background: #fff;
+	cursor: pointer;
+	display: flex;
+	gap: 0.65rem;
+	align-items: center;
+}
+
+.rt-pe-search-results__button:hover,
+.rt-pe-search-results__button:focus {
+	border-color: #2271b1;
+}
+
+.rt-pe-search-results__type {
+	background: #f0f0f1;
+	border-radius: 2px;
+	padding: 0.15rem 0.35rem;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.rt-pe-pagination {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.rt-pe-pagination__label {
+	font-size: 0.8125rem;
+}
+
+.rt-pe-block__items {
+	display: grid;
+	gap: 1rem;
+}
+
+.rt-pe-embedded-post {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+	gap: 1rem;
+	align-items: start;
+}
+
+.rt-pe-embedded-post--image-right {
+	grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+}
+
+.rt-pe-embedded-post__image {
+	width: 100%;
+}
+
+.rt-pe-embedded-post__image-tag {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border-radius: 2px;
+}
+
+.rt-pe-embedded-post__image-placeholder {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	background: #f0f0f1;
+	display: grid;
+	place-items: center;
+	color: #646970;
+	font-size: 0.8125rem;
+}
+
+.rt-pe-embedded-post__title {
+	margin: 0 0 0.5rem;
+	font-size: 1.25rem;
+	line-height: 1.3;
+}
+
+.rt-pe-embedded-post__date-wrap {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 0.875rem;
+	color: #50575e;
+}
+
+.rt-pe-embedded-post__excerpt {
+	margin: 0 0 0.75rem;
+}
+
+.rt-pe-embedded-post__actions {
+	display: grid;
+	gap: 0.35rem;
+}
+
+.page-custom-post .movie-section {
+	padding-top: 120px;
+	padding-bottom: 4.5rem;
+}
+
+.page-custom-post .rt-pe-content {
+	margin-top: 48px;
+}
+
+.rt-pe-frontend {
+	display: grid;
+	gap: 32px;
+}
+
+.rt-pe-item {
+	background: var(--color-surface-card, #2b2b2b);
+	width: 100%;
+	overflow: hidden;
+}
+
+.rt-pe-grid {
+	display: grid;
+	grid-template-columns: minmax(220px, 384px) minmax(0, 1fr);
+	align-items: stretch;
+	min-height: 224px;
+}
+
+.rt-pe-grid--image-right {
+	grid-template-columns: minmax(0, 1fr) minmax(220px, 384px);
+}
+
+.rt-pe-grid__image {
+	height: 100%;
+	background: var(--color-header-bg, #1f1f1f);
+}
+
+.rt-pe-grid__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 224px;
+	object-fit: cover;
+}
+
+.rt-pe-grid__image--placeholder {
+	display: grid;
+	place-items: center;
+	color: var(--color-text-muted, rgba(255, 255, 255, 0.5));
+	min-height: 224px;
+	font-size: var(--text-14, 0.875rem);
+}
+
+.rt-pe-grid__content {
+	padding: 24px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	min-width: 0;
+}
+
+.rt-pe-item__title {
+	margin: 0;
+	color: var(--color-text-primary, #fff);
+	font-family: var(--font-logo, "Big Shoulders", sans-serif);
+	font-size: clamp(1.75rem, 2.3vw, 2.5rem);
+	font-weight: var(--weight-bold, 400);
+	line-height: 1.08;
+}
+
+.rt-pe-item__title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.rt-pe-item__date {
+	display: block;
+	margin: 0;
+	color: var(--color-text-muted, rgba(255, 255, 255, 0.5));
+	font-size: var(--text-14, 0.875rem);
+	line-height: 1.5;
+}
+
+.rt-pe-item__excerpt {
+	margin: 0;
+	color: var(--color-text-primary, #fff);
+	font-size: var(--text-16, 1rem);
+	line-height: 1.5;
+}
+
+.rt-pe-item__excerpt p {
+	margin: 0;
+}
+
+.rt-pe-item__excerpt p + p {
+	margin-top: 0.5rem;
+}
+
+.rt-pe-item__missing-source {
+	margin: auto 0 0;
+	padding: 0.5rem 0.75rem;
+	border-left: 3px solid var(--color-accent, #d13223);
+	background: rgb(209 50 35 / 12%);
+	color: var(--color-text-primary, #fff);
+	font-size: var(--text-14, 0.875rem);
+}
+
+@media (max-width: 782px) {
+
+	.rt-pe-embedded-post,
+	.rt-pe-embedded-post--image-right,
+	.rt-pe-grid,
+	.rt-pe-grid--image-right {
+		grid-template-columns: 1fr;
+	}
+
+	.page-custom-post .movie-section {
+		padding-top: 3.8rem;
+	}
+
+	.page-custom-post .rt-pe-content {
+		margin-top: 32px;
+	}
+}

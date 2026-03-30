@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rt-post-embedder/post-embedder",
+  "version": "1.0.0",
+  "title": "Post Embedder",
+  "category": "widgets",
+  "icon": "embed-post",
+  "description": "Search and embed existing posts with editable content fields.",
+  "keywords": [
+    "post",
+    "embed",
+    "search"
+  ],
+  "textdomain": "rt-post-embedder",
+  "supports": {
+    "html": false,
+    "multiple": false
+  },
+  "attributes": {
+    "embeddedPosts": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "postId": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "thumbnailId": {
+            "type": "integer"
+          },
+          "thumbnailUrl": {
+            "type": "string"
+          },
+          "imageLeft": {
+            "type": "boolean",
+            "default": true
+          },
+          "showExcerpt": {
+            "type": "boolean",
+            "default": true
+          },
+          "showDate": {
+            "type": "boolean",
+            "default": true
+          },
+          "syncChanges": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "editorStyle": "file:./index.css"
+}

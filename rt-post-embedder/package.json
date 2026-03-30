@@ -1,0 +1,15 @@
+{
+  "name": "rt-post-embedder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build configuration for RT Post Embedder blocks",
+  "scripts": {
+    "build": "wp-scripts build && wp-scripts build src/pre-publish-checker/index.js --output-path=build/pre-publish-checker --output-filename=index.js",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js src",
+    "lint:css": "wp-scripts lint-style \"src/**/*.css\" \"assets/css/**/*.css\""
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^31.7.0"
+  }
+}

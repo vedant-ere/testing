@@ -1,0 +1,8 @@
+.column-rt_pe_embedded_in a {
+	display: inline-block;
+	margin-bottom: 0.25rem;
+}
+
+.column-rt_pe_embedded_in a:last-child {
+	margin-bottom: 0;
+}

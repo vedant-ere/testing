@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "rt-movie-library/movies",
+	"version": "1.0.0",
+	"title": "Movies",
+	"category": "widgets",
+	"icon": "video-alt2",
+	"description": "Display a filterable list of movies with metadata.",
+	"keywords": [ "movies", "film", "rt-movie-library" ],
+	"textdomain": "rt-movie-library",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"count": {
+			"type": "integer",
+			"default": 6
+		},
+		"directorId": {
+			"type": "integer",
+			"default": 0
+		},
+		"genreId": {
+			"type": "integer",
+			"default": 0
+		},
+		"labelId": {
+			"type": "integer",
+			"default": 0
+		},
+		"languageId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"editorScript": "file:./index.js"
+}

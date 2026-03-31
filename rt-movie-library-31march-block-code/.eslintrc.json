@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "extends": "plugin:@wordpress/eslint-plugin/recommended",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsdoc/check-tag-names": "off",
+    "jsdoc/no-undefined-types": "off",
+    "jsdoc/empty-tags": "off"
+  },
+  "globals": {
+    "rtMediaBoxL10n": "readonly",
+    "rtMovieCrewL10n": "readonly",
+    "rtMovieMetaL10n": "readonly",
+    "rtBlocksConfig": "readonly"
+  }
+}

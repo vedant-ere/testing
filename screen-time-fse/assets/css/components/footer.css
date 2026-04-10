@@ -1,0 +1,162 @@
+/**
+ * Footer Styles — Brand, navigation, social, copyright
+ *
+ * @package ScreenTimeFSE
+ * @since   1.0.0
+ */
+
+.site-footer__columns {
+	align-items: flex-start;
+	gap: 3rem !important;
+}
+
+.site-footer__brand-col .wp-block-site-logo {
+	display: block;
+}
+
+.site-footer__heading {
+	margin-top: 4.5625rem !important;
+	font-size: var(--wp--preset--font-size--base) !important;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+/* ── Social icons ─────────────────────────────────────────────────────────── */
+.social-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+}
+
+.social-list a {
+	display: inline-flex;
+	width: 3.125rem;
+	height: 3.125rem;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: transform 150ms ease;
+}
+
+.social-list a:hover,
+.social-list a:focus-visible {
+	transform: scale(1.08);
+}
+
+.social-list img {
+	width: 3.125rem;
+	height: 3.125rem;
+	object-fit: contain;
+	opacity: 0.8;
+	transition: opacity 0.25s ease;
+	display: block;
+}
+
+.social-list a:hover img,
+.social-list a:focus-visible img {
+	opacity: 1;
+}
+
+/* ── Footer nav links ─────────────────────────────────────────────────────── */
+.site-footer__menu.wp-block-navigation {
+	flex-direction: column;
+}
+
+.site-footer__menu .wp-block-navigation__container {
+	flex-direction: column;
+	gap: 0;
+}
+
+.site-footer__menu .wp-block-navigation-item__content {
+	font-size: var(--wp--preset--font-size--base);
+	line-height: 2.5;
+	padding: 0;
+	color: var(--wp--preset--color--text-primary);
+}
+
+.site-footer__menu .wp-block-navigation-item__content:hover,
+.site-footer__menu .wp-block-navigation-item:focus-within .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--accent);
+}
+
+.site-footer__links-col h2 {
+	font-size: var(--wp--preset--font-size--base) !important;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 0 0 1rem !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+.site-footer__divider {
+	margin: 0 !important;
+	border: none !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ── Bottom row ───────────────────────────────────────────────────────────── */
+.site-footer__copyright {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: var(--wp--preset--font-size--sm);
+}
+
+.site-footer__bottom-links .wp-block-navigation-item__content {
+	font-size: var(--wp--preset--font-size--sm);
+	color: rgba(255, 255, 255, 0.5);
+	padding: 0;
+	line-height: 1;
+}
+
+.site-footer__bottom-links .wp-block-navigation__container {
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.site-footer__bottom-links .wp-block-navigation-item + .wp-block-navigation-item::before {
+	content: "|";
+	color: rgba(255, 255, 255, 0.3);
+	margin: 0 0.5rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+	.site-footer__columns.wp-block-columns {
+		flex-direction: column;
+		gap: 0 !important;
+	}
+
+	.site-footer__brand-col {
+		align-items: center;
+		text-align: center;
+	}
+
+	.social-list {
+		justify-content: center;
+	}
+
+	.site-footer__links-col {
+		display: none;
+	}
+
+	.site-footer__heading {
+		margin-top: 1.25rem !important;
+	}
+
+	.site-footer__bottom-links .wp-block-navigation__container {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.site-footer__bottom-links .wp-block-navigation-item + .wp-block-navigation-item::before {
+		content: "";
+		margin: 0;
+	}
+
+	.site-footer__copyright {
+		text-align: center;
+	}
+}

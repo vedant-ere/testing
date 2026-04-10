@@ -1,0 +1,98 @@
+/**
+ * Hero Section Styles — Homepage featured section
+ *
+ * @package ScreenTimeFSE
+ * @since   1.0.0
+ */
+
+.hero-section {
+	position: relative;
+	min-height: clamp(18rem, 43vw, 38.75rem);
+	background-color: #0f0f12;
+	background-size: cover;
+	background-position: center 5%;
+	overflow: hidden;
+}
+
+.hero-section__overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.75) 0%,
+		rgba(0, 0, 0, 0.55) 40%,
+		rgba(0, 0, 0, 0.1) 100%
+	);
+}
+
+.hero-section__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: flex-start;
+	padding-top: clamp(5rem, 12vw, 8.5rem);
+	padding-bottom: clamp(3rem, 6vw, 6rem);
+	padding-inline: clamp(1.5rem, 8vw, 7.25rem);
+}
+
+.hero-section__panel {
+	max-width: clamp(18rem, 35vw, 26rem);
+}
+
+.hero-section__tags {
+	font-size: var(--wp--preset--font-size--sm);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--wp--preset--color--accent);
+	margin: 0 0 1rem;
+}
+
+.hero-section__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--big-shoulders);
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-weight: 300;
+	line-height: 1.04;
+}
+
+.hero-section__title a {
+	color: var(--wp--preset--color--text-primary);
+}
+
+.hero-section__title a:hover,
+.hero-section__title a:focus-visible {
+	color: var(--wp--preset--color--accent);
+}
+
+.hero-section__meta {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.5rem 0.875rem;
+	margin: 2rem 0 0;
+	font-size: var(--wp--preset--font-size--sm);
+	color: var(--wp--preset--color--text-muted);
+}
+
+.hero-section__description {
+	max-width: 26rem;
+	margin: 1.5rem 0 0;
+	font-size: var(--wp--preset--font-size--base);
+	line-height: 1.6;
+	color: var(--wp--preset--color--text-primary);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+	.hero-section {
+		min-height: 17.875rem;
+	}
+
+	.hero-section__title {
+		font-size: clamp(1.5rem, 8vw, 2rem);
+	}
+
+	.hero-section__description {
+		display: none;
+	}
+}

@@ -1,0 +1,24 @@
+/**
+ * Screen Time FSE — Component Styles Index
+ *
+ * This file imports all scoped component CSS files.
+ * Each component is self-contained and handles its own responsiveness.
+ *
+ * @package ScreenTimeFSE
+ * @since   1.0.0
+ */
+
+/* Header — Logo, navigation, search, mobile menu */
+@import url('./components/header.css');
+
+/* Hero section — Homepage featured section */
+@import url('./components/hero.css');
+
+/* Movie card & Archive — Movie grids, cards, pagination */
+@import url('./components/movie-card.css');
+
+/* Single movie page — All movie detail sections */
+@import url('./components/single-movie.css');
+
+/* Footer — Brand, navigation, social, copyright */
+@import url('./components/footer.css');

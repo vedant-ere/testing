@@ -1,0 +1,50 @@
+<?php
+/**
+ * Title: Screen Time Header
+ * Slug: screen-time-fse/screen-time-header
+ * Categories: header
+ * Inserter: false
+ *
+ * @package ScreenTimeFSE
+ */
+
+?>
+<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"backgroundColor":"page-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-page-bg-background-color has-background"><!-- wp:group {"className":"header-top-bar","style":{"dimensions":{"minHeight":"120px"}},"backgroundColor":"page-bg","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group header-top-bar has-page-bg-background-color has-background" style="min-height:120px"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":343,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="http://rt-movie-plugin-assignment.local/wp-content/uploads/2026/04/search-1.png" alt="" class="wp-image-343"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"header-search-label"} -->
+<p class="header-search-label">search</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:site-logo {"width":153} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"header-actions-desktop","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group header-actions-desktop"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xs"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":537,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="http://rt-movie-plugin-assignment.local/wp-content/uploads/2026/04/user-1.png" alt="" class="wp-image-537"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>SIGN IN</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>ENG ▼</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"header-hamburger-mobile"} -->
+<p class="header-hamburger-mobile">☰</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:navigation {"ref":285,"backgroundColor":"nav-bg","icon":"menu","align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} /--></div>
+<!-- /wp:group -->

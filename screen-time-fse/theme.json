@@ -1,0 +1,248 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"color": {
+			"custom": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"palette": [
+				{ "slug": "page-bg",      "color": "#1f1f1f",              "name": "Page Background"  },
+				{ "slug": "header-bg",    "color": "#1f1f1f",              "name": "Header Background" },
+				{ "slug": "nav-bg",       "color": "#111111",              "name": "Nav Background"    },
+				{ "slug": "footer-bg",    "color": "#2b2b2b",              "name": "Footer Background" },
+				{ "slug": "surface-card", "color": "#2b2b2b",              "name": "Card Surface"      },
+				{ "slug": "text-primary", "color": "#ffffff",              "name": "Text Primary"      },
+				{ "slug": "text-muted",   "color": "rgba(255,255,255,0.5)","name": "Text Muted"        },
+				{ "slug": "accent",       "color": "#d13223",              "name": "Accent Red"        },
+				{ "slug": "accent-light", "color": "rgba(228,109,98,1)",   "name": "Accent Light"      },
+				{ "slug": "divider",      "color": "rgba(255,255,255,0.6)","name": "Divider"           },
+				{ "slug": "black",        "color": "#000000",              "name": "Black"             },
+				{ "slug": "white",        "color": "#ffffff",              "name": "White"             }
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"customFontSize": false,
+			"dropCap": false,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Big Shoulders\", sans-serif",
+					"slug": "big-shoulders",
+					"name": "Big Shoulders"
+				},
+				{
+					"fontFamily": "\"Heebo\", sans-serif",
+					"slug": "heebo",
+					"name": "Heebo"
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "xs",
+					"size": "0.75rem",
+					"name": "XS (12px)",
+					"fluid": { "min": "0.625rem", "max": "0.75rem" }
+				},
+				{
+					"slug": "sm",
+					"size": "0.875rem",
+					"name": "SM (14px)",
+					"fluid": { "min": "0.8125rem", "max": "0.875rem" }
+				},
+				{
+					"slug": "base",
+					"size": "1rem",
+					"name": "Base (16px)"
+				},
+				{
+					"slug": "md",
+					"size": "1.25rem",
+					"name": "MD (20px)",
+					"fluid": { "min": "1rem", "max": "1.25rem" }
+				},
+				{
+					"slug": "xl",
+					"size": "2rem",
+					"name": "XL (32px)",
+					"fluid": { "min": "1.5rem", "max": "2rem" }
+				},
+				{
+					"slug": "2xl",
+					"size": "2.25rem",
+					"name": "2XL (36px)",
+					"fluid": { "min": "1.75rem", "max": "2.25rem" }
+				},
+				{
+					"slug": "3xl",
+					"size": "2.9375rem",
+					"name": "3XL (47px)",
+					"fluid": { "min": "2rem", "max": "2.9375rem" }
+				},
+				{
+					"slug": "4xl",
+					"size": "4rem",
+					"name": "4XL (64px)",
+					"fluid": { "min": "2.5rem", "max": "4rem" }
+				},
+				{
+					"slug": "hero",
+					"size": "5.5rem",
+					"name": "Hero (88px)",
+					"fluid": { "min": "2.5rem", "max": "5.5rem" }
+				}
+			]
+		},
+		"spacing": {
+			"customSpacingSize": true,
+			"defaultSpacingSizes": false,
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
+			"spacingSizes": [
+				{ "slug": "4",   "size": "0.25rem", "name": "4" },
+				{ "slug": "8",   "size": "0.5rem",  "name": "8" },
+				{ "slug": "12",  "size": "0.75rem", "name": "12" },
+				{ "slug": "16",  "size": "1rem",    "name": "16" },
+				{ "slug": "20",  "size": "1.25rem", "name": "20" },
+				{ "slug": "24",  "size": "1.5rem",  "name": "24" },
+				{ "slug": "32",  "size": "2rem",    "name": "32" },
+				{ "slug": "48",  "size": "3rem",    "name": "48" },
+				{ "slug": "64",  "size": "4rem",    "name": "64" },
+				{ "slug": "96",  "size": "6rem",    "name": "96" },
+				{ "slug": "120", "size": "7.5rem",  "name": "120" }
+			]
+		},
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"layout": {
+			"contentSize": "1208px",
+			"wideSize": "1440px"
+		},
+		"dimensions": {
+			"aspectRatio": true,
+			"minHeight": true
+		},
+		"blocks": {
+			"core/navigation": {
+				"typography": {
+					"customFontSize": false
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--page-bg)",
+			"text": "var(--wp--preset--color--text-primary)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)",
+			"fontSize": "var(--wp--preset--font-size--base)",
+			"lineHeight": "1.5"
+		},
+		"spacing": {
+			"blockGap": "0",
+			"padding": {
+				"top": "0",
+				"right": "0",
+				"bottom": "0",
+				"left": "0"
+			}
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "var(--wp--preset--color--text-primary)" },
+				":hover": { "color": { "text": "var(--wp--preset--color--accent)" } },
+				"typography": { "textDecoration": "none" }
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--big-shoulders)",
+					"fontWeight": "300",
+					"lineHeight": "1.04"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--big-shoulders)",
+					"fontWeight": "400",
+					"lineHeight": "1.1"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heebo)",
+					"fontWeight": "600",
+					"lineHeight": "1.2"
+				}
+			},
+			"button": {
+				"color": {
+					"text": "var(--wp--preset--color--text-primary)",
+					"background": "var(--wp--preset--color--accent)"
+				},
+				":hover": {
+					"color": { "background": "var(--wp--preset--color--accent-light)" }
+				},
+				"border": { "radius": "0" },
+				"typography": { "textTransform": "uppercase" }
+			}
+		},
+		"blocks": {
+			"core/navigation": {
+				"typography": {
+					"textTransform": "uppercase",
+					"fontSize": "var(--wp--preset--font-size--sm)"
+				},
+				"color": { "text": "var(--wp--preset--color--text-primary)" }
+			},
+			"core/post-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--big-shoulders)"
+				}
+			},
+			"core/query-pagination": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "front-page",
+			"title": "Front Page",
+			"postTypes": [ "page" ]
+		},
+		{
+			"name": "archive-rt-movie",
+			"title": "Movies Archive",
+			"postTypes": [ "rt-movie" ]
+		},
+		{
+			"name": "single-rt-movie",
+			"title": "Single Movie",
+			"postTypes": [ "rt-movie" ]
+		}
+	]
+}

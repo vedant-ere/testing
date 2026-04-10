@@ -1,0 +1,44 @@
+/**
+ * Screen Time FSE — Editor Stylesheet
+ *
+ * Applied inside the block editor iFrame. Mirrors global + blocks styles so
+ * the editing experience matches the front end as closely as possible.
+ *
+ * @package ScreenTimeFSE
+ * @since   1.0.0
+ */
+
+/* Import Google Fonts into the editor iFrame. */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Heebo:wght@100..900&display=swap");
+
+/* Section title accent bar */
+.editor-styles-wrapper .section-title {
+	display: inline-flex;
+	align-items: stretch;
+	gap: 1rem;
+}
+
+.editor-styles-wrapper .section-title::before {
+	content: "";
+	display: block;
+	width: 4px;
+	background: var(--wp--preset--color--accent);
+	flex-shrink: 0;
+	align-self: stretch;
+}
+
+/* Movie card inside editor */
+.editor-styles-wrapper .movie-card {
+	background: var(--wp--preset--color--surface-card);
+	display: flex;
+	flex-direction: column;
+}
+
+/* Hero section editor preview */
+.editor-styles-wrapper .hero-section {
+	position: relative;
+	min-height: 20rem;
+	background-color: #0f0f12;
+	background-size: cover;
+	background-position: center;
+}

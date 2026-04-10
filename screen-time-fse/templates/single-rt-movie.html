@@ -1,0 +1,323 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main page-single-movie","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group site-main page-single-movie">
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- TOP SECTION — Poster · Title · Dynamic Meta · Excerpt · Genres   -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:group {"className":"movie-single-hero","backgroundColor":"header-bg","style":{"spacing":{"padding":{"top":"var:preset|spacing|32","bottom":"var:preset|spacing|64","left":"0","right":"0"}}},"layout":{"type":"constrained","contentSize":"1440px","justifyContent":"center"}} -->
+	<div class="wp-block-group movie-single-hero has-header-bg-background-color has-background">
+
+		<!-- wp:group {"className":"movie-single-hero__inner","style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top","justifyContent":"left"}} -->
+		<div class="wp-block-group movie-single-hero__inner">
+
+			<!-- Poster column -->
+			<!-- wp:group {"className":"movie-single-hero__poster-wrap","style":{"layout":{"selfStretch":"fixed","flexSize":"552px"},"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+			<div class="wp-block-group movie-single-hero__poster-wrap">
+
+				<!-- wp:post-featured-image {"isLink":false,"width":"552px","height":"876px","className":"movie-single-hero__poster","style":{"border":{"radius":"0"}}} /-->
+
+			</div>
+			<!-- /wp:group -->
+
+			<!-- Content column -->
+			<!-- wp:group {"className":"movie-single-hero__content","style":{"spacing":{"padding":{"top":"var:preset|spacing|96","left":"0","right":"0"}}},"layout":{"type":"default"}} -->
+			<div class="wp-block-group movie-single-hero__content">
+
+				<!-- Movie title -->
+				<!-- wp:post-title {"level":1,"className":"movie-single-hero__title","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--big-shoulders)","fontWeight":"300","lineHeight":"1.04","fontSize":"clamp(2rem,6vw,5.5rem)"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} /-->
+
+				<!-- ─── Dynamic Meta Row (Block Binding API) ──────────────── -->
+				<!-- Rating · Release Date · Content Rating · Runtime
+				     All four are bound to rt-movie post meta via core/post-meta.
+				     Requires WP 6.5+ and meta registered with show_in_rest:true  -->
+				<!-- wp:group {"className":"movie-single-hero__rating-row","style":{"spacing":{"margin":{"top":"var:preset|spacing|48","bottom":"0"},"blockGap":"var:preset|spacing|16"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+				<div class="wp-block-group movie-single-hero__rating-row">
+
+					<!-- Rating -->
+					<!-- wp:group {"className":"meta-item meta-item--rating","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|8"}}} -->
+					<div class="wp-block-group meta-item meta-item--rating">
+
+						<!-- wp:html -->
+						<span class="meta-star" aria-hidden="true">&#9733;</span>
+						<!-- /wp:html -->
+
+						<!-- wp:paragraph {"className":"meta-value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"rt-movie-meta-basic-rating"}}}},"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+						<p class="wp-block-paragraph meta-value"></p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:html -->
+						<span class="meta-label">/10</span>
+						<!-- /wp:html -->
+
+					</div>
+					<!-- /wp:group -->
+
+					<!-- Separator -->
+					<!-- wp:html -->
+					<span class="meta-sep" aria-hidden="true">&#8226;</span>
+					<!-- /wp:html -->
+
+					<!-- Release Date -->
+					<!-- wp:paragraph {"className":"meta-value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"rt-movie-meta-basic-release-date"}}}},"style":{"typography":{"fontSize":"1.5rem"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+					<p class="wp-block-paragraph meta-value"></p>
+					<!-- /wp:paragraph -->
+
+					<!-- Separator -->
+					<!-- wp:html -->
+					<span class="meta-sep" aria-hidden="true">&#8226;</span>
+					<!-- /wp:html -->
+
+					<!-- Content Rating -->
+					<!-- wp:paragraph {"className":"meta-value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"rt-movie-meta-basic-content-rating"}}}},"style":{"typography":{"fontSize":"1.5rem"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+					<p class="wp-block-paragraph meta-value"></p>
+					<!-- /wp:paragraph -->
+
+					<!-- Separator -->
+					<!-- wp:html -->
+					<span class="meta-sep" aria-hidden="true">&#8226;</span>
+					<!-- /wp:html -->
+
+					<!-- Runtime (minutes) -->
+					<!-- wp:paragraph {"className":"meta-value","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"rt-movie-meta-basic-runtime"}}}},"style":{"typography":{"fontSize":"1.5rem","textTransform":"uppercase"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+					<p class="wp-block-paragraph meta-value"></p>
+					<!-- /wp:paragraph -->
+
+				</div>
+				<!-- /wp:group -->
+
+				<!-- Excerpt / Synopsis description -->
+				<!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"excerptLength":55,"className":"movie-single-hero__description","style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.8"},"spacing":{"margin":{"top":"var:preset|spacing|48","bottom":"0"}}}} /-->
+
+				<!-- Genre terms as chips -->
+				<!-- wp:post-terms {"term":"rt-movie-genre","className":"movie-single-hero__genres","style":{"typography":{"fontSize":"var(--wp--preset--font-size--sm)"},"spacing":{"margin":{"top":"var:preset|spacing|24","bottom":"0"}}}} /-->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- CONTENT SECTION — Post body + Quick Links sidebar                 -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:group {"className":"movie-single-body","id":"synopsis","style":{"spacing":{"padding":{"top":"var:preset|spacing|64","bottom":"var:preset|spacing|64","left":"0","right":"0"}}},"layout":{"type":"constrained","contentSize":"1440px","justifyContent":"center"}} -->
+	<div class="wp-block-group movie-single-body" id="synopsis">
+
+		<!-- wp:columns {"className":"movie-single-body__grid","isStackedOnMobile":true,"style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16"},"blockGap":{"left":"var:preset|spacing|64"}}}} -->
+		<div class="wp-block-columns movie-single-body__grid">
+
+			<!-- Main content column -->
+			<!-- wp:column {"width":"66.67%","className":"movie-single-body__copy"} -->
+			<div class="wp-block-column movie-single-body__copy" style="flex-basis:66.67%">
+
+				<!-- wp:heading {"level":2,"className":"section-title","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--big-shoulders)","fontSize":"var(--wp--preset--font-size--4xl)","fontWeight":"400","lineHeight":"1.1"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|32"}}}} -->
+				<h2 class="wp-block-heading section-title">Synopsis</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:post-content {"layout":{"type":"constrained","contentSize":"100%"}} /-->
+
+			</div>
+			<!-- /wp:column -->
+
+			<!-- Sidebar: Quick Links navigation widget -->
+			<!-- wp:column {"width":"33.33%","className":"movie-single-body__sidebar"} -->
+			<div class="wp-block-column movie-single-body__sidebar" style="flex-basis:33.33%">
+
+				<!-- wp:group {"className":"quick-links-widget","style":{"spacing":{"padding":{"top":"var:preset|spacing|32","right":"var:preset|spacing|24","bottom":"var:preset|spacing|32","left":"var:preset|spacing|24"},"blockGap":"var:preset|spacing|16"},"color":{"background":"var(--wp--preset--color--surface-card)"}},"layout":{"type":"default"}} -->
+				<div class="wp-block-group quick-links-widget has-surface-card-background-color has-background">
+
+					<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"var(--wp--preset--font-size--base)","fontWeight":"400","textTransform":"uppercase","lineHeight":"2"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+					<h3 class="wp-block-heading">Quick Links</h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:html -->
+					<ul class="quick-links-list" role="list">
+						<li><a href="#synopsis">Synopsis</a></li>
+						<li><a href="#cast-crew">Cast &amp; Crew</a></li>
+						<li><a href="#snapshots">Snapshots</a></li>
+						<li><a href="#trailers">Trailer &amp; Clips</a></li>
+						<li><a href="#reviews">Reviews</a></li>
+					</ul>
+					<!-- /wp:html -->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- CAST & CREW SECTION — Dynamic from plugin meta, static View All  -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:pattern {"slug":"screen-time-fse/cast-crew-section"} /-->
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- SNAPSHOTS — Static (one gallery shared across all movies)         -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:group {"className":"movie-single-section","id":"snapshots","style":{"spacing":{"padding":{"top":"var:preset|spacing|64","bottom":"var:preset|spacing|64","left":"0","right":"0"}}},"layout":{"type":"constrained","contentSize":"1440px","justifyContent":"center"}} -->
+	<div class="wp-block-group movie-single-section" id="snapshots">
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16","bottom":"var:preset|spacing|32"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"level":2,"className":"section-title","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--big-shoulders)","fontSize":"var(--wp--preset--font-size--4xl)","fontWeight":"400","lineHeight":"1.1"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+			<h2 class="wp-block-heading section-title">Snapshots</h2>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:gallery {"columns":3,"imageCrop":true,"linkTo":"none","className":"movie-snapshot-grid","style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16"}}},"layout":{"type":"default"}} -->
+		<figure class="wp-block-gallery movie-snapshot-grid has-nested-images columns-3 is-cropped">
+
+			<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"snapshot-item"} -->
+			<figure class="wp-block-image size-large snapshot-item">
+				<img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="Movie snapshot 1" loading="lazy"/>
+			</figure>
+			<!-- /wp:image -->
+
+			<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"snapshot-item"} -->
+			<figure class="wp-block-image size-large snapshot-item">
+				<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&q=80" alt="Movie snapshot 2" loading="lazy"/>
+			</figure>
+			<!-- /wp:image -->
+
+			<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"snapshot-item"} -->
+			<figure class="wp-block-image size-large snapshot-item">
+				<img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80" alt="Movie snapshot 3" loading="lazy"/>
+			</figure>
+			<!-- /wp:image -->
+
+		</figure>
+		<!-- /wp:gallery -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- TRAILERS — Static (placeholder embed shared across all movies)   -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:group {"className":"movie-single-section","id":"trailers","style":{"spacing":{"padding":{"top":"var:preset|spacing|64","bottom":"var:preset|spacing|64","left":"0","right":"0"}}},"layout":{"type":"constrained","contentSize":"1440px","justifyContent":"center"}} -->
+	<div class="wp-block-group movie-single-section" id="trailers">
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16","bottom":"var:preset|spacing|32"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"level":2,"className":"section-title","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--big-shoulders)","fontSize":"var(--wp--preset--font-size--4xl)","fontWeight":"400","lineHeight":"1.1"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+			<h2 class="wp-block-heading section-title">Trailer &amp; Clips</h2>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"className":"movie-trailer-grid","style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16"}}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+		<div class="wp-block-group movie-trailer-grid">
+
+			<!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"movie-trailer-embed"} -->
+			<figure class="wp-block-embed is-type-video is-provider-youtube movie-trailer-embed wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					https://www.youtube.com/watch?v=dQw4w9WgXcQ
+				</div>
+			</figure>
+			<!-- /wp:embed -->
+
+			<!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"movie-trailer-embed"} -->
+			<figure class="wp-block-embed is-type-video is-provider-youtube movie-trailer-embed wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					https://www.youtube.com/watch?v=dQw4w9WgXcQ
+				</div>
+			</figure>
+			<!-- /wp:embed -->
+
+			<!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"movie-trailer-embed"} -->
+			<figure class="wp-block-embed is-type-video is-provider-youtube movie-trailer-embed wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					https://www.youtube.com/watch?v=dQw4w9WgXcQ
+				</div>
+			</figure>
+			<!-- /wp:embed -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- REVIEWS — Core comments block (comment form + comment list)       -->
+	<!-- Name/Email/Website/Cookie fields removed by PHP filter in         -->
+	<!-- functions.php > screentime_fse_filter_comment_fields()            -->
+	<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+	<!-- wp:group {"className":"movie-single-section","id":"reviews","style":{"spacing":{"padding":{"top":"var:preset|spacing|64","bottom":"var:preset|spacing|96","left":"0","right":"0"}}},"layout":{"type":"constrained","contentSize":"1440px","justifyContent":"center"}} -->
+	<div class="wp-block-group movie-single-section" id="reviews">
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16","bottom":"var:preset|spacing|48"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"level":2,"className":"section-title","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--big-shoulders)","fontSize":"var(--wp--preset--font-size--4xl)","fontWeight":"400","lineHeight":"1.1"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+			<h2 class="wp-block-heading section-title">Reviews</h2>
+			<!-- /wp:heading -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"left":"var:preset|spacing|16","right":"var:preset|spacing|16"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group">
+
+			<!-- Comment list — renders existing reviews in card style via CSS -->
+			<!-- wp:comments {"className":"movie-review-comments","style":{"spacing":{"blockGap":"var:preset|spacing|24"}}} -->
+			<div class="wp-block-comments movie-review-comments">
+
+				<!-- wp:comments-title {"level":3,"showPostTitle":false,"className":"sr-only"} /-->
+
+				<!-- wp:comment-template {"className":"movie-review-grid","layout":{"type":"grid","columnCount":2}} -->
+
+				<!-- wp:group {"className":"movie-review-card","style":{"color":{"background":"var(--wp--preset--color--surface-card)"},"spacing":{"padding":{"top":"var:preset|spacing|24","right":"var:preset|spacing|24","bottom":"var:preset|spacing|24","left":"var:preset|spacing|24"},"blockGap":"var:preset|spacing|12"}},"layout":{"type":"default"}} -->
+				<div class="wp-block-group movie-review-card has-surface-card-background-color has-background">
+
+					<!-- wp:group {"className":"review-card__author-row","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|12"}}} -->
+					<div class="wp-block-group review-card__author-row">
+
+						<!-- wp:avatar {"size":40,"isLink":false,"className":"review-card__avatar"} /-->
+
+						<!-- wp:comment-author-name {"isLink":false,"className":"review-card__name","style":{"typography":{"fontWeight":"600","fontSize":"var(--wp--preset--font-size--base)"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} /-->
+
+					</div>
+					<!-- /wp:group -->
+
+					<!-- wp:comment-content {"className":"review-card__text","style":{"typography":{"fontSize":"var(--wp--preset--font-size--sm)"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} /-->
+
+					<!-- wp:comment-date {"format":"F j, Y","isLink":false,"className":"review-card__date","style":{"typography":{"fontSize":"var(--wp--preset--font-size--xs)"},"color":{"text":"rgba(255,255,255,0.5)"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+				<!-- /wp:comment-template -->
+
+				<!-- Post comment form — Name/Email/Website/Cookie stripped by PHP filter -->
+				<!-- wp:post-comments-form {"className":"movie-review-form"} /-->
+
+			</div>
+			<!-- /wp:comments -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

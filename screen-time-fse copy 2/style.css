@@ -1,0 +1,237 @@
+/*
+Theme Name: Screen Time FSE
+Author: Vedant Ere
+Description: Full Site Editing block theme for the Screen Time movie library. Requires the RT Movie Library plugin.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: screen-time-fse
+Domain Path: /languages
+*/
+
+/* ========================================
+   GLOBAL HEADING ACCENT BAR
+======================================== */
+
+/* Red accent bar to the left of every heading */
+.wp-block-heading {
+	position: relative;
+	padding-left: 0.4em;
+}
+
+.wp-block-heading::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 1.15em;
+	width: 0.1em;
+	background: var(--wp--preset--color--accent);
+	border-radius: 0;
+}
+
+/* =============================
+   GENRE PILLS
+============================= */
+
+.genre-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.genre-pills a {
+	padding: 0.35em 0.9em;
+
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+
+	font-size: 0.85rem;
+	text-decoration: none;
+
+	color: var(--wp--preset--color--text-primary);
+
+	transition: 0.2s ease;
+}
+
+.genre-pills a:hover {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* =============================
+   PAGINATION
+============================= */
+
+.movie-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(0.5rem, 1vw, 0.9rem);
+	margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.movie-pagination .wp-block-query-pagination-numbers {
+	display: flex;
+	gap: clamp(0.5rem, 1vw, 0.9rem);
+}
+
+.movie-pagination .page-numbers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	inline-size: 2.75rem;
+	block-size: 2.75rem;
+
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+
+	font-size: 0.875rem;
+	text-decoration: none;
+
+	color: var(--wp--preset--color--text-primary);
+
+	transition: 0.2s ease;
+}
+
+.movie-pagination .current {
+	background: var(--wp--preset--color--footer-bg);
+	color: var(--wp--preset--color--accent);
+	border: none;
+}
+
+.movie-pagination a:hover {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* =============================
+   REVIEW GRID
+============================= */
+
+.review-grid .wp-block-comment-template {
+	display: grid;
+
+	grid-template-columns: repeat(2, 1fr);
+
+	gap: clamp(1rem, 2vw, 1.75rem);
+
+	margin-top: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+/* limit to 4 reviews */
+
+.review-grid .wp-block-comment-template > *:nth-child(n + 5) {
+	display: none;
+}
+
+/* review card */
+
+.review-grid .wp-block-comment {
+	padding: clamp(1rem, 2vw, 1.5rem);
+
+	background: var(--wp--preset--color--footer-bg);
+
+	display: flex;
+	flex-direction: column;
+
+	gap: 0.7rem;
+
+	min-block-size: 10rem;
+}
+
+/* avatar */
+
+.review-grid .wp-block-comment-author-avatar img {
+	inline-size: 2.5rem;
+	block-size: 2.5rem;
+
+	border-radius: 50%;
+}
+
+/* review text */
+
+.review-grid .wp-block-comment-content {
+	font-size: 0.95rem;
+
+	line-height: 1.65;
+}
+
+/* review date */
+
+.review-grid .wp-block-comment-date {
+	align-self: flex-end;
+
+	font-size: 0.8rem;
+
+	opacity: 0.65;
+
+	margin-top: auto;
+}
+
+/* =============================
+   REVIEW FORM
+============================= */
+
+.review-form {
+	max-inline-size: 46rem;
+}
+
+.review-form input,
+.review-form textarea {
+	inline-size: 100%;
+
+	padding: 0.75em;
+
+	border: 1px solid rgba(255, 255, 255, 0.35);
+
+	background: transparent;
+
+	color: inherit;
+
+	font-size: 0.95rem;
+}
+
+.review-form textarea {
+	min-block-size: 8rem;
+}
+
+.review-form .wp-block-columns {
+	gap: 1rem;
+}
+
+.review-form .form-submit input {
+	padding: 0.6em 1.4em;
+
+	border-radius: 999px;
+
+	border: none;
+
+	background: var(--wp--preset--color--accent);
+
+	color: #fff;
+
+	cursor: pointer;
+
+	font-size: 0.9rem;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (max-width: 48rem) {
+
+	.review-grid .wp-block-comment-template {
+		grid-template-columns: 1fr;
+	}
+
+	.review-form .wp-block-columns {
+		flex-direction: column;
+	}
+}

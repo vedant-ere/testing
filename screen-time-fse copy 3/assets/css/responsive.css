@@ -1,0 +1,340 @@
+/*
+ * responsive.css — Screen Time FSE (Optimized)
+ * Breakpoints: tablet 1024px, mobile 599px
+ */
+
+/* ── TABLET STYLES (1024px and below) ── */
+@media (max-width: 1024px) {
+	.header-top-bar {
+		min-height: 72px !important;
+	}
+
+	.header-actions-desktop {
+		display: none !important;
+	}
+
+	.header-search-label {
+		display: none;
+	}
+}
+
+/* Hidden by default, shown on mobile */
+.header-hamburger-mobile {
+	display: none !important;
+}
+
+/* Header mode visibility defaults */
+.desktop-header-only {
+	display: block;
+}
+
+.mobile-header-only {
+	display: none;
+}
+
+/* ── MOBILE STYLES (599px and below) ── */
+@media (max-width: 599px) {
+
+	/* 0. GLOBAL SAFETY NET: Triple-Lock against horizontal scroll */
+	html,
+	body {
+		overflow-x: hidden !important;
+		width: 100% !important;
+		position: relative !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.wp-site-blocks,
+	.wp-block-group,
+	.wp-block-columns {
+		max-width: 100% !important;
+		overflow-x: hidden !important;
+	}
+
+	/* 1. HEADER & NAVIGATION */
+	.wp-block-navigation {
+		display: none !important;
+	}
+
+	.header-hamburger-mobile {
+		display: block !important;
+		font-size: 24px;
+		line-height: 1;
+		cursor: default;
+		color: var(--wp--preset--color--text-primary, #fff);
+		margin: 0;
+	}
+
+	/* 2. FOOTER */
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:last-child {
+		display: none;
+	}
+
+	.has-footer-bg-background-color>.wp-block-columns {
+		justify-content: center;
+	}
+
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:first-child,
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:first-child .wp-block-group {
+		align-items: center;
+		text-align: center;
+	}
+
+	/* 2. FOOTER */
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:last-child {
+		display: none;
+	}
+
+	.has-footer-bg-background-color>.wp-block-columns {
+		justify-content: center;
+	}
+
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:first-child,
+	.has-footer-bg-background-color>.wp-block-columns>.wp-block-column:first-child .wp-block-group {
+		align-items: center;
+		text-align: center;
+	}
+
+	/* ── ADD THESE BELOW ── */
+
+	/* Social icons: circular dark background */
+	.has-footer-bg-background-color .wp-block-social-links {
+		justify-content: center !important;
+		gap: 0.8rem !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link {
+		border-radius: 50% !important;
+		background-color: #3a3a3a !important;
+		width: 44px !important;
+		height: 44px !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link a {
+		padding: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link svg {
+		width: 18px !important;
+		height: 18px !important;
+		fill: #fff !important;
+	}
+
+	/* Footer bottom: copyright + links stacked and centered */
+	.has-footer-bg-background-color .wp-block-separator {
+		width: 80% !important;
+		margin-inline: auto !important;
+	}
+
+	.has-footer-bg-background-color .footer-legal-row {
+		flex-direction: column !important;
+		align-items: center !important;
+		text-align: center !important;
+		gap: 0.3rem !important;
+	}
+
+
+	/* 8. GALLERIES (MOBILE STACKING) */
+	.mobile-single-column.wp-block-gallery {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+
+	.mobile-single-column.wp-block-gallery .wp-block-image {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex-basis: auto !important;
+		margin: 0 auto 20px auto !important;
+	}
+
+	/* .mobile-single-column.wp-block-gallery .wp-block-image img {
+		width: 100% !important;
+		max-width: 327px !important;
+		aspect-ratio: 327 / 215 !important;
+		height: auto !important;
+		display: block !important;
+		margin: 0 auto !important;
+		object-fit: cover !important;
+	} */
+
+	/* Generic single column class just in case */
+	.mobile-single-column .wp-block-post-template {
+		grid-template-columns: 1fr !important;
+		display: block !important;
+	}
+
+	.mobile-single-column .wp-block-post-template>li {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex-basis: 100% !important;
+		margin: 0 0 20px 0 !important;
+	}
+
+	/* 9. GLOBAL GUTTERS */
+	.wp-site-blocks>.wp-block-group,
+	.wp-site-blocks>.wp-block-columns,
+	.wp-site-blocks>.wp-block-query {
+		padding-inline: 20px !important;
+	}
+
+	.movie-details-section {
+		padding-inline: 0 !important;
+	}
+
+
+	/* ═══════════════════════════════════════════════════════════
+	   REFINED MOBILE HEADER (Search | Logo | Hamburger)
+	   ═══════════════════════════════════════════════════════════ */
+
+	/* Constants for JS-controlled Drawer */
+	:root {
+		--mobile-header-h: 80px;
+		--drawer-bg: #1f1f1f;
+		--drawer-trans: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.desktop-header-only { display: none !important; }
+	.mobile-header-only { display: block !important; }
+
+	/* Mobile Header Bar */
+	.mobile-header-bar {
+		height: var(--mobile-header-h);
+		background: var(--drawer-bg);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+		position: relative;
+		z-index: 100;
+	}
+
+	.mobile-header-bar .mobile-logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.mobile-search-trigger img {
+		width: 24px;
+		height: 24px;
+		display: block;
+		opacity: 0.9;
+	}
+
+	/* Hamburger (4 Lines) */
+	.mobile-menu-trigger {
+		background: none;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		align-items: flex-end;
+	}
+
+	.mobile-menu-trigger span {
+		display: block;
+		height: 2px;
+		background: #ffffff;
+		border-radius: 2px;
+	}
+	.mobile-menu-trigger span:nth-child(1) { width: 28px; }
+	.mobile-menu-trigger span:nth-child(2) { width: 24px; }
+	.mobile-menu-trigger span:nth-child(3) { width: 28px; }
+	.mobile-menu-trigger span:nth-child(4) { width: 20px; }
+
+	/* Navigation Drawer */
+	.mobile-menu-drawer {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background: var(--drawer-bg);
+		z-index: 9999;
+		transform: translateX(100%);
+		transition: var(--drawer-trans);
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.is-mobile-menu-open { overflow: hidden; }
+	body.is-mobile-menu-open .mobile-menu-drawer { transform: translateX(0); }
+
+	.drawer-top-row {
+		height: var(--mobile-header-h);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.drawer-close-btn { background: none; border: none; padding: 10px; color: #fff; }
+
+	.drawer-content { padding: 20px 0; flex-grow: 1; }
+	.drawer-accordion-header {
+		font-family: var(--wp--preset--font-family--big-shoulders);
+		font-size: 1.25rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 24px 20px;
+		text-transform: uppercase;
+	}
+	.drawer-accordion-header::after { content: "▼"; font-size: 0.7em; transition: 0.3s; }
+	.drawer-accordion.is-open .drawer-accordion-header::after { transform: rotate(180deg); }
+
+	.drawer-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+	.drawer-accordion.is-open .drawer-accordion-content { max-height: 500px; }
+
+	.drawer-menu-list { list-style: none; padding: 0 0 24px 0; margin: 0; display: flex; flex-direction: column; gap: 20px; }
+	.drawer-menu-item a {
+		font-family: var(--wp--preset--font-family--big-shoulders);
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding-left: 40px;
+		opacity: 0.8;
+	}
+}
+
+/* Mobile Section Gaps - 48px Top Margin */
+@media (max-width: 599px) {
+    .mobile-section-spacing {
+        margin-top: 48px !important;
+		margin-bottom: 24px !important;
+		padding-top: 0 !important;
+    }
+
+    /* Increase gap between Heading and Images to 24px */
+    .mobile-section-spacing .wp-block-gallery {
+        margin-top: 24px !important;
+    }
+
+    /* Target the wp-container spacing so it doesn't fight us */
+    .mobile-section-spacing > * + * {
+        margin-block-start: 24px !important;
+    }
+
+    /* Further decrease the comment text box height */
+    .mobile-section-spacing textarea {
+        min-height: 48px !important;
+    }
+}

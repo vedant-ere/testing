@@ -1,0 +1,107 @@
+/*
+ * Mobile Footer Styles (max-width: 599px)
+ * Custom classes to build the perfect 375x371 footer layout.
+ */
+
+@media (max-width: 599px) {
+
+	.mobile-footer-refined {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+		padding: 40px 16px 24px 16px !important; /* Top exactly 40px */
+		box-sizing: border-box !important;
+		background-color: #2b2b2b !important;
+		overflow: hidden !important;
+	}
+
+	.mobile-footer-refined > * {
+		margin: 0 !important;
+	}
+	.mobile-footer-refined > * + * {
+		margin-block-start: 0 !important;
+	}
+
+	/* Logo Constraints */
+	.mobile-footer-refined .custom-logo,
+	.mobile-footer-refined .site-logo img {
+		max-width: 160px !important;
+		height: auto !important;
+		margin-bottom: 24px !important; /* Exactly 24px under logo */
+	}
+
+	/* "FOLLOW US" Heading */
+	.mobile-footer-refined .footer-heading {
+		color: #ffffff !important;
+		font-family: var(--wp--preset--font-family--heebo, sans-serif) !important;
+		font-size: 14px !important; /* Slightly smaller for tighter layout */
+		font-weight: 600 !important;
+		text-transform: uppercase !important;
+		letter-spacing: 0.5px !important;
+		margin-bottom: 12px !important; /* Reduced from 24px */
+		text-align: center !important;
+	}
+
+	/* Social Network Icons Group */
+	.mobile-footer-refined .footer-social-group {
+		display: flex !important;
+		flex-direction: row !important;
+		justify-content: center !important;
+		gap: 12px !important; /* Reduced from 16px */
+		margin-bottom: 20px !important; /* Reduced from 36px */
+		width: 100% !important;
+	}
+
+	.mobile-footer-refined .wp-block-social-links {
+		display: flex !important;
+		flex-direction: row !important;
+		flex-wrap: wrap !important;
+		gap: 12px !important; /* Reduced from 16px */
+		justify-content: center !important;
+	}
+
+	.mobile-footer-refined .wp-block-social-link {
+		background-color: rgba(255, 255, 255, 0.05) !important;
+		border-radius: 50% !important;
+		width: 36px !important; /* Reduced from 44px */
+		height: 36px !important; /* Reduced from 44px */
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.mobile-footer-refined .wp-block-social-link a {
+		padding: 0 !important;
+		color: #ffffff !important;
+	}
+
+	/* Horizontal Separator Line */
+	.mobile-footer-refined .footer-separator {
+		width: 100% !important;
+		height: 1px !important;
+		background-color: rgba(255, 255, 255, 0.3) !important;
+		margin-bottom: 16px !important; /* Reduced from 28px */
+		border: none !important;
+	}
+
+	/* Copyright & Legal Text */
+	.mobile-footer-refined .footer-legal-text,
+	.mobile-footer-refined .footer-legal-text p {
+		color: #ffffff !important;
+		font-family: var(--wp--preset--font-family--heebo, sans-serif) !important;
+		font-size: 12px !important; /* Reduced from 14px */
+		font-weight: 400 !important;
+		text-align: center !important;
+		line-height: 1.5 !important;
+		margin-bottom: 4px !important;
+	}
+
+	.mobile-footer-refined .footer-legal-text a {
+		color: #ffffff !important;
+		text-decoration: none !important;
+	}
+
+}

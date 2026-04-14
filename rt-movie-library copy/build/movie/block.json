@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rt-movie-library/movie",
+  "version": "1.0.0",
+  "title": "Movie",
+  "category": "rt-movie-library",
+  "icon": "video-alt2",
+  "description": "Display a single movie by selecting it from the editor sidebar.",
+  "keywords": [
+    "movie",
+    "film",
+    "rt-movie-library"
+  ],
+  "textdomain": "rt-movie-library",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "movieId": {
+      "type": "integer",
+      "default": 0
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
+}

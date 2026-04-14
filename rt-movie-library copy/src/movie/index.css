@@ -1,0 +1,170 @@
+/**
+ * RT Movie Library — Movie (single) block stylesheet.
+ *
+ * The single movie block renders via the same PHP pipeline as the movies block
+ * so it needs identical card and wrapper styles. This file mirrors
+ * movies/index.css exactly so the single-card preview matches the grid cards.
+ *
+ * @package RT_Movie_Library
+ */
+
+@import url(https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Heebo:wght@100..900&display=swap);
+
+
+:root {
+	--color-text-primary: #fff;
+	--color-text-muted: rgba(255, 255, 255, 0.5);
+	--color-surface-card: #2b2b2b;
+	--color-link: #e46d62;
+	--color-link-hover: #f16557;
+	--font-logo: "Big Shoulders", sans-serif;
+	--font-body: "Heebo", sans-serif;
+	--text-8: 0.5rem;
+	--text-12: 0.75rem;
+	--text-14: 0.875rem;
+	--text-16: 1rem;
+	--text-24: 1.5rem;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+	--space-8: 0.5rem;
+	--space-12: 0.75rem;
+	--space-16: 1rem;
+	--space-24: 1.5rem;
+	--space-32: 2rem;
+	--space-36: 2.25rem;
+	--space-48: 3rem;
+	--container-max: 90rem;
+	--container-gutter: 7.25rem;
+	--movie-grid-cols: 2;
+	--movie-card-col-gap: 2.6875rem;
+}
+
+
+.page-archive-movie {
+	color: var(--color-text-primary);
+	font-family: var(--font-body);
+	font-size: var(--text-16);
+	line-height: 1.5;
+	padding-bottom: 4.5rem;
+}
+
+.page-archive-movie .movie-section {
+	padding-top: 7.5rem;
+}
+
+.page-archive-movie .container {
+	width: min(100%, var(--container-max));
+	margin-inline: auto;
+	padding-inline: var(--container-gutter);
+}
+
+
+.page-archive-movie .movie-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--movie-grid-cols), minmax(0, 1fr));
+	gap: var(--space-32);
+	margin-top: var(--space-48);
+}
+
+
+.movie-card {
+	width: 100%;
+	height: auto;
+	background: var(--color-surface-card);
+}
+
+.movie-card__poster {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 384 / 411;
+}
+
+.movie-card__poster img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.movie-card__content {
+	padding: var(--space-24) var(--space-16) var(--space-36);
+}
+
+.movie-card__row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	column-gap: var(--movie-card-col-gap);
+	align-items: start;
+	margin-bottom: var(--space-16);
+}
+
+.movie-card__title {
+	margin: 0;
+	font-size: var(--text-24);
+	font-weight: var(--weight-semibold);
+	line-height: 1.2;
+}
+
+.movie-card__runtime {
+	margin: 0;
+	font-size: var(--text-14);
+	color: var(--color-text-muted);
+	text-align: right;
+	white-space: nowrap;
+}
+
+.movie-card__release-date {
+	margin: 0 0 var(--space-8) 0;
+	font-size: var(--text-14);
+	color: var(--color-text-muted);
+}
+
+.movie-card__subtitle {
+	margin: 0;
+	font-size: var(--text-14);
+	color: var(--color-text-muted);
+}
+
+
+.rt-block-archive-bridge.page-archive-movie .movie-section {
+	padding-top: var(--space-24);
+}
+
+.rt-block-archive-bridge.page-archive-movie .container {
+	padding-inline: var(--space-24);
+}
+
+
+@media (width <= 39.9375rem) {
+
+	.page-archive-movie .container {
+		padding-inline: var(--space-24);
+	}
+
+	.page-archive-movie .movie-grid {
+		gap: var(--space-16);
+	}
+
+	.movie-card__content {
+		padding: var(--space-8);
+	}
+
+	.movie-card__row {
+		column-gap: var(--space-8);
+		margin-bottom: var(--space-12);
+	}
+
+	.movie-card__title {
+		font-size: var(--text-12);
+		font-weight: var(--weight-bold);
+		line-height: 1.2;
+	}
+
+	.movie-card__runtime,
+	.movie-card__subtitle,
+	.movie-card__release-date {
+		font-size: var(--text-8);
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0;
+	}
+}

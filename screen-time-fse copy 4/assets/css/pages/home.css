@@ -1,0 +1,197 @@
+/* FRONT PAGE STYLES */
+@media (max-width: 599px) {
+	/* 4. FRONT PAGE SECTIONS */
+	.frontpage-content {
+		margin: 16px;
+	}
+
+	.movie-scroll-section .wp-block-post-template {
+		display: grid !important;
+		grid-template-columns: unset !important;
+		grid-auto-flow: column !important;
+		grid-auto-columns: calc((100% - 15px) / 2) !important;
+		gap: 15px !important;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x proximity;
+		padding-bottom: 12px;
+		scrollbar-width: none;
+	}
+
+	.movie-scroll-section .wp-block-post-template::-webkit-scrollbar {
+		display: none;
+	}
+
+	.movie-scroll-section .wp-block-post-template>li {
+		scroll-snap-align: start;
+	}
+
+	.movie-card-fse {
+		width: 100% !important;
+		height: 100% !important;
+		max-width: 100% !important;
+		min-height: unset !important;
+	}
+
+	.movie-card-fse .wp-block-post-featured-image,
+	.movie-card-fse .wp-block-post-featured-image img {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 156 / 167 !important;
+		object-fit: cover !important;
+	}
+
+	.movie-card-fse .wp-block-group.has-footer-bg-background-color {
+		padding: 8px !important; /* Restore smaller padding for mobile */
+	}
+
+	.movie-card-fse .wp-block-post-title {
+		font-size: 12px !important;
+		line-height: 1.2 !important;
+		margin: 0;
+	}
+
+	.movie-card-fse .wp-block-paragraph,
+	.movie-card-fse .wp-block-post-date {
+		font-size: 8px !important;
+		line-height: 1 !important;
+	}
+
+	.quick-links-mobile {
+		display: none;
+	}
+
+	/* ═══════════════════════════════════════════════════════════
+	   HOME PAGE MASTER SECTION-GAP RESET
+	   Overrides WordPress core inline spacing for mobile.
+	   ═══════════════════════════════════════════════════════════ */
+
+	/* Global 48px gap between top-level sections inside the frontpage */
+	body.home .wp-site-blocks > .wp-block-group,
+	body.blog .wp-site-blocks > .wp-block-group {
+		display: flex !important;
+		flex-direction: column !important;
+		--wp--style--block-gap: 48px !important;
+		gap: 48px !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	/* Kill the WP core spacing AND any inline FSE heights (like 170px or 110px) on top-level groups */
+	body.home .wp-site-blocks > .wp-block-group > .wp-block-group,
+	body.blog .wp-site-blocks > .wp-block-group > .wp-block-group {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		margin-block-start: 0 !important;
+		margin-top: 0 !important;
+	}
+	
+	/* Also clear spacing for any .frontpage-content class if present */
+	.frontpage-content,
+	.frontpage-content > .wp-block-group {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		margin-top: 0 !important;
+	}
+
+	/* For the individual horizontal slider sections (e.g., Upcoming Movies) */
+	.movie-scroll-section {
+		display: flex !important;
+		flex-direction: column !important;
+		--wp--style--block-gap: 24px !important;
+		gap: 24px !important; /* 24px exactly between the Title and the Movies */
+	}
+
+	/* Kill WordPress core margin injections inside the scroll section */
+	.movie-scroll-section > * + * {
+		margin-block-start: 0 !important;
+		margin-top: 0 !important;
+	}
+
+	.movie-scroll-section .wp-block-heading {
+		margin: 0 !important;
+	}
+
+	/* Home Page Cover Image Class */
+	.mobile-img-cover,
+	.mobile-img-cover img {
+		width: 100% !important;
+		/* max-width: 375px !important; */
+		height: auto !important;
+		aspect-ratio: 375 / 286 !important;
+		object-fit: cover !important;
+		margin: 0 auto !important;
+		display: block !important;
+	}
+
+	/* Prevent native WP cover blocks from collapsing to 0 height due to absolute children */
+	body.home .wp-block-cover,
+	body.blog .wp-block-cover {
+		min-height: unset !important;
+		height: auto !important;
+		padding: 0 !important;
+		position: relative !important;
+		aspect-ratio: 375 / 286 !important;
+	}
+
+	body.home .wp-block-cover .wp-block-cover__inner-container,
+	body.blog .wp-block-cover .wp-block-cover__inner-container {
+		padding: 16px !important;
+		position: absolute !important;
+		bottom: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: 100% !important;
+		box-sizing: border-box !important;
+		z-index: 10 !important;
+		background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%) !important;
+	}
+
+	/* Hide the background tint overlay if it is visually obscuring the layout */
+	body.home .wp-block-cover__background.has-background-dim-0,
+	body.blog .wp-block-cover__background.has-background-dim-0 {
+		display: none !important;
+	}
+
+	/* Hero Image sizing adjustments for mobile to fit inside the smaller cover */
+	body.home .wp-block-cover .has-4-xl-font-size,
+	body.blog .wp-block-cover .has-4-xl-font-size {
+		font-size: 24px !important;
+		margin-bottom: 4px !important;
+	}
+
+	body.home .wp-block-cover .has-base-font-size,
+	body.blog .wp-block-cover .has-base-font-size {
+		font-size: 10px !important;
+		line-height: 1.2 !important;
+		margin-bottom: 8px !important;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	/* Meta info row inside the cover (Year, PG-13, 3H 1M) */
+	body.home .wp-block-cover .wp-block-group > .wp-block-group > .wp-block-group:nth-of-type(1) p {
+		font-size: 10px !important;
+		margin: 0 !important;
+	}
+
+	/* Buttons inside the cover */
+	body.home .wp-block-cover .wp-block-buttons .wp-block-button__link {
+		font-size: 10px !important;
+		padding: 4px 10px !important;
+	}
+	body.home .wp-block-cover .wp-block-buttons {
+		gap: 8px !important;
+		margin-top: 8px !important;
+	}
+
+	body.home .wp-block-cover .wp-block-group[style*="margin-bottom:45px"] {
+		margin-bottom: 12px !important;
+		gap: 6px !important;
+	}
+
+}

@@ -1,0 +1,16 @@
+{
+  "name": "rt-movie-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build configuration for RT Movie Library Gutenberg blocks",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js src",
+    "lint:css": "wp-scripts lint-style \"src/**/*.css\" --allow-empty-input",
+    "lint": "npm run lint:js && npm run lint:css"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^31.7.0"
+  }
+}

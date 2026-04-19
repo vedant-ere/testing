@@ -1,0 +1,63 @@
+/* ARCHIVE MOVIE GRID STYLES */
+@media (max-width: 599px) {
+
+	/* 3. ARCHIVE MOVIE GRID */
+	.archive-movie-grid .wp-block-post-template {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 24px !important;
+		padding-inline: 16px;
+	}
+
+	.archive-movie-grid .movie-card-fse {
+		max-width: 100% !important;
+		min-height: 240px;
+	}
+
+	.archive-movie-grid .movie-card-fse .wp-block-post-featured-image,
+	.archive-movie-grid .movie-card-fse .wp-block-post-featured-image img {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 156 / 167;
+		object-fit: cover;
+	}
+
+	.archive-movie-grid .movie-card-fse
+	.wp-block-group.has-footer-bg-background-color {
+		padding: 8px !important;
+	}
+
+	.archive-movie-grid .movie-card-fse .wp-block-post-title {
+		font-size: 0.75rem !important;
+		line-height: 1.2 !important;
+	}
+
+	.archive-movie-grid .movie-card-fse .wp-block-paragraph,
+	.archive-movie-grid .movie-card-fse .wp-block-post-date {
+		font-size: 0.5rem !important;
+		line-height: 1 !important;
+	}
+
+}
+
+/* ── TABLET STYLES (600px to 1024px) ── */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+	/* 3. ARCHIVE MOVIE GRID - Tablet 2 Columns strictly */
+	.archive-movie-grid .wp-block-post-template {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 32px !important;
+		padding-inline: 24px;
+	}
+
+	.archive-movie-grid .movie-card-fse {
+		max-width: 100% !important;
+		min-height: unset;
+	}
+
+	.archive-movie-grid .movie-card-fse .wp-block-post-featured-image img {
+		width: 100% !important;
+		height: auto !important;
+		aspect-ratio: 156 / 167 !important;
+		object-fit: cover !important;
+	}
+}

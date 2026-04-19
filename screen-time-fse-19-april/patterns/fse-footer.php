@@ -1,0 +1,70 @@
+<?php
+/**
+ * Title: FSE Footer
+ * Slug: screen-time-fse/fse-footer
+ * Categories: footer
+ * Inserter: false
+ *
+ * @package ScreenTimeFSE
+ */
+
+?>
+<!-- wp:group {"style":{"dimensions":{"minHeight":"92px"},"spacing":{"margin":{"top":"120px","bottom":"0"},"padding":{"right":"0","left":"0","top":"110px","bottom":"30px"},"blockGap":"96px"}},"backgroundColor":"footer-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-footer-bg-background-color has-background" style="min-height:92px;margin-top:120px;margin-bottom:0;padding-top:110px;padding-right:0;padding-bottom:30px;padding-left:0"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:site-logo /-->
+
+<!-- wp:paragraph {"fontSize":"base","fontFamily":"heebo"} -->
+<p class="has-heebo-font-family has-base-font-size">Follow Us</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:social-links -->
+<ul class="wp-block-social-links"><!-- wp:social-link {"url":"facebook.com","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"twitter.com","service":"twitter"} /-->
+
+<!-- wp:social-link {"url":"youtube.com","service":"youtube"} /-->
+
+<!-- wp:social-link {"url":"instagram.com","service":"instagram"} /-->
+
+<!-- wp:social-link {"url":"rss.com","service":"feed"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"footer-nav-columns"} -->
+<div class="wp-block-column footer-nav-columns"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"fontSize":"base"} -->
+<p class="has-base-font-size">COMPANY</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:navigation {"ref":370,"style":{"typography":{"fontStyle":"normal","fontWeight":"200","lineHeight":"1.2"}},"fontSize":"base","fontFamily":"heebo","layout":{"type":"flex","orientation":"vertical"}} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"fontSize":"base"} -->
+<p class="has-base-font-size">EXPLORE</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:navigation {"ref":396,"style":{"typography":{"lineHeight":"1.2","fontStyle":"normal","fontWeight":"200"}},"layout":{"type":"flex","orientation":"vertical"}} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"fontFamily":"heebo"} -->
+<p class="has-heebo-font-family"><?php echo esc_html( __( '© 2026 ScreenTime. All Rights Reserved. Terms of Service | Privacy Policy', 'screen-time-fse' ) ); ?></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->

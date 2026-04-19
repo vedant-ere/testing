@@ -1,0 +1,548 @@
+/*
+ * Screen Time Mobile Bootstrap
+ * Utility classes for mobile breakpoints (max-width: 599px)
+ */
+
+@media (max-width: 599px) {
+
+
+	.mobile-hide {
+		display: none !important;
+	}
+
+	.mobile-show-block {
+		display: block !important;
+	}
+
+	.mobile-show-flex {
+		display: flex !important;
+	}
+
+	.mobile-show-grid {
+		display: grid !important;
+	}
+
+	.mobile-flex-col {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	.mobile-flex-row {
+		display: flex !important;
+		flex-direction: row !important;
+	}
+
+	.mobile-grid-1 {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+	}
+
+	.mobile-grid-2 {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+
+	.mobile-stack > * + * {
+		margin-block-start: 16px !important;
+	}
+
+	.mobile-w-full {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.mobile-h-auto {
+		height: auto !important;
+	}
+
+
+	.mobile-gap-8 {
+		gap: 8px !important;
+	}
+
+	.mobile-m-8 {
+		margin: 8px !important;
+	}
+
+	.mobile-mt-8 {
+		margin-top: 8px !important;
+	}
+
+	.mobile-mb-8 {
+		margin-bottom: 8px !important;
+	}
+
+	.mobile-ml-8 {
+		margin-left: 8px !important;
+	}
+
+	.mobile-mr-8 {
+		margin-right: 8px !important;
+	}
+
+	.mobile-mx-8 {
+		margin-left: 8px !important;
+		margin-right: 8px !important;
+	}
+
+	.mobile-my-8 {
+		margin-top: 8px !important;
+		margin-bottom: 8px !important;
+	}
+
+	.mobile-p-8 {
+		padding: 8px !important;
+	}
+
+	.mobile-pt-8 {
+		padding-top: 8px !important;
+	}
+
+	.mobile-pb-8 {
+		padding-bottom: 8px !important;
+	}
+
+	.mobile-pl-8 {
+		padding-left: 8px !important;
+	}
+
+	.mobile-pr-8 {
+		padding-right: 8px !important;
+	}
+
+	.mobile-px-8 {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+
+	.mobile-py-8 {
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+	}
+
+	.mobile-gap-12 {
+		gap: 12px !important;
+	}
+
+	.mobile-m-12 {
+		margin: 12px !important;
+	}
+
+	.mobile-mt-12 {
+		margin-top: 12px !important;
+	}
+
+	.mobile-mb-12 {
+		margin-bottom: 12px !important;
+	}
+
+	.mobile-ml-12 {
+		margin-left: 12px !important;
+	}
+
+	.mobile-mr-12 {
+		margin-right: 12px !important;
+	}
+
+	.mobile-mx-12 {
+		margin-left: 12px !important;
+		margin-right: 12px !important;
+	}
+
+	.mobile-my-12 {
+		margin-top: 12px !important;
+		margin-bottom: 12px !important;
+	}
+
+	.mobile-p-12 {
+		padding: 12px !important;
+	}
+
+	.mobile-pt-12 {
+		padding-top: 12px !important;
+	}
+
+	.mobile-pb-12 {
+		padding-bottom: 12px !important;
+	}
+
+	.mobile-pl-12 {
+		padding-left: 12px !important;
+	}
+
+	.mobile-pr-12 {
+		padding-right: 12px !important;
+	}
+
+	.mobile-px-12 {
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
+
+	.mobile-py-12 {
+		padding-top: 12px !important;
+		padding-bottom: 12px !important;
+	}
+
+	.mobile-gap-16 {
+		gap: 16px !important;
+	}
+
+	.mobile-m-16 {
+		margin: 16px !important;
+	}
+
+	.mobile-mt-16 {
+		margin-top: 16px !important;
+	}
+
+	.mobile-mb-16 {
+		margin-bottom: 16px !important;
+	}
+
+	.mobile-ml-16 {
+		margin-left: 16px !important;
+	}
+
+	.mobile-mr-16 {
+		margin-right: 16px !important;
+	}
+
+	.mobile-mx-16 {
+		margin-left: 16px !important;
+		margin-right: 16px !important;
+	}
+
+	.mobile-my-16 {
+		margin-top: 16px !important;
+		margin-bottom: 16px !important;
+	}
+
+	.mobile-p-16 {
+		padding: 16px !important;
+	}
+
+	.mobile-pt-16 {
+		padding-top: 16px !important;
+	}
+
+	.mobile-pb-16 {
+		padding-bottom: 16px !important;
+	}
+
+	.mobile-pl-16 {
+		padding-left: 16px !important;
+	}
+
+	.mobile-pr-16 {
+		padding-right: 16px !important;
+	}
+
+	.mobile-px-16 {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+
+	.mobile-py-16 {
+		padding-top: 16px !important;
+		padding-bottom: 16px !important;
+	}
+
+	.mobile-gap-24 {
+		gap: 24px !important;
+	}
+
+	.mobile-m-24 {
+		margin: 24px !important;
+	}
+
+	.mobile-mt-24 {
+		margin-top: 24px !important;
+	}
+
+	.mobile-mb-24 {
+		margin-bottom: 24px !important;
+	}
+
+	.mobile-ml-24 {
+		margin-left: 24px !important;
+	}
+
+	.mobile-mr-24 {
+		margin-right: 24px !important;
+	}
+
+	.mobile-mx-24 {
+		margin-left: 24px !important;
+		margin-right: 24px !important;
+	}
+
+	.mobile-my-24 {
+		margin-top: 24px !important;
+		margin-bottom: 24px !important;
+	}
+
+	.mobile-p-24 {
+		padding: 24px !important;
+	}
+
+	.mobile-pt-24 {
+		padding-top: 24px !important;
+	}
+
+	.mobile-pb-24 {
+		padding-bottom: 24px !important;
+	}
+
+	.mobile-pl-24 {
+		padding-left: 24px !important;
+	}
+
+	.mobile-pr-24 {
+		padding-right: 24px !important;
+	}
+
+	.mobile-px-24 {
+		padding-left: 24px !important;
+		padding-right: 24px !important;
+	}
+
+	.mobile-py-24 {
+		padding-top: 24px !important;
+		padding-bottom: 24px !important;
+	}
+
+	.mobile-gap-32 {
+		gap: 32px !important;
+	}
+
+	.mobile-m-32 {
+		margin: 32px !important;
+	}
+
+	.mobile-mt-32 {
+		margin-top: 32px !important;
+	}
+
+	.mobile-mb-32 {
+		margin-bottom: 32px !important;
+	}
+
+	.mobile-ml-32 {
+		margin-left: 32px !important;
+	}
+
+	.mobile-mr-32 {
+		margin-right: 32px !important;
+	}
+
+	.mobile-mx-32 {
+		margin-left: 32px !important;
+		margin-right: 32px !important;
+	}
+
+	.mobile-my-32 {
+		margin-top: 32px !important;
+		margin-bottom: 32px !important;
+	}
+
+	.mobile-p-32 {
+		padding: 32px !important;
+	}
+
+	.mobile-pt-32 {
+		padding-top: 32px !important;
+	}
+
+	.mobile-pb-32 {
+		padding-bottom: 32px !important;
+	}
+
+	.mobile-pl-32 {
+		padding-left: 32px !important;
+	}
+
+	.mobile-pr-32 {
+		padding-right: 32px !important;
+	}
+
+	.mobile-px-32 {
+		padding-left: 32px !important;
+		padding-right: 32px !important;
+	}
+
+	.mobile-py-32 {
+		padding-top: 32px !important;
+		padding-bottom: 32px !important;
+	}
+
+	.mobile-gap-48 {
+		gap: 48px !important;
+	}
+
+	.mobile-m-48 {
+		margin: 48px !important;
+	}
+
+	.mobile-mt-48 {
+		margin-top: 48px !important;
+	}
+
+	.mobile-mb-48 {
+		margin-bottom: 48px !important;
+	}
+
+	.mobile-ml-48 {
+		margin-left: 48px !important;
+	}
+
+	.mobile-mr-48 {
+		margin-right: 48px !important;
+	}
+
+	.mobile-mx-48 {
+		margin-left: 48px !important;
+		margin-right: 48px !important;
+	}
+
+	.mobile-my-48 {
+		margin-top: 48px !important;
+		margin-bottom: 48px !important;
+	}
+
+	.mobile-p-48 {
+		padding: 48px !important;
+	}
+
+	.mobile-pt-48 {
+		padding-top: 48px !important;
+	}
+
+	.mobile-pb-48 {
+		padding-bottom: 48px !important;
+	}
+
+	.mobile-pl-48 {
+		padding-left: 48px !important;
+	}
+
+	.mobile-pr-48 {
+		padding-right: 48px !important;
+	}
+
+	.mobile-px-48 {
+		padding-left: 48px !important;
+		padding-right: 48px !important;
+	}
+
+	.mobile-py-48 {
+		padding-top: 48px !important;
+		padding-bottom: 48px !important;
+	}
+
+
+	.mobile-mb-52 {
+		margin-bottom: 52px !important;
+	}
+
+	.mobile-mb-60 {
+		margin-bottom: 60px !important;
+	}
+
+	.mobile-gap-64 {
+		gap: 64px !important;
+	}
+
+	.mobile-m-64 {
+		margin: 64px !important;
+	}
+
+	.mobile-mt-64 {
+		margin-top: 64px !important;
+	}
+
+	.mobile-mb-64 {
+		margin-bottom: 64px !important;
+	}
+
+	.mobile-ml-64 {
+		margin-left: 64px !important;
+	}
+
+	.mobile-mr-64 {
+		margin-right: 64px !important;
+	}
+
+	.mobile-mx-64 {
+		margin-left: 64px !important;
+		margin-right: 64px !important;
+	}
+
+	.mobile-my-64 {
+		margin-top: 64px !important;
+		margin-bottom: 64px !important;
+	}
+
+	.mobile-p-64 {
+		padding: 64px !important;
+	}
+
+	.mobile-pt-64 {
+		padding-top: 64px !important;
+	}
+
+	.mobile-pb-64 {
+		padding-bottom: 64px !important;
+	}
+
+	.mobile-pl-64 {
+		padding-left: 64px !important;
+	}
+
+	.mobile-pr-64 {
+		padding-right: 64px !important;
+	}
+
+	.mobile-px-64 {
+		padding-left: 64px !important;
+		padding-right: 64px !important;
+	}
+
+	.mobile-py-64 {
+		padding-top: 64px !important;
+		padding-bottom: 64px !important;
+	}
+
+	.mobile-text-center {
+		text-align: center !important;
+	}
+
+	.mobile-text-left {
+		text-align: left !important;
+	}
+
+	.mobile-text-right {
+		text-align: right !important;
+	}
+
+	.mobile-text-sm {
+		font-size: 0.875rem !important;
+	}
+
+	.mobile-text-base {
+		font-size: 1rem !important;
+	}
+
+	.mobile-text-md {
+		font-size: 1.125rem !important;
+	}
+
+	.mobile-text-lg {
+		font-size: 1.25rem !important;
+	}
+
+	.mobile-text-xl {
+		font-size: 1.5rem !important;
+	}
+}
+

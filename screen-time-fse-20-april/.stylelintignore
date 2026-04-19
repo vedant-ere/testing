@@ -1,0 +1,10 @@
+**/*.php
+**/*.html
+**/*.json
+**/*.js
+**/*.png
+**/*.svg
+**/*.zip
+**/*.md
+**/*.pot
+screenshot.png

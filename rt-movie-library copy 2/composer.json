@@ -1,0 +1,23 @@
+{
+    "name": "rt-movie-library/plugin",
+    "description": "RT Movie Library WordPress plugin",
+    "require-dev": {
+        "php-stubs/wp-cli-stubs": "^2.12",
+        "phpunit/phpunit": "^9.5",
+        "wp-phpunit/wp-phpunit": "^6.5",
+        "yoast/phpunit-polyfills": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/php/unit/"
+        ]
+    },
+    "config": {
+        "bin-dir": "vendor/bin"
+    }
+}

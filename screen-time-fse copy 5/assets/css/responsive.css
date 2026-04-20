@@ -1,0 +1,502 @@
+/* stylelint-disable no-descending-specificity */
+
+/*
+ * responsive.css — Screen Time FSE (Optimized)
+ * Breakpoints: tablet 1024px, mobile 599px
+ */
+
+/* ── TABLET STYLES (1024px and below) ── */
+@media (max-width: 1024px) {
+
+	.header-top-bar {
+		min-height: 72px !important;
+	}
+
+	.header-actions-desktop {
+		display: none !important;
+	}
+
+	.header-search-label {
+		display: none;
+	}
+}
+
+.header-hamburger-mobile {
+	display: none !important;
+}
+
+/* ── MOBILE STYLES (599px and below) ── */
+@media (max-width: 599px) {
+
+
+	html,
+	body {
+		overflow-x: hidden !important;
+		width: 100% !important;
+		position: relative !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.wp-site-blocks,
+	.wp-block-group,
+	.wp-block-columns {
+		max-width: 100% !important;
+		overflow-x: hidden !important;
+	}
+
+	/* 1. HEADER & NAVIGATION */
+
+	/* Allow WP Navigation to show the compact Hamburger natively */
+
+	.header-hamburger-mobile {
+		display: block !important;
+		font-size: 24px;
+		line-height: 1;
+		cursor: default;
+		color: var(--wp--preset--color--text-primary, #fff);
+		margin: 0;
+	}
+
+	/* 2. FOOTER */
+	.has-footer-bg-background-color > .wp-block-columns > .wp-block-column:last-child {
+		display: none;
+	}
+
+	.has-footer-bg-background-color > .wp-block-columns {
+		justify-content: center;
+	}
+
+	.has-footer-bg-background-color > .wp-block-columns > .wp-block-column:first-child,
+	.has-footer-bg-background-color > .wp-block-columns > .wp-block-column:first-child .wp-block-group {
+		align-items: center;
+		text-align: center;
+	}
+
+
+	/* Social icons: circular dark background */
+	.has-footer-bg-background-color .wp-block-social-links {
+		justify-content: center !important;
+		gap: 0.8rem !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link {
+		border-radius: 50% !important;
+		background-color: #3a3a3a !important;
+		width: 44px !important;
+		height: 44px !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link a {
+		padding: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link svg {
+		width: 18px !important;
+		height: 18px !important;
+		fill: #fff !important;
+	}
+
+	/* Footer bottom: copyright + links stacked and centered */
+	.has-footer-bg-background-color .wp-block-separator {
+		width: 80% !important;
+		margin-inline: auto !important;
+	}
+
+	.has-footer-bg-background-color .footer-legal-row {
+		flex-direction: column !important;
+		align-items: center !important;
+		text-align: center !important;
+		gap: 0.3rem !important;
+	}
+
+
+	/* 8. GALLERIES (MOBILE STACKING) */
+	.mobile-single-column.wp-block-gallery {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+
+	.mobile-single-column.wp-block-gallery .wp-block-image {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex-basis: auto !important;
+		margin: 0 auto 20px auto !important;
+	}
+
+	.mobile-single-column.wp-block-gallery .wp-block-image img {
+		width: 100% !important;
+		max-width: 327px !important;
+		aspect-ratio: 327 / 215 !important;
+		height: auto !important;
+		display: block !important;
+		margin: 0 auto !important;
+		object-fit: cover !important;
+	}
+
+	/* Generic single column class just in case */
+	.mobile-single-column .wp-block-post-template {
+		grid-template-columns: 1fr !important;
+		display: block !important;
+	}
+
+	.mobile-single-column .wp-block-post-template > li {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex-basis: 100% !important;
+		margin: 0 0 20px 0 !important;
+	}
+
+	/* 9. GLOBAL GUTTERS */
+	.wp-site-blocks > .wp-block-group,
+	.wp-site-blocks > .wp-block-columns,
+	.wp-site-blocks > .wp-block-query {
+		padding-inline: 20px !important;
+	}
+
+	.movie-details-section {
+		padding-inline: 0 !important;
+	}
+}
+
+/* Mobile Section Gaps - 48px Top Margin */
+@media (max-width: 599px) {
+
+	.mobile-section-spacing {
+		margin-top: 48px !important;
+		margin-bottom: 24px !important;
+		padding-top: 0 !important;
+	}
+
+	/* Increase gap between Heading and Images to 24px */
+	.mobile-section-spacing .wp-block-gallery {
+		margin-top: 24px !important;
+	}
+
+	/* Target the wp-container spacing so it doesn't fight us */
+	.mobile-section-spacing > * + * {
+		margin-block-start: 24px !important;
+	}
+
+	/* Further decrease the comment text box height */
+	.mobile-section-spacing textarea {
+		min-height: 48px !important;
+	}
+}
+
+/* ── TABLET & MOBILE UNIFIED FLUID LAYOUT (Up to 1024px) ── */
+@media (max-width: 1024px) {
+
+	/* Global Fluid Spacing */
+	.wp-site-blocks > .wp-block-group,
+	.wp-site-blocks > .wp-block-columns,
+	.wp-site-blocks > .wp-block-query {
+		padding-inline: clamp(16px, 4vw, 48px) !important;
+	}
+
+	/* Footer Tablet Refinements */
+	.has-footer-bg-background-color > .wp-block-columns {
+		flex-direction: column !important;
+		align-items: center !important;
+		text-align: center !important;
+		flex-wrap: wrap !important;
+		gap: 32px !important;
+		justify-content: center !important;
+	}
+
+	.has-footer-bg-background-color > .wp-block-columns > .wp-block-column {
+		flex-basis: 100% !important;
+		min-width: unset !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.has-footer-bg-background-color > .wp-block-columns > .wp-block-column:last-child {
+		display: none !important;
+	}
+
+	/* Use theme variables instead of hardcoded colors for tablet interactions */
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link {
+		background-color: var(--wp--preset--color--foreground, #3a3a3a) !important;
+	}
+
+	.has-footer-bg-background-color .wp-block-social-links .wp-social-link svg {
+		fill: var(--wp--preset--color--background, #fff) !important;
+	}
+
+	.has-footer-bg-background-color .footer-legal-row {
+		flex-direction: column !important;
+		align-items: center !important;
+		text-align: center !important;
+		gap: 0.3rem !important;
+		justify-content: center !important;
+	}
+
+	/* Tablet & Mobile Real Native Header Layout */
+	.desktop-header-only {
+		display: none !important;
+	}
+
+	.mobile-header-only {
+		display: block !important;
+	}
+
+	body .wp-site-blocks > header > .wp-block-group.has-page-bg-background-color,
+	body .wp-site-blocks > .wp-block-group.has-page-bg-background-color {
+		display: flex !important;
+		flex-direction: row !important;
+		align-items: center !important;
+		justify-content: space-between !important;
+		min-height: 80px !important;
+		padding: 0 20px !important;
+	}
+
+	.header-top-bar {
+		display: contents !important;
+	}
+
+	.header-search-label {
+		display: none !important;
+	}
+
+	.header-actions-desktop {
+		display: none !important;
+	}
+
+	.header-top-bar .wp-block-site-logo {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.wp-block-navigation {
+		margin: 0 !important;
+	}
+
+	.drawer-accordion-header {
+		font-family: var(--wp--preset--font-family--big-shoulders) !important;
+		font-size: 1.5rem !important;
+		font-weight: 700 !important;
+		letter-spacing: 0.1em !important;
+		padding: 24px 40px !important;
+	}
+
+	.drawer-menu-item a {
+		font-family: var(--wp--preset--font-family--big-shoulders) !important;
+		font-size: 1.25rem !important;
+		font-weight: 600 !important;
+		padding-left: 60px !important;
+	}
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   SEARCH OVERLAY
+   Uses CSS custom properties exclusively — no hardcoded colours.
+   The overlay uses opacity + pointer-events instead of display:none so
+   CSS transitions work correctly.
+───────────────────────────────────────────────────────────────────────── */
+.header-search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.88);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.header-search-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Focus trap — when overlay is open, nothing behind it is reachable */
+.header-search-overlay[aria-hidden="false"] ~ * {
+    pointer-events: none;
+}
+
+.search-overlay-inner {
+    position: relative;
+    width: min(640px, 90vw);
+    padding-bottom: var(--wp--preset--spacing--xs);
+    border-bottom: 1px solid var(--wp--preset--color--divider);
+}
+
+.search-overlay-close {
+    position: absolute;
+    top: -2.75rem;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: var(--wp--preset--color--text-primary);
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.search-overlay-close:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.search-overlay-form {
+    display: flex;
+    gap: var(--wp--preset--spacing--xs);
+    align-items: center;
+}
+
+.search-overlay-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--wp--preset--color--text-primary);
+    font-size: var(--wp--preset--font-size--xl);
+    font-family: var(--wp--preset--font-family--big-shoulders);
+    outline: none;
+    padding: 0;
+}
+
+.search-overlay-input::placeholder {
+    color: var(--wp--preset--color--text-muted);
+}
+
+.search-overlay-submit {
+    background: transparent;
+    border: none;
+    color: var(--wp--preset--color--text-primary);
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.search-overlay-submit:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   DESKTOP HEADER ELEMENTS
+───────────────────────────────────────────────────────────────────────── */
+.header-search-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--2xs);
+    background: transparent;
+    border: none;
+    color: var(--wp--preset--color--text-primary);
+    cursor: pointer;
+    padding: 0;
+    font-family: var(--wp--preset--font-family--heebo);
+    font-size: var(--wp--preset--font-size--base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.header-search-trigger:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.header-signin-group {
+    display: flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--2xs);
+    font-family: var(--wp--preset--font-family--heebo);
+    font-size: var(--wp--preset--font-size--base);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--wp--preset--color--text-primary);
+}
+
+.header-language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.language-dropdown {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--wp--preset--color--text-primary);
+    font-family: var(--wp--preset--font-family--heebo);
+    font-size: var(--wp--preset--font-size--base);
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+}
+
+.language-dropdown:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.language-dropdown-chevron {
+    font-size: 0.5rem;
+    color: var(--wp--preset--color--text-primary);
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   MOBILE LOGO
+   Uses CSS custom properties — no inline style="" attributes.
+───────────────────────────────────────────────────────────────────────── */
+.mobile-logo-link {
+    text-decoration: none;
+}
+
+.mobile-logo-text {
+    font-family: var(--wp--preset--font-family--big-shoulders);
+    font-weight: 900;
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--text-primary);
+}
+
+.mobile-logo-accent {
+    color: var(--wp--preset--color--accent);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   MOBILE DRAWER ACCORDION
+   The header is now a <button> — reset its default button styles.
+───────────────────────────────────────────────────────────────────────── */
+.drawer-accordion-header {
+    all: unset; /* Reset all browser button styles */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: var(--wp--preset--spacing--sm) 0;
+    font-family: var(--wp--preset--font-family--big-shoulders);
+    font-size: var(--wp--preset--font-size--md);
+    text-transform: uppercase;
+    color: var(--wp--preset--color--text-primary);
+    letter-spacing: 0.05em;
+}
+
+.drawer-accordion-header:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}

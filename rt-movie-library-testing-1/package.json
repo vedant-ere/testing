@@ -1,0 +1,20 @@
+{
+  "name": "rt-movie-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build configuration for RT Movie Library Gutenberg blocks",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js src",
+    "lint:css": "wp-scripts lint-style \"src/**/*.css\" --allow-empty-input",
+    "lint": "npm run lint:js && npm run lint:css",
+    "test:php": "wp-env run tests-wordpress 'phpunit -c /var/www/html/wp-content/plugins/rt-movie-library/phpunit.xml.dist --verbose'",
+    "test:local": "WP_PHPUNIT__TESTS_CONFIG='/Users/vedantere/Local Sites/rt-movie-plugin-assignment/app/public/wp-tests-config.php' ./vendor/bin/phpunit -c phpunit.xml.dist --verbose",
+    "wp-env": "wp-env"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.10.0",
+    "@wordpress/scripts": "^31.7.0"
+  }
+}

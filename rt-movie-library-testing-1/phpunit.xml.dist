@@ -1,0 +1,18 @@
+<phpunit
+  bootstrap="tests/php/bootstrap.php"
+  backupGlobals="false"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+>
+  <testsuites>
+    <testsuite name="rt-movie-library Unit Tests">
+      <directory suffix="-test.php">./tests/php/unit</directory>
+      <directory suffix=".php">./tests/php/unit</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="WP_PHPUNIT__TESTS_CONFIG" value="/tests-wordpress/wp-tests-config.php"/>
+  </php>
+</phpunit>
